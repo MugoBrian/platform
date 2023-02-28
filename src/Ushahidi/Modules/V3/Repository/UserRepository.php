@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Ushahidi\Contracts\Repository\Usecase\UserRegisterRepository;
 use Ushahidi\Contracts\Repository\Usecase\UserResetPasswordRepository;
-use Ushahidi\Contracts\Repository\Entity\UserRepository as UserRepositoryContract;
+use Ushahidi\Core\Entity\UserRepository as UserRepositoryContract;
 
 class UserRepository extends OhanzeeRepository implements
     UserRepositoryContract,
