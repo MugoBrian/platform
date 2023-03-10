@@ -12,7 +12,7 @@ namespace Ushahidi\Authzn;
 
 use Illuminate\Support\Facades\Auth;
 use Ushahidi\Contracts\Session as SessionContract;
-use Ushahidi\Contracts\Repository\Entity\UserRepository;
+use Ushahidi\Core\Entity\UserRepository;
 
 class Session implements SessionContract
 {
