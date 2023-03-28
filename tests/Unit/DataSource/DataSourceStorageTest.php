@@ -10,15 +10,15 @@
 
 namespace Ushahidi\Tests\Unit\DataSource;
 
-use Illuminate\Support\Facades\Log;
 use Mockery as M;
-use Ushahidi\Core\Entity\ContactRepository;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Contracts\Repository\Entity\MessageRepository;
-use Ushahidi\Core\Entity\Message;
+use Illuminate\Support\Facades\Log;
+use Ushahidi\DataSource\DataSourceStorage;
+use Ushahidi\Core\Entity\ContactRepository;
+use Ushahidi\Core\Entity\MessageRepository;
+use Ushahidi\Core\Ohanzee\Entities\Message;
 use Ushahidi\Core\Exception\NotFoundException;
 use Ushahidi\Core\Usecase\Message\ReceiveMessage;
-use Ushahidi\DataSource\DataSourceStorage;
 
 /**
  * @backupGlobals disabled

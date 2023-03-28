@@ -12,10 +12,10 @@
 namespace Ushahidi\Core\Tool\Authorizer;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Contracts\Repository\EntityGet;
-use Ushahidi\Contracts\Permission;
-use Ushahidi\Contracts\Repository\Entity\TagRepository;
+use Ushahidi\Contracts\Authorizer;
+use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Entity\TagRepository;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;

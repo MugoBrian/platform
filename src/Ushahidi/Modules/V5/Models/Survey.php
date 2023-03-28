@@ -2,12 +2,8 @@
 
 namespace Ushahidi\Modules\V5\Models;
 
-use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
-use Illuminate\Validation\Rule;
-use Ushahidi\Contracts\Permission;
-use Illuminate\Support\Facades\Request as RequestFacade;
-use Ushahidi\Modules\V3\Validator\LegacyValidator;
+use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Tool\Permissions\InteractsWithFormPermissions;
 
 class Survey extends BaseModel
@@ -187,7 +183,7 @@ class Survey extends BaseModel
      * Get the survey color.
      *
      * @param  string  $value
-     * @return void
+     * @return string
      */
     public function getColorAttribute($value)
     {

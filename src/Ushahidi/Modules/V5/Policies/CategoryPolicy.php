@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Core\Tool\Acl;
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity\Tag as StaticCategory;
+use Ushahidi\Core\Ohanzee\Entities\Tag as StaticCategory;
 use Ushahidi\Modules\V5\Models\Category as EloquentCategory;
 use Ushahidi\Core\Tool\Authorizer\TagAuthorizer;
 

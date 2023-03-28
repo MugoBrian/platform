@@ -4,13 +4,14 @@ namespace Ushahidi\Tests\Unit\Modules\V2\Mappers;
 
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\Contact;
+use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Ushahidi\Core\Entity\Message;
+use Ushahidi\Core\Entity\ContactRepository;
+use Ushahidi\Core\Ohanzee\Entities\Contact;
 use Ushahidi\Modules\V2\Mappers\MessageMapper;
 use Ushahidi\Tests\Unit\Modules\V2\ImportMock;
-use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
+
 use Ushahidi\Modules\V2\Contracts\ImportMappingRepository;
-use Ushahidi\Contracts\Repository\Entity\ContactRepository;
 
 /**
  * @backupGlobals disabled

@@ -7,6 +7,8 @@ use Ushahidi\Core\Entity\ConfigRepository;
 
 class FeatureManager
 {
+    protected $configRepo;
+
     /**
      * Cache lifetime in seconds
      */

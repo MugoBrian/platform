@@ -14,24 +14,16 @@
 namespace Ushahidi\Core\Ohanzee\Repositories;
 
 use Ohanzee\DB;
-use Illuminate\Support\Str;
+use Illuminate\Support\Collection;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Hasher;
-use Ushahidi\Core\Entity\User;
-use Ushahidi\Core\Concerns\Event;
-use Ushahidi\Core\Entity\Contact;
-use Illuminate\Support\Collection;
-use Ushahidi\Core\Tool\SearchData;
-use Illuminate\Support\Facades\Crypt;
-use Illuminate\Contracts\Encryption\DecryptException;
-use Ushahidi\Contracts\Repository\Usecase\UserRegisterRepository;
-use Ushahidi\Contracts\Repository\Usecase\UserResetPasswordRepository;
 use Ushahidi\Core\Entity\UserRepository as UserRepositoryContract;
+use Ushahidi\Core\Concerns\Event;
+use Ushahidi\Core\Tool\SearchData;
+use Ushahidi\Core\Ohanzee\Entities\User;
+use Ushahidi\Core\Ohanzee\Entities\Contact;
 
-class UserRepository extends OhanzeeRepository implements
-    UserRepositoryContract,
-    UserRegisterRepository,
-    UserResetPasswordRepository
+class UserRepository extends OhanzeeRepository implements UserRepositoryContract
 {
     /**
      * @var Hasher
@@ -312,7 +304,7 @@ class UserRepository extends OhanzeeRepository implements
     /**
      * Pass User count to Intercom
      * takes a postive/negative offset by which to increase/decrease count for create/delete
-     * @param Integer $offset
+     * @param integer $offset
      * @return void
      */
     protected function updateIntercomAdminUsers($user)

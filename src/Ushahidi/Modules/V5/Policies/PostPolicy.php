@@ -2,22 +2,24 @@
 
 namespace Ushahidi\Modules\V5\Policies;
 
-use Ushahidi\Modules\V5\Models\Post\Post;
+use Ushahidi\Contracts\Entity as EntityContract;
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity;
-use Ushahidi\Contracts\Permission;
+use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ParentAccess;
-use Ushahidi\Core\Concerns\Acl as AccessControlList;
+use Ushahidi\Core\Concerns\Acl as AccessControl;
 use Ushahidi\Core\Concerns\PrivateDeployment;
-use Ushahidi\Contracts\Entity as EntityContract;
+use Ushahidi\Core\Ohanzee\Entities\{
+    Post as OhanzeePost,
+    Form as OhanzeeForm
+};
+use Ushahidi\Modules\V5\Models\Post\Post as EloquentPost;
 
 class PostPolicy
 {
-
     // The access checks are run under the context of a specific user
     use UserContext;
 
@@ -32,7 +34,7 @@ class PostPolicy
     use PrivateDeployment;
 
     // Check that the user has the necessary permissions
-    use AccessControlList;
+    use AccessControl;
     use ParentAccess;
     use OwnerAccess;
 
@@ -44,18 +46,53 @@ class PostPolicy
     // It requires a `FormRepository` to load parent posts too.
     protected $post_repo;
 
-    /**
-     *
-     * @param  \Ushahidi\Modules\User  $user
-     * @return bool
-     */
     public function index()
     {
-        $empty_form = new Entity\Form();
+        $empty_form = new OhanzeeForm();
         return $this->isAllowed($empty_form, 'search');
     }
 
-    private function getPostArray(Post $post)
+    public function show(User $user, EloquentPost $post)
+    {
+        $post_entity = new OhanzeePost($this->getPostArray($post));
+        return $this->isAllowed($post_entity, 'read');
+    }
+
+    public function update(User $user, EloquentPost $post)
+    {
+        $post_entity = new OhanzeePost($this->getPostArray($post));
+        // we convert to a form entity to be able to continue using the old authorizers and classes.
+        return $this->isAllowed($post_entity, 'update');
+    }
+
+    public function delete(User $user, EloquentPost $post)
+    {
+        $post_entity = new OhanzeePost($this->getPostArray($post));
+        return $this->isAllowed($post_entity, 'delete');
+    }
+
+    public function patch(User $user, EloquentPost $post)
+    {
+        $post_entity = new OhanzeePost($this->getPostArray($post));
+        // we convert to a form entity to be able to continue using the old authorizers and classes.
+        return $this->isAllowed($post_entity, 'update');
+    }
+
+    public function changeStatus(User $user, EloquentPost $post)
+    {
+        $post_entity = new OhanzeePost($this->getPostArray($post));
+        // we convert to a form entity to be able to continue using the old authorizers and classes.
+        return $this->isAllowed($post_entity, 'update');
+    }
+
+    public function store(User $user, $form_id, $user_id)
+    {
+        // we convert to a form entity to be able to continue using the old authorizers and classes.
+        $post_entity = new OhanzeePost(['form_id' => $form_id, 'user_id' => $user_id]);
+        return $this->isAllowed($post_entity, 'create');
+    }
+
+    private function getPostArray(EloquentPost $post)
     {
         $data = $post->toArray();
         unset($data["completed_stages"]);
@@ -66,70 +103,7 @@ class PostPolicy
         unset($data["categories"]);
         return $data;
     }
-    /**
-     *
-     * @param GenericUser $user
-     * @param Post $post
-     * @return bool
-     */
-    public function show(User $user, Post $post)
-    {
-        $post_entity = new Entity\Post($this->getPostArray($post));
-        return $this->isAllowed($post_entity, 'read');
-    }
 
-    /**
-     *
-     * @param GenericUser $user
-     * @param Post $post
-     * @return bool
-     */
-    public function delete(User $user, Post $post)
-    {
-        $post_entity = new Entity\Post($this->getPostArray($post));
-        return $this->isAllowed($post_entity, 'delete');
-    }
-    /**
-     * @param Post $post
-     * @return bool
-     */
-    public function update(User $user, Post $post)
-    {
-        $post_entity = new Entity\Post($this->getPostArray($post));
-        // we convert to a form entity to be able to continue using the old authorizers and classes.
-        return $this->isAllowed($post_entity, 'update');
-    }
-    /**
-     * @param Post $post
-     * @return bool
-     */
-    public function patch(User $user, Post $post)
-    {
-        $post_entity = new Entity\Post($this->getPostArray($post));
-        // we convert to a form entity to be able to continue using the old authorizers and classes.
-        return $this->isAllowed($post_entity, 'update');
-    }
-    /**
-     * @param Post $post
-     * @return bool
-     */
-    public function changeStatus(User $user, Post $post)
-    {
-        $post_entity = new Entity\Post($this->getPostArray($post));
-        // we convert to a form entity to be able to continue using the old authorizers and classes.
-        return $this->isAllowed($post_entity, 'update');
-    }
-
-    /**
-     * @param Post $post
-     * @return bool
-     */
-    public function store(User $user, $form_id, $user_id)
-    {
-        // we convert to a form entity to be able to continue using the old authorizers and classes.
-        $post_entity = new Entity\Post(['form_id' => $form_id, 'user_id' => $user_id]);
-        return $this->isAllowed($post_entity, 'create');
-    }
     /**
      * @param $entity
      * @param string $privilege
@@ -242,10 +216,8 @@ class PostPolicy
 
     /**
      * Check if a form is disabled.
-     * @param  Entity $entity
-     * @return Boolean
      */
-    protected function isFormDisabled(Entity\Post $entity)
+    protected function isFormDisabled(OhanzeeForm $entity)
     {
         return (bool) $entity->disabled;
     }
@@ -254,8 +226,8 @@ class PostPolicy
     {
         // If the post has a parent_id, we attempt to load it from the `PostRepository`
         if ($entity->parent_id) {
-            $parent = Post::find($entity->parent_id);
-            return new Entity\Post($parent->toArray());
+            $parent = EloquentPost::find($entity->parent_id);
+            return new OhanzeePost($parent->toArray());
         }
 
         return false;
@@ -282,6 +254,7 @@ class PostPolicy
 
         return true;
     }
+
     protected function isPostPublishedToUser(EntityContract $entity, $user)
     {
         if ($entity->status === 'published' && $this->isUserOfRole($entity, $user)) {

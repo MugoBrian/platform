@@ -3,20 +3,17 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity\User as StaticUser;
+use Ushahidi\Core\Ohanzee\Entities\User as StaticUser;
 use Ushahidi\Modules\V5\Models\User as EloquentUser;
-use Ushahidi\Contracts\Permission;
+use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
-use Ushahidi\Core\Concerns\Acl as AccessControlList;
+use Ushahidi\Core\Concerns\Acl as AccessControl;
 use Ushahidi\Core\Tool\Acl;
 
 class UserPolicy
 {
-
-
-
     // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
     use PrivAccess;
 
@@ -27,7 +24,7 @@ class UserPolicy
     use PrivateDeployment;
 
     // Check that the user has the necessary permissions
-    use AccessControlList;
+    use AccessControl;
 
     protected $user;
 
@@ -51,11 +48,7 @@ class UserPolicy
 
         return $this->isAllowed($entity, 'delete');
     }
-    /**
-     * @param User $user
-     * @param ModelUser $model_user
-     * @return bool
-     */
+
     public function update(User $user, EloquentUser $eloquentUser): bool
     {
         $entity = new StaticUser();
