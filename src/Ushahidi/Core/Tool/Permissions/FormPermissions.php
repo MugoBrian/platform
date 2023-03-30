@@ -13,12 +13,12 @@ namespace Ushahidi\Core\Tool\Permissions;
 
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Entity\Permission;
-use Ushahidi\Core\Concerns\Acl as AccessControlList;
+use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
 
 class FormPermissions
 {
-    use AccessControlList;
+    use ControlAccess;
     use AdminAccess;
 
     /**

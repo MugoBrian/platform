@@ -10,13 +10,15 @@ use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Ohanzee\Entities;
 use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Modules\V5\Models\Survey;
-use Ushahidi\Core\Concerns\Acl as AccessControl;
+use Ushahidi\Core\Concerns\ControlAccess;
 
 class SurveyPolicy
 {
-
     // The access checks are run under the context of a specific user
     use UserContext;
+
+    // Check that the user has the necessary permissions
+    use ControlAccess;
 
     // It uses methods from several traits to check access:
     // - `AdminAccess` to check if the user has admin access
@@ -27,9 +29,6 @@ class SurveyPolicy
 
     // It uses `PrivateDeployment` to check whether a deployment is private
     use PrivateDeployment;
-
-    // Check that the user has the necessary permissions
-    use AccessControl;
 
     protected $user;
 

@@ -342,7 +342,7 @@ class CoreConfig extends ContainerConfig
             = $di->lazyNew(\Ushahidi\Core\Tool\Permissions\FormPermissions::class);
 
         // Set ACL for ACL Trait
-        $di->setters[\Ushahidi\Core\Concerns\Acl::class]['setAcl'] = $di->lazyGet('tool.acl');
+        $di->setters[\Ushahidi\Core\Concerns\ControlAccess::class]['setAcl'] = $di->lazyGet('tool.acl');
 
         // Tools
         $di->set('tool.signer', $di->lazyNew(\Ushahidi\Core\Tool\Signer::class));
@@ -355,8 +355,8 @@ class CoreConfig extends ContainerConfig
             'multisite' => $di->lazyGet('multisite'),
         ];
 
-        $di->set('tool.acl', $di->lazyNew(\Ushahidi\Core\Tool\Acl::class));
-        $di->setters[\Ushahidi\Core\Tool\Acl::class]['setRoleRepo'] = $di->lazyGet('repository.role');
+        $di->set('tool.acl', $di->lazyNew(\Ushahidi\Core\Tool\AccessControl::class));
+        $di->setters[\Ushahidi\Core\Tool\AccessControl::class]['setRoleRepo'] = $di->lazyGet('repository.role');
 
         $di->set('tool.hasher.password', $di->lazyNew(\Ushahidi\Core\Tool\Hasher\Password::class));
         $di->set('tool.authenticator.password', $di->lazyNew(\Ushahidi\Core\Tool\Authenticator\Password::class));

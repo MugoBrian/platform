@@ -3,7 +3,8 @@ namespace Ushahidi\Core\Entity;
 
 use Ushahidi\Contracts\Entity;
 
-interface Form extends Entity {
+interface Form extends Entity
+{
 
     const DEFAULT_TYPE = 'report';
     const DEFAULT_REQUIRE_APPROVAL = 1;

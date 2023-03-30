@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Modules\V5\Policies;
 
-use Ushahidi\Core\Tool\Acl;
+use Ushahidi\Core\Tool\AccessControl;
 use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Core\Ohanzee\Entities\Tag as StaticCategory;
 use Ushahidi\Modules\V5\Models\Category as EloquentCategory;

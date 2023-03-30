@@ -9,11 +9,13 @@ use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
-use Ushahidi\Core\Concerns\Acl as AccessControl;
-use Ushahidi\Core\Tool\Acl;
+use Ushahidi\Core\Concerns\ControlAccess;
 
 class UserPolicy
 {
+    // Check that the user has the necessary permissions
+    use ControlAccess;
+
     // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
     use PrivAccess;
 
@@ -22,9 +24,6 @@ class UserPolicy
 
     // It uses `PrivateDeployment` to check whether a deployment is private
     use PrivateDeployment;
-
-    // Check that the user has the necessary permissions
-    use AccessControl;
 
     protected $user;
 

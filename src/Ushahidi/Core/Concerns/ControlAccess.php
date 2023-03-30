@@ -13,9 +13,9 @@
 
 namespace Ushahidi\Core\Concerns;
 
-use Ushahidi\Contracts\Acl as AccessControl;
+use Ushahidi\Contracts\AccessControl;
 
-trait Acl
+trait ControlAccess
 {
     public $acl;
 

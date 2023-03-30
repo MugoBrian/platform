@@ -11,7 +11,7 @@ use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\OwnerAccess;
-use Ushahidi\Core\Concerns\Acl as AccessControlList;
+use Ushahidi\Core\Concerns\ControlAccess;
 use Illuminate\Support\Facades\Auth;
 use App\Bus\Query\QueryBus;
 use Ushahidi\Modules\V5\Actions\Collection\Queries\FetchCollectionByIdQuery;
@@ -33,7 +33,7 @@ class CollectionPolicy
     use PrivateDeployment;
 
     // Check that the user has the necessary permissions
-    use AccessControlList;
+    use ControlAccess;
     // It uses `OwnerAccess` to provide  the `isUserOwner` method.
     use OwnerAccess;
 

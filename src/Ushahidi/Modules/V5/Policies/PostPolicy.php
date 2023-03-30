@@ -10,7 +10,7 @@ use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ParentAccess;
-use Ushahidi\Core\Concerns\Acl as AccessControl;
+use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Ohanzee\Entities\{
     Post as OhanzeePost,
@@ -34,8 +34,10 @@ class PostPolicy
     use PrivateDeployment;
 
     // Check that the user has the necessary permissions
-    use AccessControl;
+    use ControlAccess;
+
     use ParentAccess;
+
     use OwnerAccess;
 
     protected $user;

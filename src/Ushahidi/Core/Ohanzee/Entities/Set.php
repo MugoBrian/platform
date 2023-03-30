@@ -92,6 +92,7 @@ class Set extends StaticEntity implements EntitySet
                 "updated" => time()
             ]);
         }
+
         return new Set([
             "user_id" => array_key_exists("user_id", $input) ? $input["user_id"] : Auth::id(),
             "name" => array_key_exists("name", $input) ? $input["name"] : '',
@@ -104,5 +105,4 @@ class Set extends StaticEntity implements EntitySet
             "updated" => time()
         ]);
     }
-
 }

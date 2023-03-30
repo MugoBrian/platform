@@ -16,7 +16,7 @@ use Ushahidi\Core\Facade\Feature;
 use Ushahidi\Core\Concerns\{
     AdminAccess,
     UserContext,
-    Acl as ControlAccess
+    ControlAccess
 };
 use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Entity\TagRepository;

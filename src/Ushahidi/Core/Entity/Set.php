@@ -13,6 +13,9 @@ namespace Ushahidi\Core\Entity;
 
 use Ushahidi\Contracts\Entity;
 
+/**
+ * @property array $role
+ */
 interface Set extends Entity
 {
     const DEFAULT_VIEW = 'list';

@@ -2,9 +2,9 @@
 
 namespace Ushahidi\Authzn;
 
-use Ushahidi\Core\Tool\Acl;
-use Ushahidi\Contracts\Acl as AclInterface;
+use Ushahidi\Contracts\AccessControl as AccessControlContract;
 use Ushahidi\Contracts\Repository\Entity\RoleRepository;
+use Ushahidi\Core\Tool\AccessControl;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
 class ServiceProvider extends BaseServiceProvider
@@ -16,9 +16,9 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
-        $this->app->bind(AclInterface::class, Acl::class);
+        $this->app->bind(AccessControlContract::class, AccessControl::class);
 
-        $this->app->extend(Acl::class, function (Acl $acl) {
+        $this->app->extend(AccessController::class, function (AccessControl $acl) {
             return $acl->setRoleRepo($this->app[RoleRepository::class]);
         });
 

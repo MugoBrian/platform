@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Acl interface
+ * Ushahidi Platform Access Control interface
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform
@@ -11,7 +11,7 @@
 
 namespace Ushahidi\Contracts;
 
-interface Acl
+interface AccessControl
 {
     /**
      * Check if user has permissions
