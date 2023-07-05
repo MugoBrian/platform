@@ -11,13 +11,14 @@
 
 namespace Ushahidi\Core\Tool\Authorizer;
 
+use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Entity\Set;
 use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\ControlAccess;
 
@@ -53,7 +54,7 @@ class SetAuthorizer implements Authorizer
     }
 
     /* Authorizer */
-    public function isAllowed(Set $set, $privilege)
+    public function isAllowed(Entity $set, $privilege)
     {
         // These checks are run within the user context.
         $user = $this->getUser();
