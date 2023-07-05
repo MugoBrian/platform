@@ -13,6 +13,9 @@ namespace Ushahidi\Core\Entity;
 
 use Ushahidi\Contracts\Entity;
 
+/**
+ * @property string|array $role The role(s) of the user
+ */
 interface User extends Entity
 {
     const DEFAULT_LOGINS = 0;

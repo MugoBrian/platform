@@ -12,11 +12,13 @@
 namespace Ushahidi\Core\Entity;
 
 use Ushahidi\Contracts\Entity;
+use Ushahidi\Contracts\OwnableEntity;
 
 /**
+ * @property string $name
  * @property array $role
  */
-interface Set extends Entity
+interface Set extends Entity, OwnableEntity
 {
     const DEFAULT_VIEW = 'list';
 
