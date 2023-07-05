@@ -3,18 +3,16 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity;
-use Ushahidi\Modules\V5\Models\Set;
-use Ushahidi\Contracts\Permission;
+use Ushahidi\Core\Ohanzee\Entities\Set as OhanzeeSet;
+use Ushahidi\Modules\V5\Models\Set as EloquentSet;
+use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\ControlAccess;
-use Illuminate\Support\Facades\Auth;
 use App\Bus\Query\QueryBus;
-use Ushahidi\Modules\V5\Actions\Collection\Queries\FetchCollectionByIdQuery;
 
 class CollectionPolicy
 {
@@ -39,7 +37,6 @@ class CollectionPolicy
 
     protected $user;
 
-
     private $queryBus;
     public function __construct(QueryBus $queryBus)
     {
@@ -52,62 +49,38 @@ class CollectionPolicy
      */
     public function index()
     {
-        $set_entity = new Entity\Set();
+        $set_entity = new OhanzeeSet();
         return $this->isAllowed($set_entity, 'search');
     }
 
-    /**
-     *
-     * @param User $user
-     * @param Set $set
-     * @return bool
-     */
-    public function show(User $user, Set $set)
+    public function show(User $user, EloquentSet $set)
     {
-        $set_entity = new Entity\Set();
+        $set_entity = new OhanzeeSet();
         $set_entity->setState($set->toArray());
         return $this->isAllowed($set_entity, 'read');
     }
 
-    /**
-     *
-     * @param GenericUser $user
-     * @param Set $set
-     * @return bool
-     */
-    public function delete(User $user, Set $set)
+    public function delete(User $user, EloquentSet $set)
     {
-        $set_entity = new Entity\Set();
+        $set_entity = new OhanzeeSet();
         $set_entity->setState($set->toArray());
         return $this->isAllowed($set_entity, 'delete');
     }
-    /**
-     * @param Set $set
-     * @return bool
-     */
-    public function update(User $user, Set $set)
+
+    public function update(User $user, EloquentSet $set)
     {
-        // we convert to a form entity to be able to continue using the old authorizers and classes.
-        $set_entity = new Entity\Set($set->toArray());
+        $set_entity = new OhanzeeSet();
+        $set_entity->setState($set->toArray());
         return $this->isAllowed($set_entity, 'update');
     }
 
-
-    /**
-     * @param Survey $set
-     * @return bool
-     */
     public function store()
     {
         // we convert to a form entity to be able to continue using the old authorizers and classes.
-        $set_entity = new Entity\Set();
+        $set_entity = new OhanzeeSet();
         return $this->isAllowed($set_entity, 'create');
     }
-    /**
-     * @param $entity
-     * @param string $privilege
-     * @return bool
-     */
+
     public function isAllowed($entity, $privilege)
     {
         $authorizer = service('authorizer.set');
@@ -128,7 +101,7 @@ class CollectionPolicy
         // Non-admin users are not allowed to change collection featured
         $old_values = [];
         if ($entity->id) {
-            $old_set = Set::where('id', '=', $entity->id)->first();
+            $old_set = EloquentSet::where('id', '=', $entity->id)->first();
             $old_values = $old_set->toArray();
         }
         if (in_array($privilege, ['create', 'update'])
@@ -172,7 +145,7 @@ class CollectionPolicy
         return false;
     }
 
-    protected function isVisibleToUser(Entity\Set $entity, $user)
+    protected function isVisibleToUser(OhanzeeSet $entity, $user)
     {
         if ($entity->role) {
             return in_array($user->role, $entity->role);
