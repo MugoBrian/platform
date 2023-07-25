@@ -15,6 +15,7 @@ namespace Ushahidi\Core\Concerns;
 
 use Ushahidi\Contracts\Entity;
 
+// TODO: Rename to AccessPrivilege
 trait PrivAccess
 {
     /**
