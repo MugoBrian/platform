@@ -14,7 +14,7 @@ namespace Ushahidi\Core\Tool\Authorizer;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Entity\Permission;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Entity\TagRepository;
@@ -36,8 +36,8 @@ class TagAuthorizer implements Authorizer
     // Adds isAllowedParent() method
     use ParentAccess;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // It uses `PrivateDeployment` to check whether a deployment is private
     use PrivateDeployment;

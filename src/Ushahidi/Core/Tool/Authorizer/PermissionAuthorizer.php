@@ -15,14 +15,14 @@ use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 
 class PermissionAuthorizer implements Authorizer
 {
     use UserContext;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // Check if user has Admin access
     use AdminAccess;

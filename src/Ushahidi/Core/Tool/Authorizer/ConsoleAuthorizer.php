@@ -13,7 +13,7 @@ namespace Ushahidi\Core\Tool\Authorizer;
 
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\UserContext;
 
 // The `ConsoleAuthorizer` class is responsible for access checks for console tasks
@@ -23,8 +23,8 @@ class ConsoleAuthorizer implements Authorizer
     // @todo refactor to avoid including this. CLI doesn't have a user context
     use UserContext;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     /* Authorizer */
     public function isAllowed(Entity $entity, $privilege)

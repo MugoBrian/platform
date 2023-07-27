@@ -19,8 +19,8 @@ trait AdminOnlyAccess
     // It uses `AdminAccess` to check if the user has admin access
     use AdminAccess;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method
+    use AccessPrivileges;
 
     /**
      * Allows full access only if the user is an admin

@@ -15,8 +15,7 @@ namespace Ushahidi\Core\Concerns;
 
 use Ushahidi\Contracts\Entity;
 
-// TODO: Rename to AccessPrivilege
-trait PrivAccess
+trait AccessPrivileges
 {
     /**
      * Get a list of all possible privilges.

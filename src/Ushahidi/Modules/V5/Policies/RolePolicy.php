@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Policies;
 use Ushahidi\Modules\V5\Models\Role;
 use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Core\Concerns\AdminAccess;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\UserContext;
 
 class RolePolicy
@@ -14,8 +14,8 @@ class RolePolicy
 
     use UserContext;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // Check if user has Admin access
     use AdminAccess;

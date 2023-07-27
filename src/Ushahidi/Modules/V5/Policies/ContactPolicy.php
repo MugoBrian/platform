@@ -7,7 +7,7 @@ use Ushahidi\Core\Ohanzee\Entities\Contact as OhanzeeContact;
 use Ushahidi\Modules\V5\Models\Contact as EloquentContact;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\ControlAccess;
@@ -22,8 +22,8 @@ class ContactPolicy
     // - `AdminAccess` to check if the user has admin access
     use AdminAccess;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // It uses `PrivateDeployment` to check whether a deployment is private
     use PrivateDeployment;

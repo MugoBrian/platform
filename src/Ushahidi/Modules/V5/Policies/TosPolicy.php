@@ -6,7 +6,7 @@ use Ushahidi\Modules\V5\Models\Tos;
 use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Modules\V5\Common\OwnerAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 
 class TosPolicy
@@ -15,8 +15,8 @@ class TosPolicy
     // - `AdminAccess` to check if the user has admin access
     use AdminAccess;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // It uses `PrivateDeployment` to check whether a deployment is private
     use PrivateDeployment;

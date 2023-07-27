@@ -16,7 +16,7 @@ use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\ControlAccess;
 
 // The `ConfigAuthorizer` class is responsible for access checks on `Config` Entities
@@ -28,8 +28,8 @@ class ConfigAuthorizer implements Authorizer
     // It uses `AdminAccess` to check if the user has admin access
     use AdminAccess;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // Check that the user has the necessary permissions
     // if roles are available for this deployment.

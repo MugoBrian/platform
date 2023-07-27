@@ -17,7 +17,7 @@ use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Entity\Permission;
-use Ushahidi\Core\Concerns\PrivAccess;
+use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\ControlAccess;
 
@@ -32,8 +32,8 @@ class ExportJobAuthorizer implements Authorizer
     // To check whether user owns the webhook
     use OwnerAccess;
 
-    // It uses `PrivAccess` to provide the `getAllowedPrivs` method.
-    use PrivAccess;
+    // It uses `AccessPrivileges` to provide the `getAllowedPrivs` method.
+    use AccessPrivileges;
 
     // It uses `PrivateDeployment` to check whether a deployment is private
     use PrivateDeployment;
