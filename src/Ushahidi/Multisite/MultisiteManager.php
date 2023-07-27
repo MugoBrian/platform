@@ -132,10 +132,6 @@ class MultisiteManager
         ));
     }
 
-    /**
-     * @param Site $site
-     * @return void
-     */
     public function setSite(Site $site)
     {
         $this->currentSite = $site;

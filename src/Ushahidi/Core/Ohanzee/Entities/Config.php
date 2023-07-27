@@ -11,8 +11,8 @@
 
 namespace Ushahidi\Core\Ohanzee\Entities;
 
+use Ushahidi\Core\Ohanzee\DynamicEntity;
 use Ushahidi\Core\Entity\Config as EntityConfig;
-use Ushahidi\Core\DynamicEntity;
 
 class Config extends DynamicEntity implements EntityConfig
 {

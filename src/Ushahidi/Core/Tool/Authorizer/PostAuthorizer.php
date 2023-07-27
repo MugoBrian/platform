@@ -11,9 +11,10 @@
 
 namespace Ushahidi\Core\Tool\Authorizer;
 
-use Ushahidi\Contracts\Authorizer;
-use Ushahidi\Core\Entity\User;
+use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Entity\Post;
+use Ushahidi\Core\Entity\User;
+use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Concerns\PrivAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
@@ -21,10 +22,10 @@ use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Contracts\ParentableEntity;
 use Ushahidi\Core\Concerns\ParentAccess;
-use Ushahidi\Core\Concerns\PrivateDeployment;
-use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Entity\FormRepository;
 use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Concerns\ControlAccess;
+use Ushahidi\Core\Concerns\PrivateDeployment;
 
 // The `PostAuthorizer` class is responsible for access checks on `Post` Entities
 class PostAuthorizer implements Authorizer

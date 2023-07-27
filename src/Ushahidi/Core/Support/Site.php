@@ -9,15 +9,18 @@
  * @license    https://www.gnu.org/licenses/agpl-3.0.html GNU Affero General Public License Version 3 (AGPL3)
  */
 
-namespace Ushahidi\Core\Entity;
+namespace Ushahidi\Core\Support;
 
-use Ushahidi\Core\StaticEntity;
+use Ushahidi\Contracts\Entity;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Request;
+use Ushahidi\Core\Concerns\StatefulData;
 use Ushahidi\Contracts\Repository\Entity\ConfigRepository;
 
-class Site extends StaticEntity
+class Site implements Entity
 {
+    use StatefulData;
+
     /**
      * Cache lifetime in seconds
      */
@@ -110,5 +113,42 @@ class Site extends StaticEntity
         }
 
         return (object) $siteConfig;
+    }
+
+    public function asArray()
+    {
+        return get_object_vars($this);
+    }
+
+    /**
+     * Transparent access to private entity properties.
+     *
+     * @param  string  $key
+     * @return mixed
+     */
+    public function __get($key)
+    {
+        if (property_exists($this, $key)) {
+            return $this->$key;
+        }
+    }
+
+    /**
+     * Transparent checking of private entity properties.
+     *
+     * @param  string  $key
+     * @return mixed
+     */
+    public function __isset($key)
+    {
+        return property_exists($this, $key);
+    }
+
+    // StatefulData
+    protected function setStateValue($key, $value)
+    {
+        if (property_exists($this, $key)) {
+            $this->$key = $value;
+        }
     }
 }

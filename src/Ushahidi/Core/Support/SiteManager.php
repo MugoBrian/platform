@@ -1,10 +1,9 @@
 <?php
 
-namespace Ushahidi\Core\Tool;
+namespace Ushahidi\Core\Support;
 
-use Ushahidi\Core\Entity\Site;
 use Illuminate\Support\Facades\Cache;
-use Ushahidi\Contracts\Repository\Entity\ConfigRepository;
+use Ushahidi\Core\Entity\ConfigRepository;
 
 class SiteManager
 {

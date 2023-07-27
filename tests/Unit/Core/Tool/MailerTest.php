@@ -12,8 +12,8 @@ namespace Ushahidi\Tests\Unit\Core\Tool;
 
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\Site;
 use Ushahidi\Core\Tool\Mailer;
+use Ushahidi\Core\Support\Site;
 
 /**
  * @backupGlobals disabled

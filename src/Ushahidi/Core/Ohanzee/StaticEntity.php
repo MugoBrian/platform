@@ -14,6 +14,7 @@
 namespace Ushahidi\Core\Ohanzee;
 
 use Ushahidi\Contracts\Entity;
+use Ushahidi\Core\Concerns\StatefulData;
 
 abstract class StaticEntity implements Entity
 {

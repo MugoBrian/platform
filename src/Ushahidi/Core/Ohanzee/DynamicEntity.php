@@ -12,9 +12,10 @@
  * @license    https://www.gnu.org/licenses/agpl-3.0.html GNU Affero General Public License Version 3 (AGPL3)
  */
 
-namespace Ushahidi\Core;
+namespace Ushahidi\Core\Ohanzee;
 
 use Ushahidi\Contracts\Entity;
+use Ushahidi\Core\Concerns\StatefulData;
 
 abstract class DynamicEntity implements Entity
 {

@@ -8,7 +8,7 @@
 
 namespace Ushahidi\Tests\Unit\Core\Entity;
 
-use Ushahidi\Core\Tool\StatefulData;
+use Ushahidi\Core\Concerns\StatefulData;
 
 class MockPostEntity
 {

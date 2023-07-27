@@ -18,7 +18,7 @@ use League\OAuth2\Server\ResourceServer;
 use Illuminate\Contracts\Encryption\Encrypter;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use League\OAuth2\Server\Exception\OAuthServerException as LeagueException;
-use Ushahidi\Contracts\Repository\Entity\UserRepository;
+use Ushahidi\Core\Entity\UserRepository;
 use Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory;
 use Laravel\Passport\ClientRepository as LaravelPassportClientRepository;
 

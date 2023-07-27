@@ -11,7 +11,7 @@ use Illuminate\Contracts\Container\Container;
 class CommandBus implements Bus
 {
     /**
-     * @var Array<Command>
+     * @var array
      */
     private $commands;
 

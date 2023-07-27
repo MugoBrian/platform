@@ -19,6 +19,7 @@ class HXLAttribute extends StaticEntity
     protected $tag_name;
     protected $hxl_attributes;
     protected $form_attribute_types;
+
     // DataTransformer
     public function getDefinition()
     {

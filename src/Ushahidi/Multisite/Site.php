@@ -13,7 +13,7 @@ namespace Ushahidi\Multisite;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Ushahidi\Core\Entity\Site as BaseSite;
+use Ushahidi\Core\Support\Site as BaseSite;
 
 class Site extends BaseSite
 {

@@ -2,7 +2,7 @@
 
 namespace App\Providers;
 
-use Ushahidi\Core\Tool\SiteManager;
+use Ushahidi\Core\Support\SiteManager;
 use Ushahidi\Addons\Mteja\MtejaSource;
 use Ushahidi\Core\Tool\FeatureManager;
 use Illuminate\Support\ServiceProvider;

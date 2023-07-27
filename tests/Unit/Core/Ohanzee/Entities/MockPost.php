@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Tests\Unit\Core\Ohanzee\Entities;
 
-use Ushahidi\Core\Tool\StatefulData;
+use Ushahidi\Core\Concerns\StatefulData;
 
 class MockPost
 {
