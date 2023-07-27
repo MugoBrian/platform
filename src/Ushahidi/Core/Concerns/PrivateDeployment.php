@@ -13,7 +13,7 @@
 
 namespace Ushahidi\Core\Concerns;
 
-use Ushahidi\Core\Facade\Feature;
+use Ushahidi\Core\Support\Facades\Feature;
 use Ushahidi\Core\Concerns\UsesSiteInfo;
 
 trait PrivateDeployment

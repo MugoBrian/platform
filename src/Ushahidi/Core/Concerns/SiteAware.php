@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Core\Concerns;
 
-use Ushahidi\Core\Facade\Site;
+use Ushahidi\Core\Support\Facades\Site;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Queue\SerializesModels;

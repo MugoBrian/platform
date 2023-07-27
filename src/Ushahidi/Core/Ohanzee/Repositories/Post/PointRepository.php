@@ -15,7 +15,7 @@ use Ohanzee\DB;
 use Ohanzee\Database;
 use Symm\Gisconverter\Decoders\WKT;
 use Symm\Gisconverter\Geometry\Point;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Symm\Gisconverter\Exceptions\InvalidText;
 use Ushahidi\Core\Ohanzee\Entities\PostValue;
 

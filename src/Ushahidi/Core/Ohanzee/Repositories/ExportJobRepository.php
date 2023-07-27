@@ -16,6 +16,7 @@ use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Tool\SearchData;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Event;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Entity\ExportBatch;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
@@ -42,7 +43,7 @@ class ExportJobRepository extends OhanzeeRepository implements ExportJobReposito
 
     protected $post_repo;
 
-    public function __construct(\Ushahidi\Core\Tool\OhanzeeResolver $resolver, PostRepository $post_repo)
+    public function __construct(OhanzeeResolver $resolver, PostRepository $post_repo)
     {
         parent::__construct($resolver);
 

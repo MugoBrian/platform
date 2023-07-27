@@ -1,9 +1,12 @@
 <?php
 
-namespace Ushahidi\Core\Facade;
+namespace Ushahidi\Core\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
+/**
+ * @see \Ushahidi\Core\Support\SiteManager
+ */
 class Site extends Facade
 {
     /**

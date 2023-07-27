@@ -12,7 +12,7 @@ namespace Ushahidi\Modules\V3\Console;
 
 use Illuminate\Console\Command;
 use Ushahidi\Core\Tool\Signer;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 
 class WebhookCommand extends Command
 {

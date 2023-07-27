@@ -20,7 +20,7 @@ class UserRepositoryTest extends TestCase
     public function testGetResetToken()
     {
         $db = M::mock(\Ohanzee\Database::class);
-        $resolver = M::mock(\Ushahidi\Core\Tool\OhanzeeResolver::class);
+        $resolver = M::mock(\Ushahidi\Core\Ohanzee\Resolver::class);
         $resolver->shouldReceive('connection')->andReturn($db);
 
         $repo = new UserRepository($resolver);

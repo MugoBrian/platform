@@ -15,7 +15,7 @@ use Faker;
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Multisite\Facade\Multisite;
 
 class ObfuscateDataCommand extends Command

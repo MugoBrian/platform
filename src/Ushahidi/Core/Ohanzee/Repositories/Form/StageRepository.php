@@ -13,6 +13,7 @@ namespace Ushahidi\Core\Ohanzee\Repositories\Form;
 
 use Ohanzee\DB;
 use Ohanzee\Database;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entities\FormStage;
 use Ushahidi\Core\Entity\FormStageRepository as FormStageRepositoryContract;
@@ -33,7 +34,7 @@ class StageRepository extends OhanzeeRepository implements
     protected $form_repo;
 
     public function __construct(
-        \Ushahidi\Core\Tool\OhanzeeResolver $resolver,
+        OhanzeeResolver $resolver,
         FormRepositoryContract $form_repo
     ) {
 

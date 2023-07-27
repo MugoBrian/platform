@@ -1,11 +1,11 @@
 <?php
 
-namespace Ushahidi\Core\Facade;
+namespace Ushahidi\Core\Support\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Ushahidi\Core\Tool\FeatureManager
+ * @see \Ushahidi\Core\Support\FeatureManager
  */
 class Feature extends Facade
 {

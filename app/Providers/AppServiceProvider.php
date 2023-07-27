@@ -2,13 +2,11 @@
 
 namespace App\Providers;
 
-use Ushahidi\Core\Support\SiteManager;
-use Ushahidi\Addons\Mteja\MtejaSource;
-use Ushahidi\Core\Tool\FeatureManager;
 use Illuminate\Support\ServiceProvider;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Support\SiteManager;
+use Ushahidi\Core\Support\FeatureManager;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Usecase\Export\Job\PostCount;
-use Ushahidi\Addons\AfricasTalking\AfricasTalkingSource;
 use Ushahidi\Contracts\Repository\Entity\PostRepository;
 use Ushahidi\Contracts\Repository\Entity\UserRepository;
 use Ushahidi\Contracts\Repository\Entity\ConfigRepository;
@@ -42,6 +40,8 @@ use Ushahidi\Modules\V5\Repository\Media;
 use Ushahidi\Modules\V5\Repository\Apikey;
 use Ushahidi\Modules\V5\Repository\Webhook;
 use Ushahidi\Modules\V5\Repository\HXL;
+use Ushahidi\Addons\Mteja\MtejaSource;
+use Ushahidi\Addons\AfricasTalking\AfricasTalkingSource;
 
 class AppServiceProvider extends ServiceProvider
 {

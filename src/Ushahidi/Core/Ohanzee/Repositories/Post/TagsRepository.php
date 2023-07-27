@@ -13,7 +13,7 @@ namespace Ushahidi\Core\Ohanzee\Repositories\Post;
 
 use Ohanzee\DB;
 use Ushahidi\Core\Entity\TagRepository;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 
 class TagsRepository extends ValueRepository
 {

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Multisite\Middleware\DetectSite;
 use Ushahidi\Multisite\Middleware\MaintenanceMode;
 use Ushahidi\Multisite\Middleware\CheckDemoExpiration;

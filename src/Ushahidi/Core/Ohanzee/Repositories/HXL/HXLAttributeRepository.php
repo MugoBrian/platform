@@ -12,6 +12,7 @@
 namespace Ushahidi\Core\Ohanzee\Repositories\HXL;
 
 use Ohanzee\Database;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Entity\HXL\HXLAttribute;
 use Ushahidi\Core\Ohanzee\Repositories\OhanzeeRepository;
@@ -26,7 +27,7 @@ class HXLAttributeRepository extends OhanzeeRepository implements
 {
     private $tags_attributes;
 
-    public function __construct(\Ushahidi\Core\Tool\OhanzeeResolver $resolver)
+    public function __construct(OhanzeeResolver $resolver)
     {
         parent::__construct($resolver);
     }

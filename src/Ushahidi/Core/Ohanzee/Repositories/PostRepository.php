@@ -20,7 +20,7 @@ use Illuminate\Support\Collection;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Tool\BoundingBox;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Entity\FormRepository;
 use Ushahidi\Core\Ohanzee\Entities\Post;
 use Ushahidi\Core\Ohanzee\Entities\Media;

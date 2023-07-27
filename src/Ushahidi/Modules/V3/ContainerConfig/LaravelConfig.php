@@ -51,7 +51,7 @@ class LaravelConfig extends ContainerConfig
 
         // Abstract repository parameters
         $di->set('db.ohanzee.resolver', $di->lazy(function () {
-            return app(\Ushahidi\Core\Tool\OhanzeeResolver::class);
+            return app(\Ushahidi\Core\Ohanzee\Resolver::class);
         }));
 
         // Configure dispatcher

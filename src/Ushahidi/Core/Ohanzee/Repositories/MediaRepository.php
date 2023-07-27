@@ -14,6 +14,7 @@ namespace Ushahidi\Core\Ohanzee\Repositories;
 use Ushahidi\Core\Tool\Uploader;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entities\Media;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Entity\MediaRepository as MediaRepositoryContract;
 
 class MediaRepository extends OhanzeeRepository implements
@@ -26,7 +27,7 @@ class MediaRepository extends OhanzeeRepository implements
 
     private $deleted_media;
 
-    public function __construct(\Ushahidi\Core\Tool\OhanzeeResolver $resolver, Uploader $upload)
+    public function __construct(OhanzeeResolver $resolver, Uploader $upload)
     {
         parent::__construct($resolver);
 

@@ -11,7 +11,7 @@
 
 namespace Ushahidi\Core\Concerns;
 
-use Ushahidi\Core\Facade\Site;
+use Ushahidi\Core\Support\Facades\Site;
 
 trait UsesSiteInfo
 {

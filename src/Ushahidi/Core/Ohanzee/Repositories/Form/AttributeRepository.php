@@ -17,8 +17,9 @@ use Ramsey\Uuid\Uuid;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Search;
 use Illuminate\Support\Collection;
-use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Concerns\UserContext;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
+use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entities\FormAttribute;
 use Ushahidi\Core\Ohanzee\Repositories\OhanzeeRepository;
 use Ushahidi\Core\Ohanzee\Repositories\Concerns\FormsTags;
@@ -52,7 +53,7 @@ class AttributeRepository extends OhanzeeRepository implements
     protected $form_id;
 
     public function __construct(
-        \Ushahidi\Core\Tool\OhanzeeResolver $resolver,
+        OhanzeeResolver $resolver,
         FormStageRepositoryContract $form_stage_repo,
         FormRepositoryContract $form_repo
     ) {

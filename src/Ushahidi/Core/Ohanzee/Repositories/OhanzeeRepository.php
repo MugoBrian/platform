@@ -16,7 +16,7 @@ use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Search;
 use Ushahidi\Contracts\Repository;
 use Ushahidi\Core\Tool\SearchData;
-use Ushahidi\Core\Tool\OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 
 abstract class OhanzeeRepository implements
     Repository\CreateRepository,
