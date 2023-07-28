@@ -11,7 +11,7 @@ use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Modules\V5\Models\Message as EloquentMessage;
-use Ushahidi\Core\Ohanzee\Entities\Message as OhanzeeMessage;
+use Ushahidi\Core\Ohanzee\Entity\Message as OhanzeeMessage;
 
 class MessagePolicy
 {

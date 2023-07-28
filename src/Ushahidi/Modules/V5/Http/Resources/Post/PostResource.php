@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\Post;
 
 use Illuminate\Support\Collection;
-use Ushahidi\Core\Ohanzee\Entities\Post;
+use Ushahidi\Core\Ohanzee\Entity\Post;
 use Ushahidi\Modules\V5\Models\Post\Post as v5Post;
 use Ushahidi\Modules\V5\Http\Resources\BaseResource;
 use Ushahidi\Modules\V5\Http\Resources\LockCollection;

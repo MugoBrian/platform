@@ -6,7 +6,7 @@ use Ushahidi\Modules\V2\Import;
 use Illuminate\Support\Collection;
 use Ushahidi\Modules\V2\Contracts\Mapper;
 use Ushahidi\Core\Entity\ContactRepository;
-use Ushahidi\Core\Ohanzee\Entities\Message;
+use Ushahidi\Core\Ohanzee\Entity\Message;
 use Ushahidi\Modules\V2\Contracts\ImportMappingRepository;
 
 class MessageMapper implements Mapper

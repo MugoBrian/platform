@@ -7,7 +7,7 @@ use Ushahidi\Modules\V2\Import;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use League\Flysystem\Util\MimeType;
-use Ushahidi\Core\Ohanzee\Entities\Post;
+use Ushahidi\Core\Ohanzee\Entity\Post;
 use Ushahidi\Modules\V2\Contracts\Mapper;
 use Ushahidi\Core\Entity\FormAttributeRepository;
 use Ushahidi\Modules\V2\Contracts\ImportDataTools;

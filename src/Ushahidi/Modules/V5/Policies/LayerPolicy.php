@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Ohanzee\Entities\Layer as OhanzeeLayer;
+use Ushahidi\Core\Ohanzee\Entity\Layer as OhanzeeLayer;
 use Ushahidi\Modules\V5\Models\Layer as EloquentLayer;
 use Ushahidi\Contracts\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;

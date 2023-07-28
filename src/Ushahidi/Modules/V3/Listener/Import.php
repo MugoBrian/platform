@@ -15,7 +15,7 @@ namespace Ushahidi\Modules\V3\Listener;
 use League\Event\EventInterface;
 use League\Event\AbstractListener;
 use Ushahidi\Core\Facade\Feature;
-use Ushahidi\Core\Ohanzee\Entities\Set;
+use Ushahidi\Core\Ohanzee\Entity\Set;
 
 class Import extends AbstractListener
 {

@@ -16,7 +16,7 @@ use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Usecase;
 use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Contracts\Transformer;
-use Ushahidi\Core\Ohanzee\Entities\CSV;
+use Ushahidi\Core\Ohanzee\Entity\CSV;
 use Ushahidi\Contracts\Repository\ImportRepository;
 use Ushahidi\Core\Usecase\Concerns\Formatter as FormatterTrait;
 use Ushahidi\Core\Usecase\Concerns\Validator as ValidatorTrait;

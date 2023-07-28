@@ -9,7 +9,7 @@
 namespace Ushahidi\Tests\Unit\Modules\V3\Formatter\Post;
 
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Tests\Unit\Core\Entity\MockPostEntity;
+use Ushahidi\Tests\Unit\Core\Ohanzee\Entity\MockPostEntity;
 use Ushahidi\Modules\V3\Formatter\Post\CSV;
 
 class CSVTest extends TestCase

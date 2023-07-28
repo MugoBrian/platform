@@ -7,7 +7,7 @@ use Ushahidi\Modules\V5\Models\ExportJob;
 use Ushahidi\Modules\V5\Requests\ExportJobRequest;
 use Illuminate\Support\Facades\Auth;
 use Ushahidi\Core\Entity\ExportJob as ExportJobEntity;
-use Ushahidi\Core\Ohanzee\Entities\ExportJob as OhanzeeExportJob;
+use Ushahidi\Core\Ohanzee\Entity\ExportJob as OhanzeeExportJob;
 use Ushahidi\Modules\V5\Models\Stage;
 
 class CreateExportJobCommand implements Command

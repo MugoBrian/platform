@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\Notification;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Ohanzee\Entities\Notification as OhanzeeNotification;
+use Ushahidi\Core\Ohanzee\Entity\Notification as OhanzeeNotification;
 
 use App\Bus\Query\QueryBus;
 

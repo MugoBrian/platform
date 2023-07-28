@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 use Ushahidi\Modules\V2\Contracts\Mapper;
 use Ushahidi\Modules\V2\Jobs\ImportForms;
 use Ushahidi\Core\Entity\FormStageRepository;
-use Ushahidi\Core\Ohanzee\Entities\FormAttribute;
+use Ushahidi\Core\Ohanzee\Entity\FormAttribute;
 use Ushahidi\Modules\V2\Contracts\ImportDataTools;
 
 use Ushahidi\Modules\V2\Contracts\ImportMappingRepository;

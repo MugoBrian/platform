@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Ohanzee\Entities\SetPost as OhanzeeSetPost;
+use Ushahidi\Core\Ohanzee\Entity\SetPost as OhanzeeSetPost;
 use Ushahidi\Modules\V5\Models\SetPost as EloquentSetPost;
 use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;

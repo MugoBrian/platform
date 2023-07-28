@@ -8,9 +8,9 @@
  * @license    https://www.gnu.org/licenses/agpl-3.0.html GNU Affero General Public License Version 3 (AGPL3)
  */
 
-namespace Ushahidi\Tests\Unit\Ohanzee\Repositories;
+namespace Ushahidi\Tests\Unit\Ohanzee\Repository;
 
-use Ushahidi\Tests\Unit\Core\Ohanzee\Entities\MockPost;
+use Ushahidi\Tests\Unit\Core\Ohanzee\Entity\MockPost;
 
 /**
  * @backupGlobals disabled

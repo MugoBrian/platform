@@ -11,7 +11,7 @@ use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Modules\V5\Models\ExportJob;
-use Ushahidi\Core\Ohanzee\Entities\ExportJob as OhanzeeExportJob;
+use Ushahidi\Core\Ohanzee\Entity\ExportJob as OhanzeeExportJob;
 
 class ExportJobPolicy
 {

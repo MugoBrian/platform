@@ -13,7 +13,7 @@ namespace Ushahidi\Tests\Unit\DataSource\Console;
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use Ushahidi\Core\Entity\ConfigRepository;
-use Ushahidi\Core\Ohanzee\Entities\Config;
+use Ushahidi\Core\Ohanzee\Entity\Config;
 use Ushahidi\DataSource\DataSourceManager;
 use Ushahidi\DataSource\Console\ListCommand;
 use Illuminate\Console\Application as Artisan;

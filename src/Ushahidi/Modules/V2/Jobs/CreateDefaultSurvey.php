@@ -4,9 +4,9 @@ namespace Ushahidi\Modules\V2\Jobs;
 
 use Ushahidi\Modules\V2;
 use Ushahidi\Core\Tool\Job;
-use Ushahidi\Core\Ohanzee\Entities\Form;
-use Ushahidi\Core\Ohanzee\Entities\FormStage;
-use Ushahidi\Core\Ohanzee\Entities\FormAttribute;
+use Ushahidi\Core\Ohanzee\Entity\Form;
+use Ushahidi\Core\Ohanzee\Entity\FormStage;
+use Ushahidi\Core\Ohanzee\Entity\FormAttribute;
 use Ushahidi\Core\Entity;
 
 class CreateDefaultSurvey extends Job

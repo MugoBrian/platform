@@ -6,9 +6,9 @@ use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use Illuminate\Support\Facades\Storage;
 use Ushahidi\Core\Entity\ExportJobRepository;
-use Ushahidi\Core\Ohanzee\Entities\ExportJob;
+use Ushahidi\Core\Ohanzee\Entity\ExportJob;
 use Ushahidi\Core\Entity\ExportBatchRepository;
-use Ushahidi\Core\Ohanzee\Entities\ExportBatch;
+use Ushahidi\Core\Ohanzee\Entity\ExportBatch;
 use Ushahidi\Modules\V3\Jobs\CombineExportedPostBatchesJob;
 
 /**

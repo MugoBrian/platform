@@ -13,7 +13,7 @@ namespace Ushahidi\Tests\Unit\DataSource;
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use Ushahidi\Core\Entity\ConfigRepository;
-use Ushahidi\Core\Ohanzee\Entities\Config;
+use Ushahidi\Core\Ohanzee\Entity\Config;
 use Ushahidi\Tests\CustomSource;
 use Ushahidi\DataSource\Email\Email;
 use Ushahidi\DataSource\Nexmo\Nexmo;

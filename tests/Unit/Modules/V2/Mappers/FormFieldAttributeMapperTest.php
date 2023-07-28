@@ -9,7 +9,7 @@ use Ushahidi\Tests\TestCase;
 use Ushahidi\Core\Entity\FormAttribute;
 use Ushahidi\Modules\V2\Jobs\ImportForms;
 use Ushahidi\Core\Entity\FormStageRepository;
-use Ushahidi\Core\Ohanzee\Entities\FormStage;
+use Ushahidi\Core\Ohanzee\Entity\FormStage;
 use Ushahidi\Tests\Unit\Modules\V2\ImportMock;
 use Ushahidi\Modules\V2\Contracts\ImportDataTools;
 use Ushahidi\Modules\V2\Mappers\FormFieldAttributeMapper;

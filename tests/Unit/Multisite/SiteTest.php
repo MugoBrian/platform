@@ -16,7 +16,7 @@ use Ushahidi\Multisite\Site;
 // use Illuminate\Support\Facades\Mail;
 use Ushahidi\Tests\TestCase;
 use Ushahidi\Core\Entity\ConfigRepository;
-use Ushahidi\Core\Ohanzee\Entities\Config;
+use Ushahidi\Core\Ohanzee\Entity\Config;
 
 /**
  * @backupGlobals disabled

@@ -36,6 +36,7 @@ class VerifierTest extends TestCase
     {
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
+        // TODO: This should use the Laravel Test Request system
         $url = "http://localhost:8000/api/v3/exports/external/count/1?api_key={$this->apiKey}";
         $payload = ['data' => 'things'];
         $signature = $this->makeSig($this->sharedSecret, $url, json_encode($payload));
@@ -51,6 +52,7 @@ class VerifierTest extends TestCase
     {
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
+        // TODO: This should use the Laravel Test Request system
         $url = "http://localhost:8000/api/v3/exports/external/count/1?api_key={$this->apiKey}";
         $payload = '';
         $signature = $this->makeSig($this->sharedSecret, $url, '');
@@ -66,6 +68,7 @@ class VerifierTest extends TestCase
     {
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
+        // TODO: This should use the Laravel Test Request system
         $url = "http://localhost:8000/api/v3/exports/external/count/1?api_key={$this->apiKey}";
         $payload = ['data' => 'things'];
         $signature = $this->makeSig($this->sharedSecret, $url, json_encode($payload));
@@ -81,6 +84,7 @@ class VerifierTest extends TestCase
     {
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
+        // TODO: This should use the Laravel Test Request system
         $url = "http://localhost:8000/api/v3/exports/external/count/1?api_key={$this->apiKey}";
         $payload = ['data' => 'things'];
         $signature = $this->makeSig('notthesecret', $url, json_encode($payload));
@@ -96,6 +100,7 @@ class VerifierTest extends TestCase
     {
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
+        // TODO: This should use the Laravel Test Request system
         $url = "http://localhost:8000/api/v3/exports/external/count/1?api_key={$this->apiKey}";
         $payload = ['data' => 'things'];
         $signature = $this->makeSig($this->sharedSecret, $url, json_encode(['tampered' => 'data']));
@@ -111,6 +116,7 @@ class VerifierTest extends TestCase
     {
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
+        // TODO: This should use the Laravel Test Request system
         $url = "http://localhost:8000/api/v3/exports/external/count/1?api_key={$this->apiKey}";
         $payload = ['data' => 'things'];
         $signature = $this->makeSig($this->sharedSecret, $url, json_encode($payload));
@@ -122,6 +128,7 @@ class VerifierTest extends TestCase
 
     public function testCheckApiKey()
     {
+        // TODO: This should use the Laravel Test Request system
         $repo = M::mock(ApiKeyRepository::class);
         $verifier = new Verifier($repo);
 

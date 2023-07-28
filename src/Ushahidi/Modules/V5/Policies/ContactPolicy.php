@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Ohanzee\Entities\Contact as OhanzeeContact;
+use Ushahidi\Core\Ohanzee\Entity\Contact as OhanzeeContact;
 use Ushahidi\Modules\V5\Models\Contact as EloquentContact;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;

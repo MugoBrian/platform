@@ -12,10 +12,8 @@ use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ParentAccess;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
-use Ushahidi\Core\Ohanzee\Entities\{
-    Post as OhanzeePost,
-    Form as OhanzeeForm
-};
+use Ushahidi\Core\Ohanzee\Entity\Post as OhanzeePost;
+use Ushahidi\Core\Ohanzee\Entity\Form as OhanzeeForm;
 use Ushahidi\Modules\V5\Models\Post\Post as EloquentPost;
 
 class PostPolicy

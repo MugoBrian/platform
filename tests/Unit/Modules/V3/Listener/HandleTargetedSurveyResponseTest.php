@@ -6,9 +6,9 @@ use Ushahidi\Tests\TestCase;
 use Ushahidi\Core\Entity\FormAttributeRepository;
 use Ushahidi\Core\Entity\MessageRepository;
 use Ushahidi\Core\Entity\TargetedSurveyStateRepository;
-use Ushahidi\Core\Ohanzee\Entities\FormAttribute;
-use Ushahidi\Core\Ohanzee\Entities\Message;
-use Ushahidi\Core\Ohanzee\Entities\TargetedSurveyState;
+use Ushahidi\Core\Ohanzee\Entity\FormAttribute;
+use Ushahidi\Core\Ohanzee\Entity\Message;
+use Ushahidi\Core\Ohanzee\Entity\TargetedSurveyState;
 use Ushahidi\Modules\V3\Listener\HandleTargetedSurveyResponse;
 
 /**

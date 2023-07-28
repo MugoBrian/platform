@@ -6,7 +6,7 @@ use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Message;
 use Ushahidi\Modules\V5\Requests\MessageRequest;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Ohanzee\Entities\Message as MessageEntity;
+use Ushahidi\Core\Ohanzee\Entity\Message as MessageEntity;
 use Ushahidi\Modules\V5\Models\Stage;
 
 class CreateMessageCommand implements Command

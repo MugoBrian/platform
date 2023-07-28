@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Core\Tool\AccessControl;
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Ohanzee\Entities\Tag as OhanzeeCategory;
+use Ushahidi\Core\Ohanzee\Entity\Tag as OhanzeeCategory;
 use Ushahidi\Modules\V5\Models\Category as EloquentCategory;
 use Ushahidi\Core\Tool\Authorizer\TagAuthorizer;
 

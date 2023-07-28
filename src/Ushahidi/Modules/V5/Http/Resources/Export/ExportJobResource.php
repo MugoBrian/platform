@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\Export;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Ohanzee\Entities\ExportJob as OhanzeeExportJob;
+use Ushahidi\Core\Ohanzee\Entity\ExportJob as OhanzeeExportJob;
 
 class ExportJobResource extends Resource
 {

@@ -10,7 +10,7 @@ use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Modules\V5\Models\Config as EloquentConfig;
-use Ushahidi\Core\Ohanzee\Entities\Config as OhanzeeConfig;
+use Ushahidi\Core\Ohanzee\Entity\Config as OhanzeeConfig;
 
 class ConfigPolicy
 {

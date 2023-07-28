@@ -6,7 +6,7 @@ use Ushahidi\Modules\V2\Import;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Log;
 use Ushahidi\Modules\V2\Contracts\Mapper;
-use Ushahidi\Core\Ohanzee\Entities\Contact;
+use Ushahidi\Core\Ohanzee\Entity\Contact;
 use Ushahidi\Modules\V2\Contracts\ImportMappingRepository;
 
 class ReporterUserMapper implements Mapper

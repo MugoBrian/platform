@@ -6,7 +6,7 @@ use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Post\Post;
 use Ushahidi\Modules\V5\Requests\PostRequest;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Ohanzee\Entities\Post as PostEntity;
+use Ushahidi\Core\Ohanzee\Entity\Post as PostEntity;
 use Ushahidi\Modules\V5\Models\Stage;
 
 class CreatePostCommand implements Command

@@ -7,7 +7,7 @@ use Ushahidi\Tests\TestCase;
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
 use Ushahidi\Core\Entity\Message;
 use Ushahidi\Core\Entity\ContactRepository;
-use Ushahidi\Core\Ohanzee\Entities\Contact;
+use Ushahidi\Core\Ohanzee\Entity\Contact;
 use Ushahidi\Modules\V2\Mappers\MessageMapper;
 use Ushahidi\Tests\Unit\Modules\V2\ImportMock;
 

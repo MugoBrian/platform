@@ -6,7 +6,7 @@ use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Notification;
 use Ushahidi\Modules\V5\Requests\NotificationRequest;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Ohanzee\Entities\Notification as NotificationEntity;
+use Ushahidi\Core\Ohanzee\Entity\Notification as NotificationEntity;
 use Ushahidi\Modules\V5\Models\Stage;
 
 class CreateNotificationCommand implements Command

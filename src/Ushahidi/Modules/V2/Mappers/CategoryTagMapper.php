@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Modules\V2\Mappers;
 
-use Ushahidi\Core\Ohanzee\Entities\Tag;
+use Ushahidi\Core\Ohanzee\Entity\Tag;
 use Ushahidi\Modules\V2\Import;
 use Ushahidi\Modules\V2\Contracts\Mapper;
 use Ushahidi\Modules\V2\Contracts\ImportMappingRepository;

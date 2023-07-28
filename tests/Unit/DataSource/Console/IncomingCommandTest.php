@@ -14,7 +14,7 @@ use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use phpmock\mockery\PHPMockery;
 use Ushahidi\Core\Entity\ConfigRepository;
-use Ushahidi\Core\Ohanzee\Entities\Config;
+use Ushahidi\Core\Ohanzee\Entity\Config;
 use Ushahidi\DataSource\DataSourceManager;
 use Ushahidi\DataSource\DataSourceStorage;
 use Illuminate\Console\Application as Artisan;

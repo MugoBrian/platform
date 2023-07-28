@@ -9,7 +9,7 @@ use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Modules\V5\Models\User as EloquentUser;
-use Ushahidi\Core\Ohanzee\Entities\User as OhanzeeUser;
+use Ushahidi\Core\Ohanzee\Entity\User as OhanzeeUser;
 
 class UserPolicy
 {

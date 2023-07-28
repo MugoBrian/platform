@@ -4,8 +4,8 @@ namespace Ushahidi\Tests\Unit\Modules\V3\Listener;
 
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Ohanzee\Entities\Message;
-use Ushahidi\Core\Ohanzee\Entities\Post;
+use Ushahidi\Core\Ohanzee\Entity\Message;
+use Ushahidi\Core\Ohanzee\Entity\Post;
 use Ushahidi\Core\Entity\MessageRepository;
 use Ushahidi\Core\Entity\PostRepository;
 use Ushahidi\Core\Entity\TargetedSurveyStateRepository;

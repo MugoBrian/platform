@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V2\Jobs;
 
 use Ushahidi\Modules\V2;
-use Ushahidi\Core\Ohanzee\Entities;
+use Ushahidi\Core\Ohanzee\Entity;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;

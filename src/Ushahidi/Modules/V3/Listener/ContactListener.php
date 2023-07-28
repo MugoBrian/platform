@@ -162,7 +162,7 @@ class ContactListener extends AbstractListener
                     'form_id' => $form_id,
                     'post_id' => $postId,
                     'contact_id' => $contactId,
-                    'survey_status' => \Ushahidi\Core\Ohanzee\Entities\TargetedSurveyState::PENDING_RESPONSE
+                    'survey_status' => \Ushahidi\Core\Ohanzee\Entity\TargetedSurveyState::PENDING_RESPONSE
                 ]
             );
 
