@@ -36,8 +36,8 @@ class LaravelConfig extends ContainerConfig
             return Storage::disk()->getDriver();
         });
 
-        $di->set('multisite', function () {
-            return app('multisite');
+        $di->set('site', function () {
+            return app('site');
         });
 
         // Setup user session service

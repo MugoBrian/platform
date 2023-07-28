@@ -1,30 +1,32 @@
 <?php
 
 /**
- * Ushahidi Platform Uploader Tool
+ * Ushahidi Core Uploader Tool
  *
  * @author     Ushahidi Team <team@ushahidi.com>
- * @package    Ushahidi\Platform
- * @copyright  2014 Ushahidi
+ * @package    Ushahidi\Core
+ * @copyright  2023 Ushahidi
  * @license    https://www.gnu.org/licenses/agpl-3.0.html GNU Affero General Public License Version 3 (AGPL3)
  */
 
 namespace Ushahidi\Core\Tool;
 
 use League\Flysystem\Filesystem;
-use Ushahidi\Core\Tool\UploadData;
-use Ushahidi\Core\Tool\FileData;
 use League\Flysystem\Util\MimeType;
-use Ushahidi\Multisite\MultisiteManager;
+use Ushahidi\Core\Tool\FileData;
+use Ushahidi\Core\Tool\UploadData;
+use Ushahidi\Core\Support\SiteManager;
 
 class Uploader
 {
-    private $fs;
+    protected $fs;
 
-    public function __construct(Filesystem $fs, MultisiteManager $multisite)
+    protected $site;
+
+    public function __construct(Filesystem $fs, SiteManager $site)
     {
         $this->fs = $fs;
-        $this->multisite = $multisite;
+        $this->site = $site;
     }
 
     /**
@@ -50,11 +52,11 @@ class Uploader
         // files per directory, eg: abc-myfile.png -> a/b/abc-myfile.png
         $filepath = implode('/', array_filter([
             getenv('CDN_PREFIX'),
-            $this->multisite->getSite()->getCdnPrefix(),
+            $this->site->instance()->getCdnPrefix(),
             $filename[0],
             $filename[1],
             $filename,
-            ]));
+        ]));
 
         // Remove any leading slashes on the filename, path is always relative.
         $filepath = ltrim($filepath, '/');
@@ -72,7 +74,7 @@ class Uploader
             // so we have to manually catch guzzle errors here
             $response = $e->getResponse();
 
-            throw new \InvalidArgumentException('Could not upload file: '. $response->getBody(true));
+            throw new \InvalidArgumentException('Could not upload file: '. $response->getBody());
         } catch (\GuzzleHttp\Exception\BadResponseException $e) {
             // Flysystem and FlysystemRackspace are very leaky abstractions
             // so we have to manually catch guzzle errors here
@@ -102,7 +104,7 @@ class Uploader
             'type'   => $type,
             'width'  => $width,
             'height' => $height,
-            ]);
+        ]);
     }
 
     /**

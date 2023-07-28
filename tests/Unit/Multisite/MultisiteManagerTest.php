@@ -12,6 +12,12 @@ use Ushahidi\Multisite\SiteRepository;
 
 class MultisiteManagerTest extends TestCase
 {
+    protected $repo;
+
+    protected $events;
+
+    protected $multisite;
+
     public function setUp(): void
     {
         parent::setUp();

@@ -352,7 +352,7 @@ class CoreConfig extends ContainerConfig
         $di->set('tool.uploader', $di->lazyNew(\Ushahidi\Core\Tool\Uploader::class));
         $di->params[\Ushahidi\Core\Tool\Uploader::class] = [
             'fs' => $di->lazyGet('tool.filesystem'),
-            'multisite' => $di->lazyGet('multisite'),
+            'site' => $di->lazyGet('site'),
         ];
 
         $di->set('tool.acl', $di->lazyNew(\Ushahidi\Core\Tool\AccessControl::class));

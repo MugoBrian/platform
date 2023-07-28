@@ -17,6 +17,10 @@ class MultisiteServiceProvider extends ServiceProvider
 {
     public function register()
     {
+        $this->mergeConfigFrom(
+            __DIR__.'/config/multisite.php', 'multisite'
+       );
+
         // Register manager
         $this->app->singleton('multisite', function ($app) {
             return new MultisiteManager(
@@ -32,6 +36,10 @@ class MultisiteServiceProvider extends ServiceProvider
     // @todo move some of this into manager?
     public function boot()
     {
+        $this->publishes([
+            __DIR__.'/../config/multisite.php' => config_path('multisite.php'),
+        ]);
+
         $this->app[Kernel::class]->pushMiddleware(DetectSite::class);
         $this->app[Kernel::class]->pushMiddleware(MaintenanceMode::class);
 

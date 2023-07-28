@@ -4,21 +4,21 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 
-class TestMultisiteJobCommand extends Command
+class TestSiteAwareJobCommand extends Command
 {
     /**
      * The console command name.
      *
      * @var string
      */
-    protected $name = 'test:multisitejob';
+    protected $name = 'test:siteawarejob';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Queue a TestMultisiteJob.';
+    protected $description = 'Queue a Job that is site aware.';
 
     /**
      * Execute the console command.
@@ -27,6 +27,6 @@ class TestMultisiteJobCommand extends Command
      */
     public function handle()
     {
-        dispatch(new \App\Jobs\TestMultisiteJob());
+        dispatch(new \App\Jobs\TestSiteAwareJob());
     }
 }

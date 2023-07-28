@@ -3,12 +3,12 @@
 namespace Ushahidi\Modules\V3\Jobs;
 
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Storage;
+use Ushahidi\Core\Entity\MediaRepository;
+use Ushahidi\Core\Support\SiteManager;
 use Ushahidi\Core\Tool\Job;
 use Ushahidi\Core\Tool\Uploader;
 use Ushahidi\Core\Tool\UploadData;
-use Illuminate\Support\Facades\Storage;
-use Ushahidi\Multisite\MultisiteManager;
-use Ushahidi\Core\Ohanzee\Repositories\MediaRepository;
 
 class ImportMediaJob extends Job
 {
@@ -38,11 +38,11 @@ class ImportMediaJob extends Job
      */
     public function handle(
         MediaRepository $mediaRepository,
-        MultiSiteManager $multisite
+        SiteManager $site
     ) {
         $filesystem = service('tool.filesystem');
         $this->mediaRepository = $mediaRepository;
-        $this->uploader = new Uploader($filesystem, $multisite);
+        $this->uploader = new Uploader($filesystem, $site);
 
         //
         foreach ($this->mediaIds as $mediaId) {

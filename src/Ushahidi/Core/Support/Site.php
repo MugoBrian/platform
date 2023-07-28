@@ -39,11 +39,6 @@ class Site implements Entity
         return 'site';
     }
 
-    public function getDefinition()
-    {
-        [];
-    }
-
     /**
      * Get site id
      * @return int|null
@@ -59,7 +54,7 @@ class Site implements Entity
      */
     public function getName()
     {
-        return $this->getSiteConfig('name', $this->deployment_name ?: 'Deployment');
+        return $this->getConfig('name', $this->deployment_name ?: 'Deployment');
     }
 
     /**
@@ -69,7 +64,7 @@ class Site implements Entity
      */
     public function getEmail()
     {
-        if ($site_email = $this->getSiteConfig('email')) {
+        if ($site_email = $this->getConfig('email')) {
             // Otherwise get email from site config
             return $site_email;
         }
@@ -88,7 +83,18 @@ class Site implements Entity
     public function getClientUri()
     {
         // get client_url from site config
-        return $this->getSiteConfig('client_url', false);
+        return $this->getConfig('client_url', false);
+    }
+
+    public function getCdnPrefix()
+    {
+        // get cdn_prefix from site config
+        return $this->getConfig('cdn_prefix') ?? $this->domain;
+    }
+
+    public function getDeploymentMode()
+    {
+        return $this->getConfig('deployment_mode', 'basic');
     }
 
     /**
@@ -96,9 +102,9 @@ class Site implements Entity
      *
      * @param  mixed $param   param to return
      * @param  mixed $default default if param not set
-     * @return mixed
+     * @return mixed|null
      */
-    public function getSiteConfig($param = false, $default = null)
+    public function getConfig($param = false, $default = null)
     {
         // TODO: I think there should be a way to work around this implementation
 

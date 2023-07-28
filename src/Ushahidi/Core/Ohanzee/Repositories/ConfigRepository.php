@@ -12,16 +12,16 @@ namespace Ushahidi\Core\Ohanzee\Repositories;
 
 use Ohanzee\DB;
 use Ohanzee\Database;
-use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
+use Ushahidi\Core\Concerns\Event;
+use Ushahidi\Core\Support\Facades\Site;
 use Ushahidi\Core\Exception\NotFoundException;
-use Ushahidi\Core\Ohanzee\Entities\Config as ConfigEntity;
 use Ushahidi\Contracts\Repository\ReadRepository;
 use Ushahidi\Contracts\Repository\DeleteRepository;
 use Ushahidi\Contracts\Repository\UpdateRepository;
+use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
+use Ushahidi\Core\Ohanzee\Entities\Config as ConfigEntity;
 use Ushahidi\Core\Entity\ConfigRepository as ConfigRepositoryContract;
-use Ushahidi\Multisite\Facade\Multisite;
 
 class ConfigRepository implements
     ReadRepository,
@@ -119,20 +119,19 @@ class ConfigRepository implements
         $config = [];
 
         // Multisite IDs
-        if (Multisite::enabled()) {
+        if ($isMultisite = Site::instance()->getDeploymentMode() !== 'single') {
             $config['multisite'] = [
-                'enabled' => true,
-                'site_id' => Multisite::getSiteId(),
-                'site_fqdn' => Multisite::getSite()->getClientUri(),
+                'enabled' => $isMultisite,
+                'site_id' => Site::instance()->getId(),
+                'site_fqdn' => Site::instance()->getClientUri(),
             ];
         } else {
             $config['multisite'] = [];
         }
 
         $analytics_prefix = env('USH_ANALYTICS_PREFIX', null);
-        $analytics_id =
-            $config['multisite']['site_id'] ??
-            env('USH_ANALYTICS_ID', null);
+        $analytics_id = env('USH_ANALYTICS_ID', $config['multisite']['site_id'] ?? null);
+
         if ($analytics_prefix && $analytics_id) {
             $config['analytics'] = [
                 'prefix' => $analytics_prefix,
@@ -233,7 +232,7 @@ class ConfigRepository implements
 
     /**
      * @param  string $group
-     * @throws InvalidArgumentException when group is invalid
+     * @throws \InvalidArgumentException when group is invalid
      * @return void
      */
     protected function verifyGroup($group)

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Ushahidi\Core\Entity\MessageRepository;
 use Ushahidi\Modules\V3\Factory\UsecaseFactory;
 use Ushahidi\Modules\V3\Http\Controllers\RESTController;
-use Ushahidi\Multisite\MultisiteManager;
+use Ushahidi\Core\Support\SiteManager;
 
 /**
  * Ushahidi API Messages Controller
@@ -27,12 +27,14 @@ class MessagesController extends RESTController
      */
     protected $usecase;
 
+    protected $messages;
+
     public function __construct(
         UsecaseFactory $usecaseFactory,
-        MultisiteManager $multisite,
+        SiteManager $site,
         MessageRepository $messages
     ) {
-        parent::__construct($usecaseFactory, $multisite);
+        parent::__construct($usecaseFactory, $site);
 
         $this->messages = $messages;
     }

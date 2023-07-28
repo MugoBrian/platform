@@ -2,27 +2,28 @@
 
 namespace spec\Ushahidi\Core\Tool;
 
-use League\Flysystem\Filesystem;
-use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
+use PhpSpec\ObjectBehavior;
+use League\Flysystem\Filesystem;
 use Ushahidi\Core\Tool\FileData;
+use Ushahidi\Core\Tool\Uploader;
 use Ushahidi\Core\Tool\UploadData;
-use Ushahidi\Multisite\MultisiteManager;
-use Ushahidi\Multisite\Site;
+use Ushahidi\Core\Support\Site;
+use Ushahidi\Core\Support\SiteManager;
 
 class UploaderSpec extends ObjectBehavior
 {
-    public function let(Filesystem $fs, MultisiteManager $multisite)
+    public function let(Filesystem $fs, SiteManager $siteManager)
     {
-        $this->beConstructedWith($fs, $multisite);
+        $this->beConstructedWith($fs, $siteManager);
     }
 
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Ushahidi\Core\Tool\Uploader');
+        $this->shouldHaveType(Uploader::class);
     }
 
-    public function it_does_convert_uploads_to_files(UploadData $input, Site $site, $fs, $multisite)
+    public function it_does_convert_uploads_to_files(UploadData $input, Site $site, $fs, $siteManager)
     {
         // define the filename to avoid the unique prefix being added, making the
         // filepath consistently testable
@@ -49,11 +50,11 @@ class UploaderSpec extends ObjectBehavior
         $fs->getSize($filepath)->willReturn(1024);
         $fs->getMimetype($filepath)->willReturn('image/png');
 
-        $multisite->getSite()->shouldBeCalled()->willReturn($site);
+        $siteManager->getSite()->shouldBeCalled()->willReturn($site);
 
         $site->getCdnPrefix()->shouldBeCalled()->willReturn('deployment.domain.com');
 
         // ... resulting a file.
-        $this->upload($input, $filename)->shouldReturnAnInstanceOf('Ushahidi\Core\Tool\FileData');
+        $this->upload($input, $filename)->shouldReturnAnInstanceOf(FileData::class);
     }
 }

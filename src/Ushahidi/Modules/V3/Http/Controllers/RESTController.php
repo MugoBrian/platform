@@ -13,12 +13,12 @@ namespace Ushahidi\Modules\V3\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Lang;
 use Ushahidi\Modules\V3\Factory\UsecaseFactory;
-use App\Exceptions\ValidationException;
-use Ushahidi\Multisite\MultisiteManager;
+use Ushahidi\Core\Support\SiteManager;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use App\Exceptions\ValidationException;
 
 abstract class RESTController extends BaseController
 {
@@ -36,19 +36,19 @@ abstract class RESTController extends BaseController
     protected $usecaseFactory;
 
     /**
-     * @var \Ushahidi\Multisite\MultisiteManager;
+     * @var \Ushahidi\Core\Support\SiteManager;
      */
-    protected $multisite;
+    protected $site;
 
     /**
      * @var \Ushahidi\Contracts\Usecase
      */
     protected $usecase;
 
-    public function __construct(UsecaseFactory $usecaseFactory, MultisiteManager $multisite)
+    public function __construct(UsecaseFactory $usecaseFactory, SiteManager $site)
     {
         $this->usecaseFactory = $usecaseFactory;
-        $this->multisite = $multisite;
+        $this->site = $site;
     }
 
     /**
@@ -70,8 +70,10 @@ abstract class RESTController extends BaseController
 
     public function demoCheck($filters)
     {
-        $isDemoTier = $this->multisite->getSite()->tier === 'demo_1';
-        if ($this->multisite->enabled() && $isDemoTier) {
+        $isNotSingleMode = $this->site->instance()->getDeploymentMode() !== 'single';
+        $isDemoTier = $this->site->instance()->tier === 'demo_1';
+
+        if ($isNotSingleMode && $isDemoTier) {
             // Demo deployments are limited to the first 25 posts,
             // if any thing other more than that or a different offset is request
             // none will be returned

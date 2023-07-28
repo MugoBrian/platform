@@ -15,8 +15,8 @@ use Faker;
 use Illuminate\Support\Str;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
+use Ushahidi\Core\Support\Facades\Site;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Multisite\Facade\Multisite;
 
 class ObfuscateDataCommand extends Command
 {
@@ -25,6 +25,10 @@ class ObfuscateDataCommand extends Command
     private $postRepository;
 
     private $contactRepository;
+
+    private $configRepository;
+
+    private $userRepository;
 
     /**
      * The console command name.
@@ -69,14 +73,14 @@ class ObfuscateDataCommand extends Command
     /**
      * Get current connection
      *
-     * @return Ohanzee\Database;
+     * @return \Ohanzee\Database;
      */
     protected function db()
     {
         return $this->resolver->connection();
     }
 
-    public function handle(OhanzeeResolver $resolver)
+    public function handle()
     {
         //check for sanity of admin-username
         if ($this->option('admin-username') && strlen($this->option('admin-username')) < 5) {
@@ -85,9 +89,9 @@ class ObfuscateDataCommand extends Command
             return;
         }
 
-        if ($this->isThisAMultisiteInstall()) {
+        if (! $this->isSingleSiteSetup()) {
             if (! getenv('HOST') || strlen(getenv('HOST')) < 1) {
-                $this->alert('ERROR: A host must be specified for a multisite deployment.');
+                $this->alert('ERROR: A host must be specified for a deployment not in single deployment mode.');
 
                 return;
             }
@@ -134,9 +138,9 @@ class ObfuscateDataCommand extends Command
         $this->info('Data scrubbing complete.');
     }
 
-    protected function isThisAMultisiteInstall()
+    protected function isSingleSiteSetup()
     {
-        return Multisite::enabled();
+        return Site::instance()->getDeploymentMode() === 'single';
     }
 
     /* optional implementations...
