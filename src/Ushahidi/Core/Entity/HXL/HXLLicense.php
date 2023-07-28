@@ -21,7 +21,7 @@ class HXLLicense extends StaticEntity
     protected $link;
 
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'        => 'int',

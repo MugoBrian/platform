@@ -20,7 +20,7 @@ class HXLTag extends StaticEntity
     protected $hxl_attributes;
     protected $form_attribute_types;
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'        => 'int',

@@ -28,7 +28,7 @@ class HXLMetadata extends StaticEntity implements OwnableEntity
     protected $updated;
 
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'                => 'int',

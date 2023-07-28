@@ -32,7 +32,7 @@ class CSV extends StaticEntity
     protected $collection_id;
 
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'           => 'int',

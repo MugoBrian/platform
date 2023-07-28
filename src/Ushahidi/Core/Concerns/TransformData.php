@@ -232,5 +232,7 @@ trait TransformData
      *
      * @return array
      */
-    abstract protected function getDefinition();
+    protected function getDefinition() {
+        return [];
+    }
 }

@@ -62,7 +62,7 @@ class MockExportJobEntity implements Entity
     }
 
     // StatefulData
-    public function getDerived()
+    protected function getDerived()
     {
         // Foreign key alias
         return [
@@ -71,7 +71,7 @@ class MockExportJobEntity implements Entity
     }
 
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id' => 'int',

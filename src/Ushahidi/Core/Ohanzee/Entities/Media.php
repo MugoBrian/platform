@@ -28,7 +28,7 @@ class Media extends StaticEntity implements EntityMedia
     protected $o_height;
 
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'         => 'int',

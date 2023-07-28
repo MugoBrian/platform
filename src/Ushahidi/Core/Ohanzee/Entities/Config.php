@@ -27,10 +27,4 @@ class Config extends DynamicEntity implements EntityConfig
     {
         return 'config';
     }
-
-    // StatefulData
-    public function getImmutable()
-    {
-        return array_merge(parent::getImmutable(), ['allowed_privileges']);
-    }
 }

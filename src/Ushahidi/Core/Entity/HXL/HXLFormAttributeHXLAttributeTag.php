@@ -21,7 +21,7 @@ class HXLFormAttributeHXLAttributeTag extends StaticEntity
     protected $hxl_tag_id;
     protected $export_job_id;
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'        => 'int',

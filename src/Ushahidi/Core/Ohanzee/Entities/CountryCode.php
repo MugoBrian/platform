@@ -21,7 +21,7 @@ class CountryCode extends StaticEntity
     protected $country_code;
 
     // DataTransformer
-    public function getDefinition()
+    protected function getDefinition()
     {
         return [
             'id'           => 'int',
