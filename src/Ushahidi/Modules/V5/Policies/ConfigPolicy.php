@@ -8,7 +8,7 @@ use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ControlAccess;
-use Ushahidi\Authzn\GenericUser as User;
+use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Modules\V5\Models\Config as EloquentConfig;
 use Ushahidi\Core\Ohanzee\Entity\Config as OhanzeeConfig;
 
@@ -28,6 +28,8 @@ class ConfigPolicy
     // if roles are available for this deployment.
     use ControlAccess;
 
+    protected $authorizer;
+
     /**
      * Public config groups
      * @var [string, ...]
@@ -39,6 +41,11 @@ class ConfigPolicy
      * @var [string, ...]
      */
     protected $readonly_groups = ['features', 'deployment_id'];
+
+    public function __construct(AccessControl $acl, TagAuthorizer $authorizer)
+    {
+        $this->authorizer = $authorizer->setAcl($acl);
+    }
 
     public function index()
     {

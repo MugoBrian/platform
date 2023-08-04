@@ -1,12 +1,12 @@
 <?php
 
-namespace Ushahidi\Authzn;
+namespace Ushahidi\Core\Support;
 
-use Illuminate\Contracts\Auth\Authenticatable as AuthContract;
+use Ushahidi\Core\Entity\User;
 use Laravel\Passport\HasApiTokens;
-use Ushahidi\Contracts\Entity;
+use Illuminate\Contracts\Auth\Authenticatable as AuthContract;
 
-class GenericUser implements Entity, AuthContract
+class GenericUser implements User, AuthContract
 {
     use HasApiTokens;
 
@@ -27,7 +27,7 @@ class GenericUser implements Entity, AuthContract
     {
         $this->attributes = $attributes;
     }
-
+ 
     public function getId()
     {
         return $this->getAuthIdentifier();

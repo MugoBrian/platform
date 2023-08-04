@@ -7,7 +7,7 @@ use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Authzn\GenericUser as User;
+use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Modules\V5\Models\Message as EloquentMessage;

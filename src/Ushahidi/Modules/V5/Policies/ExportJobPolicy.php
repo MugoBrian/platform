@@ -9,7 +9,7 @@ use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\PrivateDeployment;
-use Ushahidi\Authzn\GenericUser as User;
+use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Modules\V5\Models\ExportJob;
 use Ushahidi\Core\Ohanzee\Entity\ExportJob as OhanzeeExportJob;
 

@@ -8,13 +8,12 @@
  * @license    https://www.gnu.org/licenses/agpl-3.0.html GNU Affero General Public License Version 3 (AGPL3)
  */
 
-namespace Ushahidi\Authzn;
+namespace Ushahidi\Core\Support;
 
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Contracts\Session as SessionContract;
 use Ushahidi\Core\Entity\UserRepository;
 
-class Session implements SessionContract
+class Session
 {
     protected $user = null;
 

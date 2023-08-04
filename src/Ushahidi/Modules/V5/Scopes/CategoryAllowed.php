@@ -12,7 +12,7 @@
 
 namespace Ushahidi\Modules\V5\Scopes;
 
-use Ushahidi\Authzn\Session;
+use Ushahidi\Core\Support\Session;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Scope;
 use Illuminate\Database\Eloquent\Builder;

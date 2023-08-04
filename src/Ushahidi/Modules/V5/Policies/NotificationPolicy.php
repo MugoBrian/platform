@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Modules\V5\Policies;
 
-use Ushahidi\Authzn\GenericUser as User;
+use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Core\Ohanzee\Entity\Notification as OhanzeeNotification;
 use Ushahidi\Modules\V5\Models\Notification as EloquentNotification;
 use Ushahidi\Contracts\Permission;

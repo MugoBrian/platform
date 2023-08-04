@@ -4,9 +4,9 @@ namespace Ushahidi\Modules\V3\ContainerConfig;
 
 use Aura\Di\Container;
 use Aura\Di\ContainerConfig;
-use Ushahidi\Authzn\Session;
-use Ushahidi\Core\Tool\Mailer;
 use Illuminate\Support\Facades\Storage;
+use Ushahidi\Core\Tool\Mailer;
+use Ushahidi\Core\Support\Session;
 
 class LaravelConfig extends ContainerConfig
 {

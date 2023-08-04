@@ -22,6 +22,8 @@ trait GuestAccess
 {
     /**
      * Check if $user is unloaded or has the "guest" role
+     * 
+     * @param  \Ushahidi\Core\Entity\User $user
      */
     protected function isUserGuest(Entity $user)
     {

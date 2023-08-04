@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Modules\V5\Models\Permissions as EloquentPermissions;
-use Ushahidi\Authzn\GenericUser as User;
+use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\UserContext;

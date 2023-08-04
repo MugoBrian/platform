@@ -46,6 +46,7 @@ class V5GlobalScopes
         RepositoryService::resolveRepositoryBinder();
 
         if (!$isSavingPost) {
+            // TODO: this should be done in a better way
             Category::addGlobalScope(resolve(CategoryAllowed::class));
             Post::addGlobalScope(new PostAllowed);
             Stage::addGlobalScope(new StageAllowed);

@@ -7,6 +7,9 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Illuminate\Database\Connection;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
+use Ushahidi\Contracts\AccessControl as AccessControlContract;
+use Ushahidi\Core\Entity\RoleRepository;
+use Ushahidi\Core\Tool\AccessControl;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -27,6 +30,12 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $this->app->bind(AccessControlContract::class, AccessControl::class);
+
+        $this->app->extend(AccessControl::class, function (AccessControl $acl) {
+            return $acl->setRoleRepo($this->app[RoleRepository::class]);
+        });
+
         // Skip migrations ... run with phinx
         Passport::ignoreMigrations();
 

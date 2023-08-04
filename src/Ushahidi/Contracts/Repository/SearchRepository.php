@@ -33,7 +33,7 @@ interface SearchRepository extends EntityGet
     /**
      * Get the results for the last search.
      *
-     * @return \Ushahidi\Contracts\Entity[]
+     * @return \Ushahidi\Contracts\Entity[]|\Illuminate\Support\Collection<\Ushahidi\Contracts\Entity>
      */
     public function getSearchResults();
 

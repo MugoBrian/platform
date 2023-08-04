@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\Translation;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
-use Ushahidi\Authzn\GenericUser;
+use Ushahidi\Core\Support\GenericUser;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\Validator;

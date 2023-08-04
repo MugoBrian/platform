@@ -12,21 +12,20 @@
 namespace Ushahidi\Contracts\Repository;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Contracts\Repository\EntityGet;
 
-interface UpdateRepository extends EntityGet
+interface UpdateRepository
 {
     /**
-     * @param array|Entity $entity
+     * @param array|\Ushahidi\Contracts\Entity $entity
      *
      * @return void
      */
     public function update(Entity $entity);
 
     /**
-     * @param array|Entity[] $entities
+     * @param Ushahidi\Contracts\Entity[]|\Illuminate\Support\Collection<\Ushahidi\Contracts\Entity> $entities
      *
      * @return void
      */
-    // public function updateCollection(array $entities);
+    // public function updateCollection($entities);
 }

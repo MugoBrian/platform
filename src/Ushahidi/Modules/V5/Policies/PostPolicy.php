@@ -3,8 +3,8 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Contracts\Entity as EntityContract;
-use Ushahidi\Authzn\GenericUser as User;
 use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;

@@ -15,7 +15,9 @@ namespace Ushahidi\Contracts\Repository;
 interface EntityExists
 {
     /**
-     * @param  mixed $id
+     * Checks if an entity with ID can be found.
+     *
+     * @param int|string $id
      *
      * @return boolean
      */

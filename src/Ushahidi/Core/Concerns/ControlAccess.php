@@ -13,14 +13,16 @@
 
 namespace Ushahidi\Core\Concerns;
 
-use Ushahidi\Contracts\AccessControl as AccessControlInterface;
+use Ushahidi\Contracts\AccessControl;
 
 trait ControlAccess
 {
     public $acl;
 
-    public function setAcl(AccessControlInterface $acl)
+    public function setAcl(AccessControl $acl)
     {
         $this->acl = $acl;
+
+        return $this;
     }
 }

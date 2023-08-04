@@ -1,7 +1,7 @@
 <?php
 namespace Ushahidi\Modules\V5\Common;
 
-use Ushahidi\Authzn\GenericUser as User;
+use Ushahidi\Core\Support\GenericUser as User;
 use Illuminate\Database\Eloquent\Model;
 
 trait OwnerAccess

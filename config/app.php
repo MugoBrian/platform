@@ -151,14 +151,10 @@ return [
          * Package Service Providers...
          */
 
-        Ushahidi\Authzn\ServiceProvider::class,
         Ushahidi\Multisite\MultisiteServiceProvider::class,
         Ushahidi\DataSource\DataSourceServiceProvider::class,
         Ushahidi\Addons\Rackspace\RackspaceServiceProvider::class,
-
         Ushahidi\Modules\V2\ServiceProvider::class,
-        Ushahidi\Modules\V3\ServiceProvider::class,
-        Ushahidi\Modules\V5\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -170,6 +166,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\PassportServiceProvider::class,
+
+        // TODO: Rename Modules directory back to App
+        Ushahidi\Modules\V3\ServiceProvider::class,
+        Ushahidi\Modules\V5\ServiceProvider::class,
     ],
 
     /*
