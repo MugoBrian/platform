@@ -6,9 +6,6 @@ use Illuminate\Support\ServiceProvider;
 use Ushahidi\Core\Support\SiteManager;
 use Ushahidi\Core\Support\FeatureManager;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Usecase\Export\Job\PostCount;
-use Ushahidi\Contracts\Repository\Entity\PostRepository;
-use Ushahidi\Contracts\Repository\Entity\UserRepository;
 use Ushahidi\Contracts\Repository\Entity\ConfigRepository;
 use Ushahidi\Modules\V5\Models\Post\Post as PostModel;
 use Ushahidi\Modules\V5\Repository\Category\CategoryRepository;
@@ -18,7 +15,7 @@ use Ushahidi\Modules\V5\Repository\Translation\TranslationRepository;
 use Ushahidi\Modules\V5\Repository\CountryCode\CountryCodeRepository;
 use Ushahidi\Modules\V5\Repository\CountryCode\EloquentCountryCodeRepository;
 use Ushahidi\Modules\V5\Repository\Post\EloquentPostRepository;
-use Ushahidi\Modules\V5\Repository\Post\PostRepository as V5PostRepository;
+use Ushahidi\Modules\V5\Repository\Post\PostRepository;
 use Ushahidi\Modules\V5\Repository\Permissions\PermissionsRepository;
 use Ushahidi\Modules\V5\Repository\Permissions\EloquentPermissionsRepository;
 use Ushahidi\Modules\V5\Repository\Role\RoleRepository;
@@ -88,84 +85,11 @@ class AppServiceProvider extends ServiceProvider
             return new OhanzeeResolver();
         });
 
-        $this->registerServicesFromAura();
-
-        $this->registerFeatures();
+        // TODO: Move this to a separate service provider in the v5 module
+        $this->registerActions();
     }
 
-    public function registerServicesFromAura()
-    {
-        $this->app->singleton(UsecaseFactory::class, function ($app) {
-            // Just return it from AuraDI
-            return service('factory.usecase');
-        });
-
-        $this->app->singleton(UserRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.user');
-        });
-
-        $this->app->singleton(MessageRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.message');
-        });
-
-        $this->app->singleton(ConfigRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.config');
-        });
-
-        $this->app->singleton(ContactRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.contact');
-        });
-
-        $this->app->singleton(PostRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.post');
-        });
-
-        $this->app->singleton(ExportJobRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.export_job');
-        });
-
-        $this->app->singleton(ExportBatchRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.export_batch');
-        });
-
-        $this->app->singleton(TargetedSurveyStateRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.targeted_survey_state');
-        });
-
-        $this->app->singleton(FormAttributeRepository::class, function ($app) {
-            // Just return it from AuraDI
-            return service('repository.form_attribute');
-        });
-
-        $this->app->singleton(Verifier::class, function ($app) {
-            // Just return it from AuraDI
-            return service('tool.verifier');
-        });
-
-        $this->app->singleton(PostCount::class, function ($app) {
-            return service('factory.usecase')
-                // Override action
-                ->get('export_jobs', 'post-count')
-                // Override authorizer
-                ->setAuthorizer(service('authorizer.external_auth')); // @todo remove the need for this?
-        });
-
-        $this->app->singleton(Export::class, function ($app) {
-            return service('factory.usecase')
-                ->get('posts_export', 'export')
-                ->setAuthorizer(service('authorizer.export_job'));
-        });
-    }
-
-    public function registerFeatures()
+    public function registerActions()
     {
         $this->app->bind(CountryCodeRepository::class, EloquentCountryCodeRepository::class);
 
@@ -182,7 +106,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(TosRepository::class, EloquentTosRepository::class);
         $this->app->bind(CategoryRepository::class, EloquentCategoryRepository::class);
         $this->app->bind(TranslationRepository::class, EloquentTranslationRepository::class);
-        $this->app->bind(V5PostRepository::class, function ($app) {
+        $this->app->bind(PostRepository::class, function ($app) {
             return new EloquentPostRepository(PostModel::query());
         });
         $this->app->bind(Survey\SurveyRepository::class, Survey\EloquentSurveyRepository::class);
