@@ -13,11 +13,9 @@ namespace Ushahidi\Modules\V3\Validator\Post;
 
 use Kohana\Validation\Validation;
 use Ushahidi\Core\Facade\Feature;
-use Ushahidi\Core\Concerns\{
-    AdminAccess,
-    UserContext,
-    ControlAccess
-};
+use Ushahidi\Core\Concerns\AdminAccess;
+use Ushahidi\Core\Concerns\UserContext;
+use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Entity\Permission;
 use Ushahidi\Core\Entity\TagRepository;
 use Ushahidi\Core\Entity\FormRepository;

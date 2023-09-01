@@ -13,6 +13,7 @@ namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\StaticEntity;
 use Ushahidi\Core\Entity\UserSetting as EntityUserSetting;
+
 class UserSetting extends StaticEntity implements EntityUserSetting
 {
     protected $id;
@@ -63,5 +64,4 @@ class UserSetting extends StaticEntity implements EntityUserSetting
 
         ]);
     }
-
 }

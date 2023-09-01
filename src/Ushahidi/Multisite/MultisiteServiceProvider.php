@@ -18,8 +18,9 @@ class MultisiteServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/config/multisite.php', 'multisite'
-       );
+            __DIR__.'/config/multisite.php',
+            'multisite'
+        );
 
         // Register manager
         $this->app->singleton('multisite', function ($app) {

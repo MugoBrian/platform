@@ -15,7 +15,7 @@ use Ushahidi\Contracts\Entity;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Request;
 use Ushahidi\Core\Concerns\StatefulData;
-use Ushahidi\Contracts\Repository\Entity\ConfigRepository;
+use Ushahidi\Core\Entity\ConfigRepository;
 
 class Site implements Entity
 {

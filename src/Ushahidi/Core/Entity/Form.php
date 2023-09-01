@@ -14,5 +14,4 @@ interface Form extends Entity
     const DEFAULT_HIDE_LOCATION = 0;
     const DEFAULT_DISABLED = 0;
     const DEFAULT_BASE_LANGUAGE = 'en-US';
-
 }

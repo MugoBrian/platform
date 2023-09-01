@@ -7,7 +7,6 @@ use Ushahidi\Contracts\Repository\Entity\ExportBatchRepository;
 use Ushahidi\Core\Concerns\SiteAware;
 use Ushahidi\Core\Support\SiteManager;
 
-
 class TestSiteAwareJob extends Job
 {
     use SiteAware;
