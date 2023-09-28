@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi ApiKey Entity
+ * Ushahidi ApiKeyEntity Entity
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform
@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\ApiKey as EntityApiKey;
+use Ushahidi\Core\Data\ApiKeyEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class ApiKey extends StaticEntity implements EntityApiKey
+class ApiKey extends StaticEntity implements ApiKeyEntity
 {
     protected $id;
     protected $api_key;

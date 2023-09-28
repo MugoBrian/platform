@@ -121,7 +121,7 @@ class FindConfigByNameQueryHandler extends AbstractQueryHandler
         $this->verifyGroup($group);
 
         // @todo add them to config!
-        $file = __DIR__ . "/../../../.." . '/V3/Repository/Config/' . $group . '.php';
+        $file = __DIR__ . "/../../../.." . '/V3/Repository/ConfigEntity/' . $group . '.php';
         if (file_exists($file)) {
             return require $file;
         }

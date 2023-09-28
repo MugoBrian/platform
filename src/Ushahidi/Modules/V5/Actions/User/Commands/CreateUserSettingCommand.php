@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\User\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\UserSetting as UserSettingEntity;
+use Ushahidi\Core\Data\UserSettingEntity as UserSettingEntity;
 
 class CreateUserSettingCommand implements Command
 {

@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Core\Support\GenericUser as User;
-use Ushahidi\Core\Entity;
+use Ushahidi\Core\Data;
 use Ushahidi\Modules\V5\Models\CSV;
 use Ushahidi\Contracts\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
@@ -45,7 +45,7 @@ class CSVPolicy
      */
     public function index()
     {
-        $empty_csv_entity = new Entity\CSV();
+        $empty_csv_entity = new Data\CSV();
         return $this->isAllowed($empty_csv_entity, 'search');
     }
 
@@ -57,7 +57,7 @@ class CSVPolicy
      */
     public function show(User $user, CSV $csv)
     {
-        $csv_entity = new Entity\CSV($csv->toArray());
+        $csv_entity = new Data\CSV($csv->toArray());
         return $this->isAllowed($csv_entity, 'read');
     }
 
@@ -69,7 +69,7 @@ class CSVPolicy
      */
     public function delete(User $user, CSV $csv)
     {
-        $csv_entity = new Entity\CSV($csv->toArray());
+        $csv_entity = new Data\CSV($csv->toArray());
         return $this->isAllowed($csv_entity, 'delete');
     }
     /**
@@ -79,7 +79,7 @@ class CSVPolicy
     public function update(User $user, CSV $csv)
     {
         // we convert to a CSV entity to be able to continue using the old authorizers and classes.
-        $csv_entity = new Entity\CSV($csv->toArray());
+        $csv_entity = new Data\CSV($csv->toArray());
         return $this->isAllowed($csv_entity, 'update');
     }
 
@@ -91,7 +91,7 @@ class CSVPolicy
     public function store(User $user, CSV $csv)
     {
         // we convert to a csv_entity entity to be able to continue using the old authorizers and classes.
-        $csv_entity = new Entity\CSV($csv->toArray());
+        $csv_entity = new Data\CSV($csv->toArray());
         return $this->isAllowed($csv_entity, 'create');
     }
 

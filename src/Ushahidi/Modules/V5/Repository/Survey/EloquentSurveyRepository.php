@@ -7,7 +7,7 @@ use Ushahidi\Modules\V5\Repository\Survey\SurveyRepository as SurveyRepository;
 use Ushahidi\Core\Exception\NotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Form as SurveyEntity;
+use Ushahidi\Core\Data\FormEntity as SurveyEntity;
 use Ushahidi\Modules\V5\DTO\SurveySearchFields;
 use Ushahidi\Modules\V5\Models\SurveyRole;
 use Illuminate\Database\Eloquent\Collection;

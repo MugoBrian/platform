@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Role Repository
+ * Ushahidi FormEntity Role Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -13,7 +13,7 @@ namespace Ushahidi\Core\Ohanzee\Repository;
 
 use Ohanzee\DB;
 use Ushahidi\Core\Ohanzee\Entity;
-use Ushahidi\Core\Entity\TargetedSurveyStateRepository as TargetedSurveyStateRepositoryContract;
+use Ushahidi\Core\Data\TargetedSurveyStateRepository as TargetedSurveyStateRepositoryContract;
 
 class TargetedSurveyStateRepository extends OhanzeeRepository implements
     TargetedSurveyStateRepositoryContract

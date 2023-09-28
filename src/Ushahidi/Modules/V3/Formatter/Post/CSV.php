@@ -248,13 +248,13 @@ class CSV extends API
         // check that the key we received is available in $attributes
         $recordAttributes = isset($attributes[$headingKey]) ? $attributes[$headingKey] : null;
         // If the returned attribute for the given heading key is the native form name attribute
-        // Retrieve Form Name from the attribute rather than from the Post until the data model improves
+        // Retrieve FormEntity Name from the attribute rather than from the Post until the data model improves
 
         if (is_array($recordAttributes) && isset($recordAttributes['type'])
             && $recordAttributes['type'] === 'form_name') {
             return is_array($record) && isset($record['form_name']) ? $record['form_name'] : 'Unstructured';
         }
-        // Ignore attributes that are not related to this Post by Form Id
+        // Ignore attributes that are not related to this Post by FormEntity Id
         // Ensure that native attributes identified via id 0 are included
         if (is_array($recordAttributes) && isset($recordAttributes['form_id']) && isset($record['form_id'])
             && $recordAttributes['form_id'] != 0 && ($record['form_id'] != $recordAttributes['form_id'])) {

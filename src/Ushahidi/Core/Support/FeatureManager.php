@@ -3,7 +3,7 @@
 namespace Ushahidi\Core\Support;
 
 use Illuminate\Support\Facades\Cache;
-use Ushahidi\Core\Entity\ConfigRepository;
+use Ushahidi\Core\Data\ConfigRepository;
 
 class FeatureManager
 {

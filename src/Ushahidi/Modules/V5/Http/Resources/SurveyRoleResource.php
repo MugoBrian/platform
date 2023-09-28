@@ -3,7 +3,7 @@ namespace Ushahidi\Modules\V5\Http\Resources;
 
 use Illuminate\Http\Resources\Json\Resource;
 use Ushahidi\Modules\V5\Models\SurveyRole;
-use Ushahidi\Core\Entity\FormRole as SurveyRoleEntity;
+use Ushahidi\Core\Data\FormRole as SurveyRoleEntity;
 
 class SurveyRoleResource extends BaseResource
 {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Search Form Stats Use Case
+ * Ushahidi Platform Search FormEntity Stats Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

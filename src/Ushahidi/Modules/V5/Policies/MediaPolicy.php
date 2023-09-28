@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity;
+use Ushahidi\Core\Data;
 use Ushahidi\Modules\V5\Models\Media;
 use Ushahidi\Contracts\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
@@ -31,7 +31,7 @@ class MediaPolicy
 
     // Check that the user has the necessary permissions
     use AccessControlList;
-    
+
     use OwnerAccess;
 
     protected $user;
@@ -44,7 +44,7 @@ class MediaPolicy
      */
     public function index()
     {
-        $empty_media_entity = new Entity\Media();
+        $empty_media_entity = new Data\Media();
         return $this->isAllowed($empty_media_entity, 'search');
     }
 
@@ -56,7 +56,7 @@ class MediaPolicy
      */
     public function show(User $user, Media $media)
     {
-        $media_entity = new Entity\Media($media->toArray());
+        $media_entity = new Data\Media($media->toArray());
         return $this->isAllowed($media_entity, 'read');
     }
 
@@ -68,7 +68,7 @@ class MediaPolicy
      */
     public function delete(User $user, Media $media)
     {
-        $media_entity = new Entity\Media($media->toArray());
+        $media_entity = new Data\Media($media->toArray());
         return $this->isAllowed($media_entity, 'delete');
     }
     /**
@@ -78,7 +78,7 @@ class MediaPolicy
     public function update(User $user, Media $media)
     {
         // we convert to a Media entity to be able to continue using the old authorizers and classes.
-        $media_entity = new Entity\Media($media->toArray());
+        $media_entity = new Data\Media($media->toArray());
         return $this->isAllowed($media_entity, 'update');
     }
 
@@ -90,7 +90,7 @@ class MediaPolicy
     public function store(User $user, Media $media)
     {
         // we convert to a media_entity entity to be able to continue using the old authorizers and classes.
-        $media_entity = new Entity\Media($media->toArray());
+        $media_entity = new Data\Media($media->toArray());
         return $this->isAllowed($media_entity, 'create');
     }
 

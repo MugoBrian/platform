@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Config Entity
+ * Ushahidi ConfigEntity Entity
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform
@@ -12,9 +12,9 @@
 namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\DynamicEntity;
-use Ushahidi\Core\Entity\Config as EntityConfig;
+use Ushahidi\Core\Data\ConfigEntity;
 
-class Config extends DynamicEntity implements EntityConfig
+class Config extends DynamicEntity implements ConfigEntity
 {
     // DataTransformer
     protected function getDefinition()

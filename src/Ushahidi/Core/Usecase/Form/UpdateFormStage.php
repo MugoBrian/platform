@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Update Form Stage Use Case
+ * Ushahidi Platform Update FormEntity Stage Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

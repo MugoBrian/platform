@@ -6,11 +6,11 @@ use SetPostUserNullOnDelete;
 use Ushahidi\Modules\V5\Models\SetPost;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Ushahidi\Modules\V5\DTO\CollectionSearchFields;
-use Ushahidi\Core\Entity\Set as CollectionEntity;
+use Ushahidi\Core\Data\Set as CollectionEntity;
 
 interface SetPostRepository
 {
-    
+
     /**
      * This method will fetch a single Set from the database utilising
      * Laravel Eloquent ORM. Will throw an exception if provided identifier does
@@ -28,7 +28,7 @@ interface SetPostRepository
      * @param int $post_id
      *
      */
-   
+
     public function create(int $collection_id, int $post_id): void;
 
     /**

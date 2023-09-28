@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi ApiKey Repository
+ * Ushahidi ApiKeyEntity Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -15,10 +15,10 @@ use Ramsey\Uuid\Uuid;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Concerns\AdminAccess;
-use Ushahidi\Core\Ohanzee\Entity\ApiKey;
+use Ushahidi\Core\Ohanzee\Entity\ApiKeyEntity;
 use Ushahidi\Contracts\Repository\EntityExists;
 use Ushahidi\Contracts\Repository\CreateRepository;
-use Ushahidi\Core\Entity\ApiKeyRepository as ApiKeyRepositoryContract;
+use Ushahidi\Core\Data\ApiKeyRepository as ApiKeyRepositoryContract;
 
 class ApiKeyRepository extends OhanzeeRepository implements ApiKeyRepositoryContract, CreateRepository, EntityExists
 {
@@ -31,7 +31,7 @@ class ApiKeyRepository extends OhanzeeRepository implements ApiKeyRepositoryCont
 
     public function getEntity(array $data = null)
     {
-        return new ApiKey($data);
+        return new ApiKeyEntity($data);
     }
 
     // OhanzeeRepository

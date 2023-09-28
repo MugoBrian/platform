@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\HXL\Commands;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Contact;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\HXL\HXLMetadata as HXLMetadataEntity;
+use Ushahidi\Core\Data\HXL\HXLMetadata as HXLMetadataEntity;
 use Ushahidi\Modules\V5\Models\Stage;
 use Ushahidi\Modules\V5\Requests\HXLMetadataRequest;
 
@@ -17,7 +17,7 @@ class CreateHXLMetaDataCommand implements Command
     private $hxl_metdata_entity;
 
 
-    
+
 
     public function __construct(HXLMetadataEntity $hxl_metdata_entity)
     {

@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\Media\Commands;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Media;
 use Ushahidi\Modules\V5\Requests\MediaRequest;
-use Ushahidi\Core\Entity\Media as MediaEntity;
+use Ushahidi\Core\Data\Media as MediaEntity;
 use Illuminate\Support\Facades\Auth;
 use Ushahidi\Modules\V5\Helpers\ParameterUtilities;
 

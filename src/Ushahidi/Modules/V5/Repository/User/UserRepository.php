@@ -4,8 +4,9 @@ namespace Ushahidi\Modules\V5\Repository\User;
 
 use Ushahidi\Modules\V5\Models\User;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Ushahidi\Core\Entity\User as UserEntity;
+use Ushahidi\Core\Data\UserEntity;
 use Ushahidi\Modules\V5\DTO\UserSearchFields;
+use Ushahidi\Core\Exception\NotFoundException;
 
 interface UserRepository
 {
@@ -45,8 +46,6 @@ interface UserRepository
      */
     public function findByEmail(string $email): ?User;
 
-   
-
     /**
      * This method will create a User
      * @param UserEntity $entity
@@ -77,6 +76,6 @@ interface UserRepository
     public function isValidResetToken($token): bool;
 
     public function setPassword($token, $password);
-    
+
     public function deleteResetToken($token);
 }

@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\Role\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\Role as RoleEntity;
+use Ushahidi\Core\Data\Role as RoleEntity;
 
 class CreateRoleCommand implements Command
 {

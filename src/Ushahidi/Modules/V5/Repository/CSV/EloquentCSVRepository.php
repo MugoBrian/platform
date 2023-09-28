@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\CSV;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\CSVSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\CSV as CSVEntity;
+use Ushahidi\Core\Data\CSV as CSVEntity;
 
 class EloquentCSVRepository implements CSVRepository
 {

@@ -8,11 +8,11 @@ use Illuminate\Support\Str;
 use Ushahidi\Core\Tool\Job;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
-use Ushahidi\Core\Entity\ExportJob;
-use Ushahidi\Core\Entity\ExportBatch;
+use Ushahidi\Core\Data\ExportJobEntity;
+use Ushahidi\Core\Data\ExportBatchEntity;
 use Illuminate\Support\Facades\Storage;
-use Ushahidi\Core\Entity\ExportJobRepository;
-use Ushahidi\Core\Entity\ExportBatchRepository;
+use Ushahidi\Core\Data\ExportJobRepository;
+use Ushahidi\Core\Data\ExportBatchRepository;
 use Illuminate\Support\Facades\File as LocalFilesystem;
 
 class CombineExportedPostBatchesJob extends Job
@@ -62,7 +62,7 @@ class CombineExportedPostBatchesJob extends Job
         }
 
         // Load batches
-        $batches = $exportBatchRepo->getByJobId($this->jobId, ExportBatch::STATUS_COMPLETED);
+        $batches = $exportBatchRepo->getByJobId($this->jobId, ExportBatchEntity::STATUS_COMPLETED);
         // Get just filenames
         $fileNames = $batches
             ->sortBy('batch_number')
@@ -84,7 +84,7 @@ class CombineExportedPostBatchesJob extends Job
         // Set status = completed
         $job->setState([
             'url' => $destinationFile, // No longer actually saving a URL, we can format it when it goes to the API
-            'status' => ExportJob::STATUS_EXPORTED_TO_CDN,
+            'status' => ExportJobEntity::STATUS_EXPORTED_TO_CDN,
         ]);
         $exportJobRepo->update($job);
     }

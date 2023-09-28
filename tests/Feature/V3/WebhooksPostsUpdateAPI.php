@@ -3,7 +3,7 @@ namespace Ushahidi\Tests\Feature\V3;
 
 use Faker;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Ohanzee\Entity\ApiKey;
+use Ushahidi\Core\Ohanzee\Entity\ApiKeyEntity;
 use Ushahidi\Core\Ohanzee\Entity\Post;
 
 /**
@@ -77,7 +77,7 @@ class WebhooksPostsUpdateAPI extends TestCase
 
         // Make an API key
         $apiKeys = service('repository.apikey');
-        $apiKeyId = $apiKeys->create(new ApiKey([]));
+        $apiKeyId = $apiKeys->create(new ApiKeyEntity([]));
         $apiKey = $apiKeys->get($apiKeyId);
 
         // Make a signature

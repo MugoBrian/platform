@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\Permission as EntityPermission;
+use Ushahidi\Core\Data\PermissionEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class Permission extends StaticEntity implements EntityPermission
+class Permission extends StaticEntity implements PermissionEntity
 {
     protected $id;
     protected $name;

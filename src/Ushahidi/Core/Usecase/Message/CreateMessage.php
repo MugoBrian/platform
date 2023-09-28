@@ -11,7 +11,7 @@
 
 namespace Ushahidi\Core\Usecase\Message;
 
-use Ushahidi\Core\Entity\Message;
+use Ushahidi\Core\Data\Message;
 use Ushahidi\Core\Usecase\CreateUsecase;
 
 class CreateMessage extends CreateUsecase

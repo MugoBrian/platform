@@ -36,7 +36,7 @@ class Post extends BaseModel
     public const REQUIRED_FIELDS = [
         'id'
     ];
-    
+
     public const ALLOWED_FIELDS = [
         'id',
         'parent_id',
@@ -629,7 +629,7 @@ class Post extends BaseModel
     // public function contact()
     // {
     //     // Lumen 5.8+:
-    //     // return $this->hasOneThrough(Message::class, Contact::class);
+    //     // return $this->hasOneThrough(Message::class, ContactEntity::class);
     // }
 
     protected static function valueTypesRelationships()

@@ -13,9 +13,9 @@ namespace Ushahidi\Core\Ohanzee\Repository\HXL;
 
 use Ohanzee\DB;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Entity\HXL\HXLFormAttributeHXLAttributeTag;
+use Ushahidi\Core\Data\HXL\HXLFormAttributeHXLAttributeTag;
 use Ushahidi\Core\Tool\SearchData;
-use Ushahidi\Core\Entity\HXL\HXLFormAttributeHXLAttributeTagRepository
+use Ushahidi\Core\Data\HXL\HXLFormAttributeHXLAttributeTagRepository
     as HXLFormAttributeHXLAttributeTagRepositoryContract;
 use Ushahidi\Contracts\Repository\ReadRepository;
 use Ushahidi\Contracts\Repository\SearchRepository;

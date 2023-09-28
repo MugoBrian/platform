@@ -3,7 +3,7 @@ namespace spec\Ushahidi\Core\Tool;
 
 use PhpSpec\ObjectBehavior;
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Entity\ConfigRepository;
+use Ushahidi\Core\Data\ConfigRepository;
 use Ushahidi\Core\Tool\Date;
 
 class DateSpec extends ObjectBehavior

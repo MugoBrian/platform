@@ -5,7 +5,7 @@ use Illuminate\Http\Resources\Json\JsonResource as Resource;
 use Ushahidi\Modules\V5\Http\Resources\RequestCachedResource;
 use Ushahidi\Modules\V5\Http\Resources\Permissions\PermissionsCollection;
 use Illuminate\Support\Collection;
-use Ushahidi\Core\Entity\Config as ConfigEntity;
+use Ushahidi\Core\Data\ConfigEntity as ConfigEntity;
 
 
 use App\Bus\Query\QueryBus;

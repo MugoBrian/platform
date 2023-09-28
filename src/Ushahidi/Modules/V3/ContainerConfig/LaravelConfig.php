@@ -61,7 +61,7 @@ class LaravelConfig extends ContainerConfig
 
     protected function injectAuraConfig(Container $di)
     {
-        // CDN Config settings
+        // CDN ConfigEntity settings
         $di->values['cdn.config'] = config('cdn');
 
         // $di->set('cdn.config', function () {

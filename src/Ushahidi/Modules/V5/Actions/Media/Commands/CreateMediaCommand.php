@@ -6,7 +6,7 @@ use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Media;
 use Ushahidi\Modules\V5\Requests\MediaRequest;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\Media as MediaEntity;
+use Ushahidi\Core\Data\Media as MediaEntity;
 use Ushahidi\Core\Tool\UploadData;
 use Ushahidi\Core\Exception\ValidatorException;
 
@@ -58,7 +58,7 @@ class CreateMediaCommand implements Command
             $fileMimeType = $file->getMimeType(); // File MIME type
             $fileRealPath = $file->getRealPath(); // Temporary file path
 
-           
+
             // Now, you can create an array with the extracted information
             $file_array = [
                 'name' => str_replace(' ', '_', $fileName),

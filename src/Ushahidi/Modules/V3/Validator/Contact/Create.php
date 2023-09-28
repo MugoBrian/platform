@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Contact Validator
+ * Ushahidi ContactEntity Validator
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application

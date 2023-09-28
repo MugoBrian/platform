@@ -4,7 +4,7 @@
  *  @var $router \Illuminate\Routing\Router
  */
 
-// Config
+// ConfigEntity
 $router->group([
     'middleware' => ['scope:config'],
 ], function () use ($router) {

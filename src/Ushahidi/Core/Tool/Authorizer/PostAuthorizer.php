@@ -12,18 +12,18 @@
 namespace Ushahidi\Core\Tool\Authorizer;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Entity\Post;
-use Ushahidi\Core\Entity\User;
+use Ushahidi\Core\Data\Post;
+use Ushahidi\Core\Data\User;
 use Ushahidi\Contracts\Authorizer;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Contracts\ParentableEntity;
 use Ushahidi\Core\Concerns\ParentAccess;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\PostRepository;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 
@@ -206,7 +206,7 @@ class PostAuthorizer implements Authorizer
     protected function isFormRestricted(Post $post, $user)
     {
         // If the $entity->form_id exists and the $form->everyone_can_create is False
-        // we check to see if the Form & Role Join exists in the `FormRoleRepository`
+        // we check to see if the FormEntity & Role Join exists in the `FormRoleRepository`
 
         if ($post->form_id) {
             $roles = $this->form_repo->getRolesThatCanCreatePosts($post->form_id);

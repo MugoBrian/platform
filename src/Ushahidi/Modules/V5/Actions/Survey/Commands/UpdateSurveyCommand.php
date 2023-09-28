@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\Survey\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\Form as SurveyEntity;
+use Ushahidi\Core\Data\FormEntity as SurveyEntity;
 
 class UpdateSurveyCommand implements Command
 {

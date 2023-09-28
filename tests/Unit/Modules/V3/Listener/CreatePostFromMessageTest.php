@@ -6,9 +6,9 @@ use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use Ushahidi\Core\Ohanzee\Entity\Message;
 use Ushahidi\Core\Ohanzee\Entity\Post;
-use Ushahidi\Core\Entity\MessageRepository;
-use Ushahidi\Core\Entity\PostRepository;
-use Ushahidi\Core\Entity\TargetedSurveyStateRepository;
+use Ushahidi\Core\Data\MessageRepository;
+use Ushahidi\Core\Data\PostRepository;
+use Ushahidi\Core\Data\TargetedSurveyStateRepository;
 use Ushahidi\Modules\V3\Listener\CreatePostFromMessage;
 
 /**

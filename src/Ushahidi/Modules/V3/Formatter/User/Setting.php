@@ -20,7 +20,7 @@ class Setting extends API
 
     protected function formatConfigValueWithFields($value, $fields)
     {
-        // If Config Key contains a keywords
+        // If ConfigEntity Key contains a keywords
         // then we redact some of the information
         // Ideally, we would define some kind of flag for sensitive
         // User setting data to make it more straightforward to identify

@@ -11,7 +11,7 @@ use Ushahidi\Modules\V5\Actions\SavedSearch\Commands\CreateSavedSearchCommand;
 use Ushahidi\Modules\V5\Actions\SavedSearch\Commands\UpdateSavedSearchCommand;
 use Ushahidi\Modules\V5\Actions\SavedSearch\Commands\DeleteSavedSearchCommand;
 use Ushahidi\Modules\V5\DTO\SavedSearchSearchFields;
-use Ushahidi\Core\Entity\SavedSearch as SavedSearchEntity;
+use Ushahidi\Core\Data\SavedSearch as SavedSearchEntity;
 use Ushahidi\Modules\V5\Requests\SavedSearchRequest;
 use Ushahidi\Modules\V5\Models\Set as SavedSearch;
 

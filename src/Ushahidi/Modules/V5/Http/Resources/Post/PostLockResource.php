@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\Post;
 
 use Illuminate\Support\Collection;
-use Ushahidi\Core\Entity\Post;
+use Ushahidi\Core\Data\Post;
 use Ushahidi\Modules\V5\Http\Resources\BaseResource;
 
 class PostLockResource extends BaseResource

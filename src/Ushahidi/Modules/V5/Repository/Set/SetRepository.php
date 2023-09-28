@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Repository\Set;
 use Ushahidi\Modules\V5\Models\Set;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Ushahidi\Modules\V5\DTO\CollectionSearchFields;
-use Ushahidi\Core\Entity\Set as CollectionEntity;
+use Ushahidi\Core\Data\Set as CollectionEntity;
 
 interface SetRepository
 {

@@ -6,7 +6,7 @@ use Ushahidi\Modules\V2;
 use Ushahidi\Core\Ohanzee\Entity;
 use Ushahidi\Core\Tool\Job;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\PostRepository;
 
 class ImportIncidents extends ImportFromV2Job
 {

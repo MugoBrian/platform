@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\Export\Commands;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\ExportJob;
 use Ushahidi\Modules\V5\Requests\ExportJobRequest;
-use Ushahidi\Core\Entity\ExportJob as ExportJobEntity;
+use Ushahidi\Core\Data\ExportJobEntity as ExportJobEntity;
 use Illuminate\Support\Facades\Auth;
 use Ushahidi\Modules\V5\Helpers\ParameterUtilities;
 

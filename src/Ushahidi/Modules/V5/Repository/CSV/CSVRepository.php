@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 use Ushahidi\Modules\V5\Models\CSV;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\CSVSearchFields;
-use Ushahidi\Core\Entity\CSV as CSVEntity;
+use Ushahidi\Core\Data\CSV as CSVEntity;
 
 interface CSVRepository
 {

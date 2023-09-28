@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Stage Repository
+ * Ushahidi FormEntity Stage Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -16,8 +16,8 @@ use Ohanzee\Database;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entity\FormStage;
-use Ushahidi\Core\Entity\FormStageRepository as FormStageRepositoryContract;
-use Ushahidi\Core\Entity\FormRepository as FormRepositoryContract;
+use Ushahidi\Core\Data\FormStageRepository as FormStageRepositoryContract;
+use Ushahidi\Core\Data\FormRepository as FormRepositoryContract;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Tool\Permissions\InteractsWithFormPermissions;
 use Ushahidi\Core\Ohanzee\Repository\OhanzeeRepository;
@@ -122,7 +122,7 @@ class StageRepository extends OhanzeeRepository implements
         }
 
         if ($search->q) {
-            // Form group text searching
+            // FormEntity group text searching
             $query->where('label', 'LIKE', "%{$search->q}%");
         }
     }

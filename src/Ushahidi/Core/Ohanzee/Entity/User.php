@@ -11,11 +11,11 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\User as EntityUser;
+use Ushahidi\Core\Data\UserEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 use Ushahidi\Core\Tool\Hasher\Password as PasswordHash;
 
-class User extends StaticEntity implements EntityUser
+class User extends StaticEntity implements UserEntity
 {
     protected $id;
     protected $email;

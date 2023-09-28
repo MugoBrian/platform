@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\SavedSearch\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\SavedSearch;
+use Ushahidi\Core\Data\SavedSearch;
 
 class UpdateSavedSearchCommand implements Command
 {

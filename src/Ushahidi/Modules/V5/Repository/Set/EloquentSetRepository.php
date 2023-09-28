@@ -9,7 +9,7 @@ use Ushahidi\Core\Exception\NotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
 use Ushahidi\Modules\V5\DTO\CollectionSearchFields;
-use Ushahidi\Core\Entity\Set as CollectionEntity;
+use Ushahidi\Core\Data\Set as CollectionEntity;
 use Illuminate\Support\Facades\Auth;
 
 class EloquentSetRepository implements SetRepository

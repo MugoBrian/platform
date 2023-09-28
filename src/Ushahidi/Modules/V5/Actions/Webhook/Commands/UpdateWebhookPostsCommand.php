@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\Webhook\Commands;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Webhook\Webhook;
 use Ushahidi\Modules\V5\Requests\WebhookRequest;
-use Ushahidi\Core\Entity\Webhook as WebhookEntity;
+use Ushahidi\Core\Data\Webhook as WebhookEntity;
 use Illuminate\Support\Facades\Auth;
 use Ushahidi\Modules\V5\Helpers\ParameterUtilities;
 

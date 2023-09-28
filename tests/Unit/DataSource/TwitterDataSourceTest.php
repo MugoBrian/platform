@@ -162,7 +162,7 @@ class TwitterDataSourceTest extends TestCase
             'search_terms' => '#ushahidi,#test',
         ]);
 
-        // $config = M::mock(Config::class);
+        // $config = M::mock(ConfigEntity::class);
 
         // $config->shouldReceive('asArray')->once()->andReturn([
         //     'id' => 'twitter',

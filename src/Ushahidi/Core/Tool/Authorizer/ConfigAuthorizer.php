@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Config Authorizer
+ * Ushahidi ConfigEntity Authorizer
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -12,14 +12,14 @@
 namespace Ushahidi\Core\Tool\Authorizer;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\ControlAccess;
 
-// The `ConfigAuthorizer` class is responsible for access checks on `Config` Entities
+// The `ConfigAuthorizer` class is responsible for access checks on `ConfigEntity` Entities
 class ConfigAuthorizer implements Authorizer
 {
     // The access checks are run under the context of a specific user
@@ -37,13 +37,13 @@ class ConfigAuthorizer implements Authorizer
 
     /**
      * Public config groups
-     * @var [string, ...]
+     * @var string[]
      */
     protected $public_groups = ['features', 'map', 'site', 'deployment_id'];
 
     /**
      * Public config groups
-     * @var [string, ...]
+     * @var string[]
      */
     protected $readonly_groups = ['features', 'deployment_id'];
 
@@ -84,7 +84,7 @@ class ConfigAuthorizer implements Authorizer
      */
     protected function isConfigPublic(Entity $entity)
     {
-        // Config that is unloaded is treated as public.
+        // ConfigEntity that is unloaded is treated as public.
         if (!$entity->getId()) {
             return true;
         }
@@ -103,7 +103,7 @@ class ConfigAuthorizer implements Authorizer
      */
     protected function isConfigReadOnly(Entity $entity)
     {
-        // Config that is unloaded is treated as writable.
+        // ConfigEntity that is unloaded is treated as writable.
         if (!$entity->getId()) {
             return false;
         }

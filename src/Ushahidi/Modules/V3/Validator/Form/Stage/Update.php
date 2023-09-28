@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Stage Validator
+ * Ushahidi FormEntity Stage Validator
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -12,7 +12,7 @@
 namespace Ushahidi\Modules\V3\Validator\Form\Stage;
 
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\FormRepository;
+use Ushahidi\Core\Data\FormRepository;
 
 class Update extends LegacyValidator
 {

@@ -13,7 +13,7 @@ namespace Ushahidi\Core\Usecase\User;
 
 use Illuminate\Support\Facades\Hash;
 use Ushahidi\Contracts\Usecase;
-use Ushahidi\Core\Entity\UserRepository;
+use Ushahidi\Core\Data\UserRepository;
 use Ushahidi\Core\Concerns\ModifyRecords;
 use Ushahidi\Core\Usecase\Concerns\Formatter as FormatterTrait;
 use Ushahidi\Core\Usecase\Concerns\Validator as ValidatorTrait;

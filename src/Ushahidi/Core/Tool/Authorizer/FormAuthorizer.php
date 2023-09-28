@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Authorizer
+ * Ushahidi FormEntity Authorizer
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -13,14 +13,14 @@ namespace Ushahidi\Core\Tool\Authorizer;
 
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ParentAccess;
 use Ushahidi\Core\Concerns\PrivateDeployment;
 use Ushahidi\Core\Concerns\ControlAccess;
-use Ushahidi\Core\Entity\FormRepository;
+use Ushahidi\Core\Data\FormRepository;
 
 // The `FormAuthorizer` class is responsible for access checks on `Forms`
 class FormAuthorizer implements Authorizer

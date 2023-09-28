@@ -12,9 +12,9 @@
 namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\StaticEntity;
-use Ushahidi\Core\Entity\Media as EntityMedia;
+use Ushahidi\Core\Data\MediaEntity;
 
-class Media extends StaticEntity implements EntityMedia
+class Media extends StaticEntity implements MediaEntity
 {
     protected $id;
     protected $user_id;

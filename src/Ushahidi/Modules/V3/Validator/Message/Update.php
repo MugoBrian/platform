@@ -12,7 +12,7 @@
 namespace Ushahidi\Modules\V3\Validator\Message;
 
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\MessageRepository;
+use Ushahidi\Core\Data\MessageRepository;
 
 class Update extends LegacyValidator
 {

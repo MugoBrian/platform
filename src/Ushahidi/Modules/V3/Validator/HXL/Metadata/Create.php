@@ -12,9 +12,9 @@
 namespace Ushahidi\Modules\V3\Validator\HXL\Metadata;
 
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\UserRepository;
-use Ushahidi\Core\Entity\HXL\HXLLicenseRepository;
-use Ushahidi\Core\Entity\HXL\HXLMetadataRepository;
+use Ushahidi\Core\Data\UserRepository;
+use Ushahidi\Core\Data\HXL\HXLLicenseRepository;
+use Ushahidi\Core\Data\HXL\HXLMetadataRepository;
 
 class Create extends LegacyValidator
 {

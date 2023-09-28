@@ -12,7 +12,7 @@
 namespace Ushahidi\Modules\V3\Validator\User;
 
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\UserRepository;
+use Ushahidi\Core\Data\UserRepository;
 
 class Reset extends LegacyValidator
 {

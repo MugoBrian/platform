@@ -55,7 +55,7 @@ class ContactPolicy
 
     public function update(User $user, EloquentContact $contact)
     {
-        // we convert to a Contact entity to be able to continue using the old authorizers and classes.
+        // we convert to a ContactEntity entity to be able to continue using the old authorizers and classes.
         $contact_entity = new OhanzeeContact($contact->toArray());
         return $this->isAllowed($contact_entity, 'update');
     }

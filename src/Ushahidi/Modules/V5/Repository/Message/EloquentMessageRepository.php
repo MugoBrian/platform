@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\Message;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\MessageSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Message as MessageEntity;
+use Ushahidi\Core\Data\Message as MessageEntity;
 use Ushahidi\Core\Tool\Tile;
 
 class EloquentMessageRepository implements MessageRepository
@@ -36,7 +36,7 @@ class EloquentMessageRepository implements MessageRepository
         } elseif ($search_fields->box() === 'inbox') {
             $builder->whereIn('messages.direction', ["incoming"]);
         }
-       
+
         if ($search_fields->box() === 'archived') {
             $builder->where('messages.status', '=', "archived");
         } elseif ($search_fields->status()) {
@@ -47,7 +47,7 @@ class EloquentMessageRepository implements MessageRepository
         } else {
             $builder->where('messages.status', '!=', "archived");
         }
- 
+
         if ($search_fields->parent()) {
             $builder->whereIn('messages.parent_id', $search_fields->parent());
         }

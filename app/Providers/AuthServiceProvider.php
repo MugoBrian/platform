@@ -8,7 +8,7 @@ use Illuminate\Database\Connection;
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport;
 use Ushahidi\Contracts\AccessControl as AccessControlContract;
-use Ushahidi\Core\Entity\RoleRepository;
+use Ushahidi\Core\Data\RoleRepository;
 use Ushahidi\Core\Tool\AccessControl;
 
 class AuthServiceProvider extends ServiceProvider

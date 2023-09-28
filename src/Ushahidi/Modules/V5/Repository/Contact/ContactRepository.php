@@ -7,13 +7,13 @@ use Illuminate\Support\Collection;
 use Ushahidi\Modules\V5\Models\Contact;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\ContactSearchFields;
-use Ushahidi\Core\Entity\Contact as ContactEntity;
+use Ushahidi\Core\Data\ContactEntity as ContactEntity;
 
 interface ContactRepository
 {
 
     /**
-     * This method will fetch all the Contact for the logged user from the database utilising
+     * This method will fetch all the ContactEntity for the logged user from the database utilising
      * Laravel Eloquent ORM and return them as an array
      * @param int $limit
      * @param int $skip
@@ -25,7 +25,7 @@ interface ContactRepository
     public function fetch(Paging $paging, ContactSearchFields $search_fields): LengthAwarePaginator;
 
     /**
-     * This method will fetch a single Contact from the database utilising
+     * This method will fetch a single ContactEntity from the database utilising
      * Laravel Eloquent ORM. Will throw an exception if provided identifier does
      * not exist in the database.
      * @param int $id
@@ -35,21 +35,21 @@ interface ContactRepository
     public function findById(int $id): Contact;
 
     /**
-     * This method will create a Contact
+     * This method will create a ContactEntity
      * @param ContactEntity $entity
      * @return int
      */
     public function create(ContactEntity $entity): int;
 
     /**
-     * This method will update the Contact
+     * This method will update the ContactEntity
      * @param int $id
      * @param ContactEntity $entity
      */
     public function update(int $id, ContactEntity $entity): void;
 
        /**
-     * This method will delete the Contact
+     * This method will delete the ContactEntity
      * @param int $id
      */
     public function delete(int $id): void;

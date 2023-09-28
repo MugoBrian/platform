@@ -13,9 +13,9 @@ namespace Ushahidi\Modules\V3\Validator\ExportJob;
 
 use Ushahidi\Core\Facade\Feature;
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\UserRepository;
-use Ushahidi\Core\Entity\ExportJobRepository;
-use Ushahidi\Core\Entity\HXL\HXLMetadataRepository;
+use Ushahidi\Core\Data\UserRepository;
+use Ushahidi\Core\Data\ExportJobRepository;
+use Ushahidi\Core\Data\HXL\HXLMetadataRepository;
 
 class Update extends LegacyValidator
 {

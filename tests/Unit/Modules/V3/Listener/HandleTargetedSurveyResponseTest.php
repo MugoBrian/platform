@@ -3,9 +3,9 @@ namespace Ushahidi\Tests\Unit\Modules\V3\Listener;
 
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\FormAttributeRepository;
-use Ushahidi\Core\Entity\MessageRepository;
-use Ushahidi\Core\Entity\TargetedSurveyStateRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
+use Ushahidi\Core\Data\MessageRepository;
+use Ushahidi\Core\Data\TargetedSurveyStateRepository;
 use Ushahidi\Core\Ohanzee\Entity\FormAttribute;
 use Ushahidi\Core\Ohanzee\Entity\Message;
 use Ushahidi\Core\Ohanzee\Entity\TargetedSurveyState;

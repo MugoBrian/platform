@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\HXL;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\HXL\HXLLicense as HXLLicenseEntity;
+use Ushahidi\Core\Data\HXL\HXLLicense as HXLLicenseEntity;
 
 
 use App\Bus\Query\QueryBus;

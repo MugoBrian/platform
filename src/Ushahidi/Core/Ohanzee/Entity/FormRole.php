@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Role
+ * Ushahidi FormEntity Role
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

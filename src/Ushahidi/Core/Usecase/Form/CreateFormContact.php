@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Create Form Attribute Use Case
+ * Ushahidi Platform Create FormEntity Attribute Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

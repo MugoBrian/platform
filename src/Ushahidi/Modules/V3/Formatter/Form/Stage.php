@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi API Formatter for Form Stage
+ * Ushahidi API Formatter for FormEntity Stage
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application

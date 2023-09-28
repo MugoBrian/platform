@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V3\Jobs;
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
-use Ushahidi\Core\Entity\MediaRepository;
+use Ushahidi\Core\Data\MediaRepository;
 use Ushahidi\Core\Support\SiteManager;
 use Ushahidi\Core\Tool\Job;
 use Ushahidi\Core\Tool\Uploader;

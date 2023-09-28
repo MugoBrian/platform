@@ -12,7 +12,7 @@
 namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\StaticEntity;
-use Ushahidi\Core\Entity\Message as MessageEntity;
+use Ushahidi\Core\Data\MessageEntity;
 
 class Message extends StaticEntity implements MessageEntity
 {

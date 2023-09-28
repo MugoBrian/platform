@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\Collection\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\Set as Collection;
+use Ushahidi\Core\Data\Set as Collection;
 
 class CreateCollectionCommand implements Command
 {

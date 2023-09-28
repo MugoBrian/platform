@@ -6,7 +6,7 @@ use Ramsey\Uuid\Uuid;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\Apikey;
 use Ushahidi\Modules\V5\Requests\ApiKeyRequest;
-use Ushahidi\Core\Entity\ApiKey as ApikeyEntity;
+use Ushahidi\Core\Data\ApiKeyEntity as ApikeyEntity;
 use Ushahidi\Modules\V5\Helpers\ParameterUtilities;
 
 class UpdateApikeyCommand implements Command

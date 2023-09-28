@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\FormStage as EntityFormStage;
+use Ushahidi\Core\Data\FormStageEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class FormStage extends StaticEntity implements EntityFormStage
+class FormStage extends StaticEntity implements FormStageEntity
 {
     protected $id;
     protected $form_id;

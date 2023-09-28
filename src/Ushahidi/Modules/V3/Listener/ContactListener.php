@@ -16,12 +16,12 @@ namespace Ushahidi\Modules\V3\Listener;
 use League\Event\EventInterface;
 use League\Event\AbstractListener;
 use Illuminate\Support\Facades\Log;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\PostRepository;
-use Ushahidi\Core\Entity\ContactRepository;
-use Ushahidi\Core\Entity\MessageRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
-use Ushahidi\Core\Entity\TargetedSurveyStateRepository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\PostRepository;
+use Ushahidi\Core\Data\ContactRepository;
+use Ushahidi\Core\Data\MessageRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
+use Ushahidi\Core\Data\TargetedSurveyStateRepository;
 use Ushahidi\DataSource\Contracts\MessageType as MessageType;
 
 class ContactListener extends AbstractListener
@@ -140,9 +140,9 @@ class ContactListener extends AbstractListener
                 'post_id' => $postId,
                 'title' => $firstAttribute->label,
                 'message' => $firstAttribute->label,
-                'status' => \Ushahidi\Core\Entity\Message::PENDING,
+                'status' => \Ushahidi\Core\Data\Message::PENDING,
                 'type' => $message_type,
-                'direction' => \Ushahidi\Core\Entity\Message::OUTGOING,
+                'direction' => \Ushahidi\Core\Data\Message::OUTGOING,
                 'data_source' => $source->getId(),
             ];
             $message->setState($messageState);

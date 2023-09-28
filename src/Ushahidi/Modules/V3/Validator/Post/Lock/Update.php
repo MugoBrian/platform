@@ -12,7 +12,7 @@
 namespace Ushahidi\Modules\V3\Validator\Post\Lock;
 
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\PostRepository;
 
 class Update extends LegacyValidator
 {

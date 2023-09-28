@@ -13,7 +13,7 @@ use Ushahidi\Modules\V5\Actions\User\Commands\CreateUserSettingCommand;
 use Ushahidi\Modules\V5\Actions\User\Commands\DeleteUserSettingCommand;
 use Ushahidi\Modules\V5\Actions\User\Commands\UpdateUserSettingCommand;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\UserSetting as UserSettingEntity;
+use Ushahidi\Core\Data\UserSettingEntity as UserSettingEntity;
 use Ushahidi\Modules\V5\Requests\UserSettingRequest;
 
 class UserSettingController extends V5Controller

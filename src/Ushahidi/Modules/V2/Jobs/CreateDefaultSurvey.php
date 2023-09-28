@@ -7,7 +7,7 @@ use Ushahidi\Core\Tool\Job;
 use Ushahidi\Core\Ohanzee\Entity\Form;
 use Ushahidi\Core\Ohanzee\Entity\FormStage;
 use Ushahidi\Core\Ohanzee\Entity\FormAttribute;
-use Ushahidi\Core\Entity;
+use Ushahidi\Core\Data;
 
 class CreateDefaultSurvey extends Job
 {
@@ -133,9 +133,9 @@ class CreateDefaultSurvey extends Job
      */
     public function handle(
         V2\Contracts\ImportMappingRepository $mappingRepo,
-        Entity\FormRepository $formRepo,
-        Entity\FormStageRepository $stageRepo,
-        Entity\FormAttributeRepository $attrRepo
+        Data\FormRepository                  $formRepo,
+        Data\FormStageRepository             $stageRepo,
+        Data\FormAttributeRepository         $attrRepo
     ) {
         // Create form
         $formId = $formRepo->create(new Form([

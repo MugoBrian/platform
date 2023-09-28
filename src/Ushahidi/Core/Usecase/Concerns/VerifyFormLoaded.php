@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Verify Form Exists for Usecase
+ * Ushahidi Platform Verify FormEntity Exists for Usecase
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform
@@ -13,8 +13,8 @@ namespace Ushahidi\Core\Usecase\Concerns;
 
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Exception\ValidatorException;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\FormContactRepository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\FormContactRepository;
 
 trait VerifyFormLoaded
 {

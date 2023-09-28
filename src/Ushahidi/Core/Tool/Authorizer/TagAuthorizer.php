@@ -13,11 +13,11 @@ namespace Ushahidi\Core\Tool\Authorizer;
 
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Entity\TagRepository;
+use Ushahidi\Core\Data\TagRepository;
 use Ushahidi\Contracts\ParentableEntity;
 use Ushahidi\Core\Concerns\ParentAccess;
 use Ushahidi\Core\Concerns\ControlAccess;
@@ -71,8 +71,8 @@ class TagAuthorizer implements Authorizer
     }
 
     /**
-     * @param \Ushahidi\Core\Entity\Tag $tag
-     * @param \Ushahidi\Core\Entity\User $user
+     * @param \Ushahidi\Core\Data\Tag $tag
+     * @param \Ushahidi\Core\Data\User $user
      * @return boolean
      */
     protected function isUserOfRole(Entity $tag, Entity $user)

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Contact Authorizer
+ * Ushahidi ContactEntity Authorizer
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application

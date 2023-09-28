@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 use Ushahidi\Modules\V5\Models\Media;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\MediaSearchFields;
-use Ushahidi\Core\Entity\Media as MediaEntity;
+use Ushahidi\Core\Data\Media as MediaEntity;
 
 interface MediaRepository
 {

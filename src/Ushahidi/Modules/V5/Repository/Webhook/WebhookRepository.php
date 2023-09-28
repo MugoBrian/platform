@@ -7,7 +7,7 @@ use Illuminate\Support\Collection;
 use Ushahidi\Modules\V5\Models\Webhook\Webhook;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\WebhookSearchFields;
-use Ushahidi\Core\Entity\Webhook as WebhookEntity;
+use Ushahidi\Core\Data\Webhook as WebhookEntity;
 
 interface WebhookRepository
 {

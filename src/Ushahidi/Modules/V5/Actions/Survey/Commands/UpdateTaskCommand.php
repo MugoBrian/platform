@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\Survey\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\FormStage as TaskEntity;
+use Ushahidi\Core\Data\FormStageEntity as TaskEntity;
 
 class UpdateTaskCommand implements Command
 {

@@ -17,7 +17,7 @@ use Ushahidi\Core\Usecase\Concerns\Formatter as FormatterTrait;
 use Ushahidi\Core\Usecase\Concerns\Authorizer as AuthorizerTrait;
 use Ushahidi\Core\Usecase\Concerns\Translator as TranslatorTrait;
 use Ushahidi\Core\Concerns\FilterRecords;
-use Ushahidi\Core\Entity\ConfigRepository;
+use Ushahidi\Core\Data\ConfigRepository;
 
 class SearchConfig implements Usecase
 {

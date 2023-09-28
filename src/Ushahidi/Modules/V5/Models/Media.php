@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Validator;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Illuminate\Support\Facades\Input;
 
 class Media extends BaseModel

@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 
 class Translation extends BaseModel
 {

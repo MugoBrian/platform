@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Contact Validator
+ * Ushahidi ContactEntity Validator
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -11,9 +11,9 @@
 
 namespace Ushahidi\Modules\V3\Validator\Contact;
 
-use Ushahidi\Core\Entity\Contact;
+use Ushahidi\Core\Data\ContactEntity;
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\UserRepository;
+use Ushahidi\Core\Data\UserRepository;
 
 class Update extends LegacyValidator
 {
@@ -40,7 +40,13 @@ class Update extends LegacyValidator
             'type' => [
                 ['max_length', [':value', 255]],
                 // @todo this should be shared via repo or other means
-                ['in_array', [':value', [Contact::EMAIL, Contact::PHONE, Contact::WHATSAPP, Contact::TWITTER]]],
+                ['in_array', [':value', [
+                    ContactEntity::EMAIL,
+                    ContactEntity::PHONE,
+                    ContactEntity::WHATSAPP,
+                    ContactEntity::TWITTER
+                    ]]
+                ],
             ],
             'data_source' => [
                 ['in_array', [':value', array_keys($sources->getEnabledSources())]],
@@ -53,7 +59,7 @@ class Update extends LegacyValidator
     }
 
     /**
-     * Validate Contact Against Contact Type
+     * Validate ContactEntity Against ContactEntity Type
      *
      * @param array $validation
      * @param string $field field name
@@ -64,13 +70,13 @@ class Update extends LegacyValidator
     {
         // Valid Email?
         if (isset($data['type']) and
-            $data['type'] == Contact::EMAIL and
+            $data['type'] == ContactEntity::EMAIL and
              ! \Kohana\Validation\Valid::email($contact)) {
             return $validation->error('contact', 'invalid_email', [$contact]);
         // Valid Phone?
         // @todo Look at using libphonenumber to validate international numbers
         } elseif (isset($data['type']) and
-            $data['type'] == Contact::PHONE) {
+            $data['type'] == ContactEntity::PHONE) {
             // Remove all non-digit characters from the number
             $number = preg_replace('/\D+/', '', $contact);
 

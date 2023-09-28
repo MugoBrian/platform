@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\Apikey\Commands;
 use Ramsey\Uuid\Uuid;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Requests\ApiKeyRequest;
-use Ushahidi\Core\Entity\ApiKey as ApikeyEntity;
+use Ushahidi\Core\Data\ApiKeyEntity as ApikeyEntity;
 
 class CreateApikeyCommand implements Command
 {
@@ -15,7 +15,7 @@ class CreateApikeyCommand implements Command
     private $apikey_entity;
 
 
-    
+
 
     public function __construct(ApikeyEntity $apikey_entity)
     {

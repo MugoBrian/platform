@@ -15,8 +15,8 @@ namespace Ushahidi\Modules\V3\Listener;
 
 use League\Event\EventInterface;
 use League\Event\AbstractListener;
-use Ushahidi\Core\Entity\WebhookRepository;
-use Ushahidi\Core\Entity\WebhookJobRepository;
+use Ushahidi\Core\Data\WebhookRepository;
+use Ushahidi\Core\Data\WebhookJobRepository;
 
 class PostListener extends AbstractListener
 {

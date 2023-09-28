@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V2\Jobs;
 
 use Ushahidi\Modules\V2;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\MessageRepository;
+use Ushahidi\Core\Data\MessageRepository;
 
 class ImportMessages extends ImportFromV2Job
 {

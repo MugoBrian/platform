@@ -14,11 +14,11 @@ namespace Ushahidi\Core\Ohanzee\Repository\HXL;
 use Ohanzee\Database;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Tool\SearchData;
-use Ushahidi\Core\Entity\HXL\HXLAttribute;
+use Ushahidi\Core\Data\HXL\HXLAttribute;
 use Ushahidi\Core\Ohanzee\Repository\OhanzeeRepository;
 use Ushahidi\Contracts\Repository\ReadRepository;
 use Ushahidi\Contracts\Repository\SearchRepository;
-use Ushahidi\Core\Entity\HXL\HXLAttributeRepository as HXLAttributeRepositoryContract;
+use Ushahidi\Core\Data\HXL\HXLAttributeRepository as HXLAttributeRepositoryContract;
 
 class HXLAttributeRepository extends OhanzeeRepository implements
     HXLAttributeRepositoryContract,

@@ -12,16 +12,16 @@
 namespace Ushahidi\Core\Tool;
 
 use Ushahidi\Contracts\AccessControl as Acl;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity;
 use Ushahidi\Core\Facade\Feature;
-use Ushahidi\Core\Entity\RoleRepository;
+use Ushahidi\Core\Data\RoleRepository;
 
 class AccessControl implements Acl
 {
     protected $role_repo;
 
     const DEFAULT_ROLES = [
-        'user'  => [Permission::EDIT_OWN_POSTS]
+        'user'  => [PermissionEntity::EDIT_OWN_POSTS]
     ];
 
     public function setRoleRepo(RoleRepository $role_repo)

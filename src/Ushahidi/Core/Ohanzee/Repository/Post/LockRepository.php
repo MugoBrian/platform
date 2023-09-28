@@ -16,7 +16,7 @@ use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Entity\PostLockRepository;
+use Ushahidi\Core\Data\PostLockRepository;
 use Ushahidi\Core\Ohanzee\Entity\PostLock;
 use Ushahidi\Core\Ohanzee\Repository\UserRepository;
 use Ushahidi\Core\Ohanzee\Repository\OhanzeeRepository;

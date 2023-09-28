@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Role Validator
+ * Ushahidi FormEntity Role Validator
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application

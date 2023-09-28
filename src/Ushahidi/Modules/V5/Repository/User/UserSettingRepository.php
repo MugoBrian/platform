@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Repository\User;
 
 use Ushahidi\Modules\V5\Models\UserSetting;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Ushahidi\Core\Entity\UserSetting as UserSettingEntity;
+use Ushahidi\Core\Data\UserSettingEntity as UserSettingEntity;
 
 interface UserSettingRepository
 {

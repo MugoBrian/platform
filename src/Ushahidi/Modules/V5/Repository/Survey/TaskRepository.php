@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Repository\Survey;
 
 use Ushahidi\Modules\V5\Models\Stage as Task;
-use Ushahidi\Core\Entity\FormStage as TaskEntity;
+use Ushahidi\Core\Data\FormStageEntity as TaskEntity;
 use Ushahidi\Modules\V5\DTO\TaskSearchFields;
 
 interface TaskRepository

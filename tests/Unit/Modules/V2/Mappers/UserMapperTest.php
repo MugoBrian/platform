@@ -3,10 +3,9 @@
 namespace Ushahidi\Tests\Unit\Modules\V2\Mappers;
 
 use Ushahidi\Modules\V2\Mappers\UserMapper;
-use Ushahidi\Core\Entity\User;
+use Ushahidi\Core\Data\UserEntity as User;
 use Ushahidi\Tests\Unit\Modules\V2\ImportMock;
 use Ushahidi\Tests\TestCase;
-use Mockery as M;
 use Faker;
 
 /**

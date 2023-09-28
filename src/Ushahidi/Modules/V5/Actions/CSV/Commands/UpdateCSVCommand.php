@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\CSV\Commands;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\CSV;
 use Ushahidi\Modules\V5\Requests\CSVRequest;
-use Ushahidi\Core\Entity\CSV as CSVEntity;
+use Ushahidi\Core\Data\CSV as CSVEntity;
 
 class UpdateCSVCommand implements Command
 {

@@ -17,7 +17,7 @@ use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Ohanzee\Entity\Webhook;
-use Ushahidi\Core\Entity\WebhookRepository as WebhookRepositoryContract;
+use Ushahidi\Core\Data\WebhookRepository as WebhookRepositoryContract;
 
 class WebhookRepository extends OhanzeeRepository implements WebhookRepositoryContract
 {

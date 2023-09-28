@@ -6,7 +6,7 @@ use Ushahidi\Modules\V5\Models\Stage as Task;
 use Ushahidi\Modules\V5\Repository\Survey\TaskRepository;
 use Ushahidi\Core\Exception\NotFoundException;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\FormStage as TaskEntity;
+use Ushahidi\Core\Data\FormStageEntity as TaskEntity;
 
 class EloquentTaskRepository implements TaskRepository
 {

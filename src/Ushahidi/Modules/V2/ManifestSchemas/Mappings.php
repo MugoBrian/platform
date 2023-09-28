@@ -23,9 +23,9 @@ namespace Ushahidi\Modules\V2\ManifestSchemas;
       - { from: { id: 23 }, to: { key: 86a61869-f4a7-42a2-a19f-3e9806e5c23e } }
 */
 
-use Ushahidi\Core\Entity\TagRespository;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
+use Ushahidi\Core\Data\TagRespository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
 
 // phpcs:disable PSR1.Classes.ClassDeclaration.MultipleClasses
 // (Readibility is enhanced in this case by having all the mapping def classes here)

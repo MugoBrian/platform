@@ -6,11 +6,11 @@ use Ushahidi\Modules\V5\Models\SetPost;
 use Ushahidi\Modules\V5\Repository\Set\SetPostRepository;
 use Ushahidi\Core\Exception\NotFoundException;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Set as CollectionEntity;
+use Ushahidi\Core\Data\Set as CollectionEntity;
 
 class EloquentSetPostRepository implements SetPostRepository
 {
-   
+
       /**
      * This method will fetch a single Set from the database utilising
      * Laravel Eloquent ORM. Will throw an exception if provided identifier does
@@ -35,7 +35,7 @@ class EloquentSetPostRepository implements SetPostRepository
      * @param int $post_id
      *
      */
-   
+
     public function create(int $collection_id, int $post_id): void
     {
         $setPost = setPost::create(['set_id'=>$collection_id,'post_id'=>$post_id]);

@@ -2,10 +2,10 @@
 namespace Ushahidi\Core\Eloquent\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Ushahidi\Core\Entity\User as EntityUser;
+use Ushahidi\Core\Data\UserEntity;
 use Ushahidi\Core\Eloquent\Concerns\HasState;
 
-class User extends Model implements EntityUser
+class User extends Model implements UserEntity
 {
     use HasState;
 

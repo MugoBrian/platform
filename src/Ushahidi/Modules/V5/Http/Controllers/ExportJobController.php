@@ -49,7 +49,7 @@ class ExportJobController extends V5Controller
 
 
     /**
-     * Create new ExportJob.
+     * Create new ExportJobEntity.
      *
      * @param ExportJobRequest $request
      * @return \Illuminate\Http\JsonResponse
@@ -64,7 +64,7 @@ class ExportJobController extends V5Controller
     } //end store()
 
      /**
-     * update  ExportJob.
+     * update  ExportJobEntity.
      *
      * @param int id
      * @param ExportJobRequest $request
@@ -82,7 +82,7 @@ class ExportJobController extends V5Controller
     }// end update
 
      /**
-     * Create new ExportJob.
+     * Create new ExportJobEntity.
      *
      * @param int id
      * @return \Illuminate\Http\JsonResponse

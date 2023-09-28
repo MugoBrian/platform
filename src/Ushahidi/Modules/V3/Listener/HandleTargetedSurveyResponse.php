@@ -4,9 +4,9 @@ namespace Ushahidi\Modules\V3\Listener;
 use Illuminate\Support\Facades\Log;
 use Ushahidi\Core\Ohanzee\Entity\Message;
 use Ushahidi\Core\Ohanzee\Entity\TargetedSurveyState;
-use Ushahidi\Core\Entity\MessageRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
-use Ushahidi\Core\Entity\TargetedSurveyStateRepository;
+use Ushahidi\Core\Data\MessageRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
+use Ushahidi\Core\Data\TargetedSurveyStateRepository;
 
 class HandleTargetedSurveyResponse
 {

@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Repository\Survey;
 
 use Ushahidi\Modules\V5\Models\SurveyRole;
-use Ushahidi\Core\Entity\FormRole as SurveyRoleEntity;
+use Ushahidi\Core\Data\FormRole as SurveyRoleEntity;
 
 interface SurveyRoleRepository
 {

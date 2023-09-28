@@ -324,12 +324,12 @@ class AppConfig extends ContainerConfig
             'resolver' => $di->lazyGet('db.ohanzee.resolver'),
         ];
 
-        // Config
+        // ConfigEntity
         $di->params[Core\Ohanzee\Repository\ConfigRepository::class] = [
             'resolver' => $di->lazyGet('db.ohanzee.resolver'),
         ];
 
-        // Config
+        // ConfigEntity
         $di->params[\App\PlatformVerifier\Database::class] = [
             'resolver' => $di->lazyGet('db.ohanzee.resolver'),
         ];
@@ -342,12 +342,12 @@ class AppConfig extends ContainerConfig
             'upload' => $di->lazyGet('tool.uploader'),
         ];
 
-        // Form Stage repository parameters
+        // FormEntity Stage repository parameters
         $di->params[Core\Ohanzee\Repository\Form\StageRepository::class] = [
             'form_repo' => $di->lazyGet('repository.form')
         ];
 
-        // Form Contact repository parameters
+        // FormEntity ContactEntity repository parameters
         $di->params[Core\Ohanzee\Repository\Form\ContactRepository::class] = [
             'form_repo' => $di->lazyGet('repository.form'),
             'targeted_survey_state_repo' => $di->lazyGet('repository.targeted_survey_state'),
@@ -355,7 +355,7 @@ class AppConfig extends ContainerConfig
         ];
         $di->setters[Core\Ohanzee\Repository\Form\ContactRepository::class]['setEvent'] = 'FormContactEvent';
 
-        // Form Stats repository parameters
+        // FormEntity Stats repository parameters
         $di->params[Core\Ohanzee\Repository\Form\StatsRepository::class] = [
             'form_repo' => $di->lazyGet('repository.form')
         ];
@@ -387,13 +387,13 @@ class AppConfig extends ContainerConfig
         $di->setters[V3\Validator\Form\Contact\Create::class]['setFormRepo'] =
             $di->lazyGet('repository.form');
 
-        // $di->setters[V3\Validator\Form\Contact\Create::class]['setContactRepo'] =
+        // $di->setters[V3\Validator\FormEntity\ContactEntity\Create::class]['setContactRepo'] =
         //     $di->lazyGet('repository.contact');
-        // $di->setters[V3\Validator\Form\Contact\Create::class]['setFormContactRepo'] =
+        // $di->setters[V3\Validator\FormEntity\ContactEntity\Create::class]['setFormContactRepo'] =
         //     $di->lazyGet('repository.form_contact');
 
 
-        // Form Attribute repository parameters
+        // FormEntity Attribute repository parameters
         $di->params[Core\Ohanzee\Repository\Form\AttributeRepository::class] = [
             'form_stage_repo' => $di->lazyGet('repository.form_stage'),
             'form_repo' => $di->lazyGet('repository.form')
@@ -668,12 +668,12 @@ class AppConfig extends ContainerConfig
         $di->setters[V3\Listener\PostListener::class]['setWebhookRepo'] =
             $di->lazyGet('repository.webhook');
 
-        // Add Intercom Listener to Config
+        // Add Intercom Listener to ConfigEntity
         $di->setters[Core\Ohanzee\Repository\ConfigRepository::class]['setEvent'] = 'ConfigUpdateEvent';
         $di->setters[Core\Ohanzee\Repository\ConfigRepository::class]['setListener'] =
             $di->lazyNew(V3\Listener\IntercomCompanyListener::class);
 
-        // Add Intercom Listener to Form
+        // Add Intercom Listener to FormEntity
         $di->setters[Core\Ohanzee\Repository\FormRepository::class]['setEvent'] = 'FormUpdateEvent';
         $di->setters[Core\Ohanzee\Repository\FormRepository::class]['setListener'] =
             $di->lazyNew(V3\Listener\IntercomCompanyListener::class);

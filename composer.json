@@ -15,7 +15,7 @@
         }
     ],
     "require": {
-        "php": ">=7.3 <7.4",
+        "php": ">=7.3",
         "abraham/twitteroauth": "^0.5.3",
         "africastalking/africastalking": "^3.0",
         "asm89/stack-cors": "^2.1",
@@ -80,6 +80,9 @@
             "http",
             "git"
         ],
+        "platform": {
+            "php": "8.0"
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,

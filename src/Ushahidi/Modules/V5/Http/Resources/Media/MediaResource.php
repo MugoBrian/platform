@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\Media;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\Media as MediaEntity;
+use Ushahidi\Core\Data\Media as MediaEntity;
 use Illuminate\Support\Facades\Storage;
 
 

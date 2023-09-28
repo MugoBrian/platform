@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V2\Mappers;
 use Ushahidi\Modules\V2\Import;
 use Illuminate\Support\Collection;
 use Ushahidi\Modules\V2\Contracts\Mapper;
-use Ushahidi\Core\Entity\ContactRepository;
+use Ushahidi\Core\Data\ContactRepository;
 use Ushahidi\Core\Ohanzee\Entity\Message;
 use Ushahidi\Modules\V2\Contracts\ImportMappingRepository;
 

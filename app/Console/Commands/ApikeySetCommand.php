@@ -15,7 +15,7 @@ use Ushahidi\Core\Usecase\CreateUsecase;
 use Illuminate\Contracts\Events\Dispatcher;
 use App\Console\Commands\Concerns\ConsoleFormatter;
 use Ushahidi\Core\Tool\Authorizer\ConsoleAuthorizer;
-use Ushahidi\Core\Entity\ApiKeyRepository as EntityApiKeyRepository;
+use Ushahidi\Core\Data\ApiKeyRepository as EntityApiKeyRepository;
 
 class ApikeySetCommand extends Command
 {

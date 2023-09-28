@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi API Formatter for Config
+ * Ushahidi API Formatter for ConfigEntity
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application

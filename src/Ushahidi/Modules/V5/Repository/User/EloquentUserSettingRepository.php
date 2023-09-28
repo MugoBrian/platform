@@ -7,7 +7,7 @@ use Ushahidi\Modules\V5\Repository\User\UserSettingRepository;
 use Ushahidi\Core\Exception\NotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\UserSetting as UserSettingEntity;
+use Ushahidi\Core\Data\UserSettingEntity as UserSettingEntity;
 
 class EloquentUserSettingRepository implements UserSettingRepository
 {

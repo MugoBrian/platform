@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Contracts\Entity as EntityContract;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Support\GenericUser as User;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
@@ -237,7 +237,7 @@ class PostPolicy
     protected function isFormRestricted(EntityContract $entity, $user)
     {
         // If the $entity->form_id exists and the $form->everyone_can_create is False
-        // we check to see if the Form & Role Join exists in the `FormRoleRepository`
+        // we check to see if the FormEntity & Role Join exists in the `FormRoleRepository`
 
         if ($entity->form_id) {
             $form_repo = service('repository.form');

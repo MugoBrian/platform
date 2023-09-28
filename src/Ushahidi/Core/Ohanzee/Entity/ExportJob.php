@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\ExportJob as EntityExportJob;
+use Ushahidi\Core\Data\ExportJobEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class ExportJob extends StaticEntity implements EntityExportJob
+class ExportJob extends StaticEntity implements ExportJobEntity
 {
     protected $id;
     protected $entity_type;

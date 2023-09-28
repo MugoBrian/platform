@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Contact Repository
+ * Ushahidi FormEntity ContactEntity Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -18,10 +18,10 @@ use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Core\Ohanzee\Repository\OhanzeeRepository;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Contracts\Repository\SearchRepository;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\MessageRepository;
-use Ushahidi\Core\Entity\FormContactRepository;
-use Ushahidi\Core\Entity\TargetedSurveyStateRepository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\MessageRepository;
+use Ushahidi\Core\Data\FormContactRepository;
+use Ushahidi\Core\Data\TargetedSurveyStateRepository;
 
 class ContactRepository extends OhanzeeRepository implements
     FormContactRepository,
@@ -60,7 +60,7 @@ class ContactRepository extends OhanzeeRepository implements
     /**
      * @param $contact
      * @param array $data
-     * @return \Ushahidi\Core\Entity\Contact (return the entity from the database
+     * @return \Ushahidi\Core\Data\ContactEntity (return the entity from the database
      * if there's a match,or a new one if not)
      */
     public function getEntityWithData($contact, $data = [])
@@ -160,7 +160,7 @@ class ContactRepository extends OhanzeeRepository implements
     }
     /**
      * @param int $form_id
-     * @return \Ushahidi\Core\Entity\Contact[]
+     * @return \Ushahidi\Core\Data\ContactEntity[]
      * Returns all
      */
     public function getByForm($form_id)

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Contact Entity
+ * Ushahidi ContactEntity Entity
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform
@@ -12,9 +12,9 @@
 namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\StaticEntity;
-use Ushahidi\Core\Entity\Contact as EntityContact;
+use Ushahidi\Core\Data\ContactEntity;
 
-class Contact extends StaticEntity implements EntityContact
+class Contact extends StaticEntity implements ContactEntity
 {
     protected $id;
     protected $user_id;

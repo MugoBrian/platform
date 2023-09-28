@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\DataProvider;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\DataProvider as DataProviderEntity;
+use Ushahidi\Core\Data\DataProvider as DataProviderEntity;
 
 
 use App\Bus\Query\QueryBus;

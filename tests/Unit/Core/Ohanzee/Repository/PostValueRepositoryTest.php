@@ -10,7 +10,7 @@
 
 namespace Ushahidi\Tests\Unit\Core\Ohanzee\Repository;
 
-use Ushahidi\Core\Entity\PostValue;
+use Ushahidi\Core\Ohanzee\Entity\PostValue;
 use Ushahidi\Core\Ohanzee\Repository\Post\ValueRepository;
 
 /**
@@ -19,6 +19,8 @@ use Ushahidi\Core\Ohanzee\Repository\Post\ValueRepository;
  */
 class PostValueRepositoryTest extends \PHPUnit\Framework\TestCase
 {
+    protected $postValue;
+
     protected $repository;
 
     public function setUp(): void

@@ -4,18 +4,18 @@ namespace Ushahidi\Modules\V2\Jobs;
 
 use Ushahidi\Modules\V2;
 use Ushahidi\Core\Tool\Job;
-use Ushahidi\Core\Entity\Form;
+use Ushahidi\Core\Data\FormEntity;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Ushahidi\Core\Entity\FormStage;
+use Ushahidi\Core\Data\FormStageEntity;
 use Ushahidi\Core\Tool\SearchData;
-use Ushahidi\Core\Entity\FormAttribute;
+use Ushahidi\Core\Data\FormAttribute;
 use Illuminate\Contracts\Container\Container;
 use Ushahidi\Modules\V2\ManifestSchemas\ImportParameters;
-use Ushahidi\Core\Entity\TagRepository;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
+use Ushahidi\Core\Data\TagRepository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
 
 class ImportForms extends ImportFromV2Job
 {
@@ -378,7 +378,7 @@ class ImportForms extends ImportFromV2Job
     {
         $formRepo = app(FormRepository::class);
         $mappingRepo = app(V2\Contracts\ImportMappingRepository::class);
-        $form = new Form([
+        $form = new FormEntity([
             'name' => 'Report',
             'description' => 'Report an incident',
             'require_approval' => true,
@@ -405,7 +405,7 @@ class ImportForms extends ImportFromV2Job
         $stageRepo = app(Entity\FormStageRepository::class);
         $mappingRepo = app(V2\Contracts\ImportMappingRepository::class);
 
-        $stageId = $stageRepo->create(new FormStage([
+        $stageId = $stageRepo->create(new FormStageEntity([
             'form_id' => $formId,
             'label' => 'Post',
             'priority' => 0,

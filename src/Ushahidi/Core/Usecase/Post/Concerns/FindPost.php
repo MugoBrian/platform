@@ -12,7 +12,7 @@
 namespace Ushahidi\Core\Usecase\Post\Concerns;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\PostRepository;
 
 trait FindPost
 {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Repository
+ * Ushahidi FormEntity Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -18,7 +18,7 @@ use Ushahidi\Core\Concerns\Event;
 use Illuminate\Support\Collection;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Core\Ohanzee\Repository\Concerns\FormsTags;
-use Ushahidi\Core\Entity\FormRepository as FormRepositoryContract;
+use Ushahidi\Core\Data\FormRepository as FormRepositoryContract;
 
 class FormRepository extends OhanzeeRepository implements
     FormRepositoryContract
@@ -65,7 +65,7 @@ class FormRepository extends OhanzeeRepository implements
         }
 
         if ($search->q) {
-            // Form text searching
+            // FormEntity text searching
             $query->where('name', 'LIKE', "%{$search->q}%");
         }
     }
@@ -108,7 +108,7 @@ class FormRepository extends OhanzeeRepository implements
     // UpdateRepository
     public function update(Entity $entity)
     {
-        // If orignal Form update Intercom if Name changed
+        // If orignal FormEntity update Intercom if Name changed
         if ($entity->id === 1) {
             foreach ($entity->getChanged() as $key => $val) {
                 $key === 'name' ? $this->emit($this->event, ['primary_survey_name' => $val]) : null;
@@ -135,7 +135,7 @@ class FormRepository extends OhanzeeRepository implements
     }
 
     /**
-      * Get value of Form property type
+      * Get value of FormEntity property type
       * if no form is found return false
       * @param  $form_id
       * @param $type, form property to check

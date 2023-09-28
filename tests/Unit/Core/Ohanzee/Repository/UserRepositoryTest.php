@@ -5,8 +5,8 @@ namespace Ushahidi\Tests\Unit\Core\Ohanzee\Repository;
 use Faker;
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Ohanzee\Entity\User;
 use Ushahidi\Tests\DatabaseTransactions;
+use Ushahidi\Core\Ohanzee\Entity\User;
 use Ushahidi\Core\Ohanzee\Repository\UserRepository;
 
 /**

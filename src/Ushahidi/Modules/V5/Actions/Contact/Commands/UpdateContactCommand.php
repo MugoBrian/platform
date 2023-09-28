@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Actions\Contact\Commands;
 
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Requests\ContactRequest;
-use Ushahidi\Core\Entity\Contact as ContactEntity;
+use Ushahidi\Core\Data\ContactEntity as ContactEntity;
 use Ushahidi\Core\Ohanzee\Entity\Contact as OhanzeeContact;
 use Ushahidi\Modules\V5\Models\Contact as EloquentContact;
 use Illuminate\Support\Facades\Auth;

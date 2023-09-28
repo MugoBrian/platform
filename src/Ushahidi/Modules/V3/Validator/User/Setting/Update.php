@@ -12,8 +12,8 @@
 namespace Ushahidi\Modules\V3\Validator\User\Setting;
 
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
-use Ushahidi\Core\Entity\UserRepository;
-use Ushahidi\Core\Entity\UserSettingRepository;
+use Ushahidi\Core\Data\UserRepository;
+use Ushahidi\Core\Data\UserSettingRepository;
 
 class Update extends LegacyValidator
 {

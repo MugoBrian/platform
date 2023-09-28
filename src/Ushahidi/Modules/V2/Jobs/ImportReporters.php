@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V2\Jobs;
 use Ushahidi\Modules\V2;
 use Ushahidi\Core\Ohanzee\Entity;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\ContactRepository;
+use Ushahidi\Core\Data\ContactRepository;
 
 class ImportReporters extends ImportFromV2Job
 {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Form Permissions
+ * FormEntity Permissions
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -12,7 +12,7 @@
 namespace Ushahidi\Core\Tool\Permissions;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Concerns\AdminAccess;
 

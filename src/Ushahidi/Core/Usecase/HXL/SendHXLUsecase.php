@@ -14,15 +14,15 @@ namespace Ushahidi\Core\Usecase\HXL;
 use Ushahidi\Contracts\Usecase;
 use Illuminate\Support\Facades\Log;
 use Ushahidi\Core\Concerns\IdentifyRecords;
-use Ushahidi\Core\Entity\ExportJobRepository;
-use Ushahidi\Core\Entity\UserSettingRepository;
-use Ushahidi\Core\Entity\HXL\HXLLicenseRepository;
-use Ushahidi\Core\Entity\HXL\HXLMetadataRepository;
+use Ushahidi\Core\Data\ExportJobRepository;
+use Ushahidi\Core\Data\UserSettingRepository;
+use Ushahidi\Core\Data\HXL\HXLLicenseRepository;
+use Ushahidi\Core\Data\HXL\HXLMetadataRepository;
 use Ushahidi\Core\Tool\ExternalServices\HDXInterface;
 use Ushahidi\Core\Usecase\Concerns\Formatter as FormatterTrait;
 use Ushahidi\Core\Usecase\Concerns\Authorizer as AuthorizerTrait;
 use Ushahidi\Core\Usecase\Concerns\Translator as TranslatorTrait;
-use Ushahidi\Core\Entity\HXL\HXLFormAttributeHXLAttributeTagRepository;
+use Ushahidi\Core\Data\HXL\HXLFormAttributeHXLAttributeTagRepository;
 
 class SendHXLUsecase implements Usecase
 {

@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Repository\Role;
 use Ushahidi\Modules\V5\Models\Role;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Ushahidi\Core\Entity\Role as RoleEntity;
+use Ushahidi\Core\Data\Role as RoleEntity;
 use Ushahidi\Modules\V5\DTO\RoleSearchFields;
 
 interface RoleRepository
@@ -43,7 +43,7 @@ interface RoleRepository
      * @return Model|Role
      */
     public function findByRole(string $role): Role;
-    
+
     /**
      * This method will create a Role
      * @param array $data
@@ -73,7 +73,7 @@ interface RoleRepository
     public function createRolePermission(string $role, string $permission): int;
 
 
-    
+
     /**
      * This method will delete the Role permission by role
      * @param int $id

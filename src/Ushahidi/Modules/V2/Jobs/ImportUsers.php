@@ -7,7 +7,7 @@ use Ushahidi\Core\Ohanzee\Entity;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use Ushahidi\Core\Entity\UserRepository;
+use Ushahidi\Core\Data\UserRepository;
 
 class ImportUsers extends ImportFromV2Job
 {

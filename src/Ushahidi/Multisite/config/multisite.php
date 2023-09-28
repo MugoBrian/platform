@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Multi Site Config
+ * Multi Site ConfigEntity
  */
 
 /*

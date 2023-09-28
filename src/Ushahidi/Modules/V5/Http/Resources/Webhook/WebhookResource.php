@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\Webhook;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\Webhook as WebhookEntity;
+use Ushahidi\Core\Data\Webhook as WebhookEntity;
 
 
 use App\Bus\Query\QueryBus;

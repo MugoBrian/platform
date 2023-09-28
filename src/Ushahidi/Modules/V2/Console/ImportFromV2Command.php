@@ -17,7 +17,7 @@ use Ushahidi\Modules\V2;
 use Ushahidi\Core\Tool\ManifestLoader;
 use Illuminate\Contracts\Bus\Dispatcher;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\PostRepository;
 use Ushahidi\Modules\V2\Contracts\ImportRepository;
 
 class ImportFromV2Command extends Command

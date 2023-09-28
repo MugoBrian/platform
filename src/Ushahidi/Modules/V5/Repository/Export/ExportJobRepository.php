@@ -7,14 +7,14 @@ use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\Models\ExportJob;
 use Ushahidi\Core\Exception\NotFoundException;
 use Ushahidi\Modules\V5\DTO\ExportJobSearchFields;
-use Ushahidi\Core\Entity\ExportJob as ExportJobEntity;
+use Ushahidi\Core\Data\ExportJobEntity as ExportJobEntity;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 interface ExportJobRepository
 {
 
     /**
-     * This method will fetch all the ExportJob for the logged user from the database utilising
+     * This method will fetch all the ExportJobEntity for the logged user from the database utilising
      * Laravel Eloquent ORM and return them as an array
      * @param int $limit
      * @param int $skip
@@ -26,7 +26,7 @@ interface ExportJobRepository
     public function fetch(Paging $paging, ExportJobSearchFields $search_fields): LengthAwarePaginator;
 
     /**
-     * This method will fetch a single ExportJob from the database utilising
+     * This method will fetch a single ExportJobEntity from the database utilising
      * Laravel Eloquent ORM. Will throw an exception if provided identifier does
      * not exist in the database.
      * @param int $id
@@ -36,21 +36,21 @@ interface ExportJobRepository
     public function findById(int $id): ExportJob;
 
     /**
-     * This method will create a ExportJob
+     * This method will create a ExportJobEntity
      * @param ExportJobEntity $entity
      * @return int
      */
     public function create(ExportJobEntity $entity): int;
 
     /**
-     * This method will update the ExportJob
+     * This method will update the ExportJobEntity
      * @param int $id
      * @param ExportJobEntity $entity
      */
     public function update(int $id, ExportJobEntity $entity): void;
 
        /**
-     * This method will delete the ExportJob
+     * This method will delete the ExportJobEntity
      * @param int $id
      */
     public function delete(int $id): void;

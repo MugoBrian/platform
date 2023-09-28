@@ -49,7 +49,7 @@ class ContactController extends V5Controller
 
 
     /**
-     * Create new Contact.
+     * Create new ContactEntity.
      *
      * @param ContactRequest $request
      * @return \Illuminate\Http\JsonResponse
@@ -64,7 +64,7 @@ class ContactController extends V5Controller
     } //end store()
 
      /**
-     * update  Contact.
+     * update  ContactEntity.
      *
      * @param int id
      * @param ContactRequest $request
@@ -82,7 +82,7 @@ class ContactController extends V5Controller
     }// end update
 
      /**
-     * Create new Contact.
+     * Create new ContactEntity.
      *
      * @param int id
      * @return \Illuminate\Http\JsonResponse

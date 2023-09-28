@@ -18,7 +18,7 @@ use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entity\Set;
 use Ushahidi\Core\Ohanzee\Entity\SavedSearch;
-use Ushahidi\Core\Entity\SetRepository as SetRepositoryContract;
+use Ushahidi\Core\Data\SetRepository as SetRepositoryContract;
 
 class SetRepository extends OhanzeeRepository implements SetRepositoryContract
 {

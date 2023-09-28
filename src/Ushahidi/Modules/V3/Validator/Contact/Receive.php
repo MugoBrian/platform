@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Contact Validator
+ * Ushahidi ContactEntity Validator
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -11,7 +11,7 @@
 
 namespace Ushahidi\Modules\V3\Validator\Contact;
 
-use Ushahidi\Core\Entity\Contact;
+use Ushahidi\Core\Data\ContactEntity;
 
 class Receive extends Create
 {
@@ -19,11 +19,11 @@ class Receive extends Create
     {
         // Valid Email?
         if (isset($data['type']) and
-            $data['type'] == Contact::EMAIL and
+            $data['type'] == ContactEntity::EMAIL and
              ! \Kohana\Validation\Valid::email($contact)) {
             return $validation->error('contact', 'invalid_email', [$contact]);
         } elseif (isset($data['type']) and
-            $data['type'] == Contact::PHONE) {
+            $data['type'] == ContactEntity::PHONE) {
             // Allow for alphanumeric sender
             $number = preg_replace('/[^a-zA-Z0-9 ]/', '', $contact);
 

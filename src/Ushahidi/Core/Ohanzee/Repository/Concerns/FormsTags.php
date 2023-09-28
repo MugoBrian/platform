@@ -15,7 +15,7 @@ use Ohanzee\DB;
 
 trait FormsTags
 {
-    //returning tags for a specific Form-id
+    //returning tags for a specific FormEntity-id
     private function getTagsForForm($id)
     {
         $attributes = DB::select('form_attributes.options')

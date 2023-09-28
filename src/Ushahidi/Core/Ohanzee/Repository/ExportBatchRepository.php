@@ -13,7 +13,7 @@ namespace Ushahidi\Core\Ohanzee\Repository;
 
 use Illuminate\Support\Collection;
 use Ushahidi\Core\Ohanzee\Entity\ExportBatch;
-use Ushahidi\Core\Entity\ExportBatchRepository as ExportBatchRepositoryContract;
+use Ushahidi\Core\Data\ExportBatchRepository as ExportBatchRepositoryContract;
 
 class ExportBatchRepository extends OhanzeeRepository implements ExportBatchRepositoryContract
 {

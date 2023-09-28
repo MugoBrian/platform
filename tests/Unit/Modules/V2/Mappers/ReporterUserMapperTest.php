@@ -5,7 +5,7 @@ namespace Ushahidi\Tests\Unit\Modules\V2\Mappers;
 use Faker;
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\Contact;
+use Ushahidi\Core\Data\ContactEntity;
 use Ushahidi\Tests\Unit\Modules\V2\ImportMock;
 use Ushahidi\Modules\V2\Mappers\ReporterUserMapper;
 use DMS\PHPUnitExtensions\ArraySubset\ArraySubsetAsserts;
@@ -37,7 +37,7 @@ class ReporterUserMapperTest extends TestCase
         $this->assertArrayHasKey('result', $result);
         $contact = $result['result'];
 
-        $this->assertInstanceOf(Contact::class, $contact);
+        $this->assertInstanceOf(ContactEntity::class, $contact);
         $this->assertArraySubset(
             $expected,
             $contact->asArray(),

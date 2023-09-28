@@ -7,7 +7,7 @@ use Ushahidi\Modules\V5\Repository\User\UserRepository as UserRepository;
 use Ushahidi\Core\Exception\NotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\User as UserEntity;
+use Ushahidi\Core\Data\UserEntity;
 use Ushahidi\Modules\V5\DTO\UserSearchFields;
 use Ushahidi\Modules\V5\Models\UserResettoken;
 
@@ -152,7 +152,7 @@ class EloquentUserRepository implements UserRepository
         ];
         // Question do we need to delete the old token ?!
         //UserResettoken::where("user_id",$user_id)->delete();
-        
+
         // Save the token
         $result =  UserResettoken::create($input);
         return $token;

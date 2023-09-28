@@ -6,7 +6,7 @@ use Ushahidi\Modules\V5\Actions\V5CommandHandler;
 use Ushahidi\Modules\V5\Actions\Survey\Commands\CreateSurveyRoleCommand;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Repository\Survey\SurveyRoleRepository;
-use Ushahidi\Core\Entity\FormRole as SurveyRoleEntity;
+use Ushahidi\Core\Data\FormRole as SurveyRoleEntity;
 
 class CreateSurveyRoleCommandHandler extends V5CommandHandler
 {

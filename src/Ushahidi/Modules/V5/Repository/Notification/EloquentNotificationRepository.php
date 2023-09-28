@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\Notification;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\NotificationSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Notification as NotificationEntity;
+use Ushahidi\Core\Data\Notification as NotificationEntity;
 
 class EloquentNotificationRepository implements NotificationRepository
 {

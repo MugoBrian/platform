@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\CSV;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\CSV as CSVEntity;
+use Ushahidi\Core\Data\CSV as CSVEntity;
 
 
 use App\Bus\Query\QueryBus;

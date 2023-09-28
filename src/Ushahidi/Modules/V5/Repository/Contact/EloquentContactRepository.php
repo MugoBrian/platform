@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\Contact;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\ContactSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Contact as ContactEntity;
+use Ushahidi\Core\Data\ContactEntity as ContactEntity;
 
 class EloquentContactRepository implements ContactRepository
 {
@@ -33,7 +33,7 @@ class EloquentContactRepository implements ContactRepository
         return $builder;
     }
     /**
-     * This method will fetch all the Contact for the logged user from the database utilising
+     * This method will fetch all the ContactEntity for the logged user from the database utilising
      * Laravel Eloquent ORM and return them as an array
      * @param int $limit
      * @param int $skip
@@ -53,7 +53,7 @@ class EloquentContactRepository implements ContactRepository
     }
 
     /**
-     * This method will fetch a single Contact from the database utilising
+     * This method will fetch a single ContactEntity from the database utilising
      * Laravel Eloquent ORM. Will throw an exception if provided identifier does
      * not exist in the database.
      * @param int $id
@@ -64,14 +64,14 @@ class EloquentContactRepository implements ContactRepository
     {
         $contact = Contact::find($id);
         if (!$contact instanceof Contact) {
-            throw new NotFoundException('Contact not found');
+            throw new NotFoundException('ContactEntity not found');
         }
         return $contact;
     }
 
 
     /**
-     * This method will create a Contact
+     * This method will create a ContactEntity
      * @param ContactEntity $entity
      * @return int
      * @throws \Exception
@@ -90,7 +90,7 @@ class EloquentContactRepository implements ContactRepository
     }
 
     /**
-     * This method will update the Contact
+     * This method will update the ContactEntity
      * @param int @id
      * @param ContactEntity $entity
      * @throws NotFoundException
@@ -99,7 +99,7 @@ class EloquentContactRepository implements ContactRepository
     {
         $contact = Contact::find($id);
         if (!$contact instanceof Contact) {
-            throw new NotFoundException('Contact not found');
+            throw new NotFoundException('ContactEntity not found');
         }
 
         DB::beginTransaction();
@@ -113,7 +113,7 @@ class EloquentContactRepository implements ContactRepository
     }
 
     /**
-     * This method will create a Contact
+     * This method will create a ContactEntity
      * @param int $id
      * @return int
      * @throws NotFoundException

@@ -12,7 +12,7 @@ namespace Ushahidi\Tests\Unit\DataSource;
 
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\ConfigRepository;
+use Ushahidi\Core\Data\ConfigRepository;
 use Ushahidi\Core\Ohanzee\Entity\Config;
 use Ushahidi\Tests\CustomSource;
 use Ushahidi\DataSource\Email\Email;

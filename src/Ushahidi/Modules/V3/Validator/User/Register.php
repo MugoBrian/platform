@@ -13,7 +13,7 @@
 
 namespace Ushahidi\Modules\V3\Validator\User;
 
-use Ushahidi\Core\Entity\UserRepository;
+use Ushahidi\Core\Data\UserRepository;
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
 
 class Register extends LegacyValidator

@@ -1,7 +1,7 @@
 <?php
 namespace Ushahidi\Modules\V5\Http\Resources;
 
-use Ushahidi\Core\Entity\Form as SurveyEntity;
+use Ushahidi\Core\Data\FormEntity as SurveyEntity;
 
 class SurveyResource extends BaseResource
 {

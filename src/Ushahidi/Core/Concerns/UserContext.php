@@ -13,13 +13,13 @@
 
 namespace Ushahidi\Core\Concerns;
 
-use Ushahidi\Core\Entity\User;
+use Ushahidi\Core\Data\UserEntity as User;
 use Ushahidi\Core\Support\Session;
 
 trait UserContext
 {
     /**
-     * @var \Ushahidi\Core\Entity\User
+     * @var \Ushahidi\Core\Data\UserEntity
      */
     protected $user;
 
@@ -84,7 +84,7 @@ trait UserContext
     /**
      * Checks if currently logged in user is the same as passed entity/array
      *
-     * @param  \Ushahidi\Core\Entity\User  $entity entity to check
+     * @param  \Ushahidi\Core\Data\UserEntity  $entity entity to check
      * @return boolean
      */
     protected function isUserSelf($entity)

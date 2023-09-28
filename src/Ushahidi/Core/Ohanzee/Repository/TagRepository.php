@@ -19,7 +19,7 @@ use Ushahidi\Core\Ohanzee\Entity\Tag;
 use Ushahidi\Contracts\ValidationEngine;
 use Ushahidi\Core\Ohanzee\Repository\Concerns;
 use Ushahidi\Core\Ohanzee\Repository\OhanzeeRepository;
-use Ushahidi\Core\Entity\TagRepository as TagRepositoryContract;
+use Ushahidi\Core\Data\TagRepository as TagRepositoryContract;
 
 class TagRepository extends OhanzeeRepository implements
     TagRepositoryContract

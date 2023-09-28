@@ -5,7 +5,7 @@ namespace Ushahidi\Modules\V5\Actions\Webhook\Commands;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Requests\WebhookRequest;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\Webhook as WebhookEntity;
+use Ushahidi\Core\Data\Webhook as WebhookEntity;
 use Ramsey\Uuid\Uuid;
 
 class CreateWebhookCommand implements Command
@@ -16,7 +16,7 @@ class CreateWebhookCommand implements Command
     private $webhook_entity;
 
 
-    
+
 
     public function __construct(WebhookEntity $webhook_entity)
     {

@@ -151,12 +151,12 @@ class CoreConfig extends ContainerConfig
         // The same collaborator mapping will be applied by action as with default use cases.
         $di->params[\Ushahidi\Modules\V3\Factory\UsecaseFactory::class]['map'] = [];
 
-        // Config does not allow ordering or sorting, because of its simple key/value nature.
+        // ConfigEntity does not allow ordering or sorting, because of its simple key/value nature.
         $di->params[\Ushahidi\Modules\V3\Factory\UsecaseFactory::class]['map']['config'] = [
             'search' => $di->newFactory(Usecase\Config\SearchConfig::class),
         ];
 
-        // Form sub-endpoints must verify that the form exists before anything else.
+        // FormEntity sub-endpoints must verify that the form exists before anything else.
         $di->params[\Ushahidi\Modules\V3\Factory\UsecaseFactory::class]['map']['form_attributes'] = [
             'create'  => $di->lazyNew(Usecase\Form\CreateFormAttribute::class),
             'read'    => $di->lazyNew(Usecase\Form\ReadFormAttribute::class),
@@ -172,8 +172,8 @@ class CoreConfig extends ContainerConfig
         $di->params[\Ushahidi\Modules\V3\Factory\UsecaseFactory::class]['map']['form_contacts'] = [
             'create'  => $di->lazyNew(Usecase\Form\CreateFormContact::class),
             'read'    => $di->lazyNew(Usecase\Form\ReadFormContact::class),
-            //'update'  => $di->lazyNew(Usecase\Form\UpdateFormContact::class),
-            // 'delete'  => $di->lazyNew(Usecase\Form\DeleteFormContact::class),
+            //'update'  => $di->lazyNew(Usecase\FormEntity\UpdateFormContact::class),
+            // 'delete'  => $di->lazyNew(Usecase\FormEntity\DeleteFormContact::class),
             'search'  => $di->lazyNew(Usecase\Form\SearchFormContact::class),
         ];
 

@@ -7,7 +7,7 @@ use Ushahidi\Core\Tool\Authenticator\Password;
 use Ushahidi\Core\Usecase\User\LoginUser;
 use League\OAuth2\Server\Entities\ClientEntityInterface;
 use League\OAuth2\Server\Repositories\UserRepositoryInterface;
-use Ushahidi\Core\Entity\UserRepository as EntityUserRepository;
+use Ushahidi\Core\Data\UserRepository as EntityUserRepository;
 
 class UserRepository implements UserRepositoryInterface
 {

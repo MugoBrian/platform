@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Repository\Survey;
 
 use Ushahidi\Modules\V5\Models\Survey;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Ushahidi\Core\Entity\Form as SurveyEntity;
+use Ushahidi\Core\Data\FormEntity as SurveyEntity;
 use Ushahidi\Modules\V5\DTO\SurveySearchFields;
 use Ushahidi\Modules\V5\Models\SurveyRole;
 use Illuminate\Database\Eloquent\Collection;

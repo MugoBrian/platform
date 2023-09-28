@@ -6,23 +6,23 @@ use Faker;
 use Ohanzee\DB;
 use Mockery as M;
 use Ohanzee\Database;
-use Ushahidi\Tests\TestCase;
 use Aura\Di\Injection\Factory;
 use Illuminate\Support\Collection;
 use Ushahidi\Core\Support\Session;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Ohanzee\Entity\Post;
 use Ushahidi\Core\Ohanzee\Entity\User;
-use Ushahidi\Tests\DatabaseTransactions;
-use Ushahidi\Core\Entity\ContactRepository;
-use Ushahidi\Core\Entity\PostLockRepository;
-use Ushahidi\Core\Entity\FormStageRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
+use Ushahidi\Core\Ohanzee\Entity\Post;
 use Ushahidi\Core\Tool\Permissions\PostPermissions;
+use Ushahidi\Core\Ohanzee\Repository\ContactRepository;
+use Ushahidi\Core\Ohanzee\Repository\FormRepository;
+use Ushahidi\Core\Ohanzee\Repository\Post\LockRepository as PostLockRepository;
+use Ushahidi\Core\Ohanzee\Repository\Form\StageRepository as FormStageRepository;
+use Ushahidi\Core\Ohanzee\Repository\Form\AttributeRepository as FormAttributeRepository;
 use Ushahidi\Core\Ohanzee\Repository\PostRepository;
 use Ushahidi\Core\Ohanzee\Repository\Post\ValueFactory;
+use Ushahidi\Tests\TestCase;
+use Ushahidi\Tests\DatabaseTransactions;
 
 /**
  * @backupGlobals disabled

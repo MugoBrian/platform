@@ -11,7 +11,7 @@ use Ushahidi\Modules\V5\Actions\Collection\Commands\CreateCollectionCommand;
 use Ushahidi\Modules\V5\Actions\Collection\Commands\UpdateCollectionCommand;
 use Ushahidi\Modules\V5\Actions\Collection\Commands\DeleteCollectionCommand;
 use Ushahidi\Modules\V5\DTO\CollectionSearchFields;
-use Ushahidi\Core\Entity\Set as CollectionEntity;
+use Ushahidi\Core\Data\Set as CollectionEntity;
 use Ushahidi\Modules\V5\Requests\CollectionRequest;
 use Ushahidi\Modules\V5\Models\Set as CollectionModel;
 

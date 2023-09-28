@@ -121,7 +121,7 @@ user_reset_tokens:
 forms:
   -
     id: 1
-    name: "Test Form"
+    name: "Test FormEntity"
     type: "report"
     description: "Testing form"
     require_approval: 0
@@ -799,7 +799,7 @@ form_attributes:
     form_stage_id: 10
   -
     id: 33
-    label: "A Test Field Form Stage 9"
+    label: "A Test Field FormEntity Stage 9"
     key: "test_field_stage_9"
     type: "varchar"
     input: "text"

@@ -12,9 +12,9 @@
 namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\StaticEntity;
-use Ushahidi\Core\Entity\Post as EntityPost;
+use Ushahidi\Core\Data\PostEntity;
 
-class Post extends StaticEntity implements EntityPost
+class Post extends StaticEntity implements PostEntity
 {
     protected $id;
     protected $parent_id;

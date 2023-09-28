@@ -11,7 +11,7 @@
 namespace Ushahidi\Modules\V3\Console;
 
 use Illuminate\Console\Command;
-use Ushahidi\Core\Entity\Message;
+use Ushahidi\Core\Data\Message;
 use Ushahidi\DataSource\DataSourceManager;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Concerns\UsesSiteInfo;
@@ -126,7 +126,7 @@ class NotificationCommand extends Command
             // Create outgoing messages
             foreach ($contacts as $contact) {
                 if ($this->messageRepository->notificationMessageExists($post->id, $contact->id)) {
-                    $this->info("Contact {$contact->id} already notified");
+                    $this->info("ContactEntity {$contact->id} already notified");
                     continue;
                 }
 

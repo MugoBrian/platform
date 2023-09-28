@@ -18,18 +18,18 @@ namespace Ushahidi\Core\Usecase\Message;
 
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Validator;
-use Ushahidi\Core\Entity\Message;
+use Ushahidi\Core\Data\MessageEntity as Message;
 use Ushahidi\Core\Usecase\CreateUsecase;
 use Ushahidi\Core\Concerns\DispatchesEvents;
 use Ushahidi\Core\Exception\ValidatorException;
-use Ushahidi\Core\Entity\ContactRepository;
+use Ushahidi\Core\Data\ContactRepository;
 
 class ReceiveMessage extends CreateUsecase
 {
     use DispatchesEvents;
 
     /**
-     * @var \Ushahidi\Core\Entity\ContactRepository
+     * @var \Ushahidi\Core\Data\ContactRepository
      */
     protected $contactRepo;
 

@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity;
+use Ushahidi\Core\Data;
 use Ushahidi\Modules\V5\Models\Apikey;
 use Ushahidi\Contracts\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
@@ -31,7 +31,7 @@ class APIKeyPolicy
 
     // Check that the user has the necessary permissions
     use AccessControlList;
-    
+
     use OwnerAccess;
 
     protected $user;
@@ -44,7 +44,7 @@ class APIKeyPolicy
      */
     public function index()
     {
-        $empty_apikey_entity = new Entity\ApiKey();
+        $empty_apikey_entity = new Data\ApiKeyEntity();
         return $this->isAllowed($empty_apikey_entity, 'search');
     }
 
@@ -56,7 +56,7 @@ class APIKeyPolicy
      */
     public function show(User $user, Apikey $apikey)
     {
-        $apikey_entity = new Entity\ApiKey($apikey->toArray());
+        $apikey_entity = new Data\ApiKeyEntity($apikey->toArray());
         return $this->isAllowed($apikey_entity, 'read');
     }
 
@@ -68,7 +68,7 @@ class APIKeyPolicy
      */
     public function delete(User $user, Apikey $apikey)
     {
-        $apikey_entity = new Entity\ApiKey($apikey->toArray());
+        $apikey_entity = new Data\ApiKeyEntity($apikey->toArray());
         return $this->isAllowed($apikey_entity, 'delete');
     }
     /**
@@ -78,7 +78,7 @@ class APIKeyPolicy
     public function update(User $user, Apikey $apikey)
     {
         // we convert to a Apikey entity to be able to continue using the old authorizers and classes.
-        $apikey_entity = new Entity\ApiKey($apikey->toArray());
+        $apikey_entity = new Data\ApiKeyEntity($apikey->toArray());
         return $this->isAllowed($apikey_entity, 'update');
     }
 
@@ -90,7 +90,7 @@ class APIKeyPolicy
     public function store(User $user, Apikey $apikey)
     {
         // we convert to a apikey_entity entity to be able to continue using the old authorizers and classes.
-        $apikey_entity = new Entity\ApiKey($apikey->toArray());
+        $apikey_entity = new Data\ApiKeyEntity($apikey->toArray());
         return $this->isAllowed($apikey_entity, 'create');
     }
 

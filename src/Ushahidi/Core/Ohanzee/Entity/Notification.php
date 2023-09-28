@@ -12,7 +12,7 @@
 namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Ushahidi\Core\Ohanzee\StaticEntity;
-use Ushahidi\Core\Entity\Notification as NotificationEntity;
+use Ushahidi\Core\Data\Notification as NotificationEntity;
 
 class Notification extends StaticEntity implements NotificationEntity
 {

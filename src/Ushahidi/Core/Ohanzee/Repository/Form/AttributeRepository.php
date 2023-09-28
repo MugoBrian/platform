@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Attribute Repository
+ * Ushahidi FormEntity Attribute Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -27,9 +27,9 @@ use Ushahidi\Core\Ohanzee\Repository\Concerns\CachesData;
 use Ushahidi\Core\Ohanzee\Repository\Concerns\JsonTranscode;
 use Ushahidi\Core\Ohanzee\Repository\Concerns\UsesBulkAutoIncrement;
 use Ushahidi\Core\Tool\Permissions\InteractsWithFormPermissions;
-use Ushahidi\Core\Entity\FormRepository as FormRepositoryContract;
-use Ushahidi\Core\Entity\FormStageRepository as FormStageRepositoryContract;
-use Ushahidi\Core\Entity\FormAttributeRepository as FormAttributeRepositoryContract;
+use Ushahidi\Core\Data\FormRepository as FormRepositoryContract;
+use Ushahidi\Core\Data\FormStageRepository as FormStageRepositoryContract;
+use Ushahidi\Core\Data\FormAttributeRepository as FormAttributeRepositoryContract;
 
 class AttributeRepository extends OhanzeeRepository implements
     FormAttributeRepositoryContract
@@ -388,7 +388,7 @@ class AttributeRepository extends OhanzeeRepository implements
                 'priority' => 6
             ],
             [
-                'label' => 'Contact ID',
+                'label' => 'ContactEntity ID',
                 'key' => 'contact_id',
                 'type' => 'integer',
                 'input' => 'number',
@@ -398,7 +398,7 @@ class AttributeRepository extends OhanzeeRepository implements
                 'priority' => 7
             ],
             [
-                'label' => 'Contact',
+                'label' => 'ContactEntity',
                 'key' => 'contact',
                 'type' => 'text',
                 'input' => 'text',

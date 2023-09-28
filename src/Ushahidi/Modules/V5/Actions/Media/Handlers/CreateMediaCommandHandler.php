@@ -7,7 +7,7 @@ use App\Bus\Command\AbstractCommandHandler;
 use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Actions\Media\Commands\CreateMediaCommand;
 use Ushahidi\Modules\V5\Repository\Media\MediaRepository;
-use Ushahidi\Core\Entity\Media as MediaEntity;
+use Ushahidi\Core\Data\Media as MediaEntity;
 use Ushahidi\Modules\V5\Actions\V5CommandHandler;
 use Illuminate\Support\Facades\DB;
 use Ushahidi\Modules\V5\Models\Media;

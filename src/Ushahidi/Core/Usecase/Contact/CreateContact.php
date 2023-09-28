@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Entity Contact Use Case
+ * Ushahidi Platform Entity ContactEntity Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

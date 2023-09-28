@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\SavedSearch;
 
 use Illuminate\Http\Resources\Json\JsonResource;
-use Ushahidi\Core\Entity\SavedSearch as SavedSearchEntity;
+use Ushahidi\Core\Data\SavedSearch as SavedSearchEntity;
 
 class SavedSearchResource extends JsonResource
 {

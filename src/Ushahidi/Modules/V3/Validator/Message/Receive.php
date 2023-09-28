@@ -14,7 +14,7 @@ namespace Ushahidi\Modules\V3\Validator\Message;
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
 use Ushahidi\DataSource\Contracts\MessageStatus;
 use Ushahidi\DataSource\Contracts\MessageDirection;
-use Ushahidi\Core\Entity\MessageRepository;
+use Ushahidi\Core\Data\MessageRepository;
 
 class Receive extends LegacyValidator
 {

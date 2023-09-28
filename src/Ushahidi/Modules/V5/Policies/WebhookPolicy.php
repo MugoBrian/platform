@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Authzn\GenericUser as User;
-use Ushahidi\Core\Entity;
+use Ushahidi\Core\Data;
 use Ushahidi\Modules\V5\Models\Webhook\Webhook;
 use Ushahidi\Contracts\Permission;
 use Ushahidi\Core\Concerns\AdminAccess;
@@ -31,7 +31,7 @@ class WebhookPolicy
 
     // Check that the user has the necessary permissions
     use AccessControlList;
-    
+
     use OwnerAccess;
 
     protected $user;
@@ -44,7 +44,7 @@ class WebhookPolicy
      */
     public function index()
     {
-        $empty_webhook_entity = new Entity\Webhook();
+        $empty_webhook_entity = new Data\Webhook();
         return $this->isAllowed($empty_webhook_entity, 'search');
     }
 
@@ -56,7 +56,7 @@ class WebhookPolicy
      */
     public function show(User $user, Webhook $webhook)
     {
-        $webhook_entity = new Entity\Webhook($webhook->toArray());
+        $webhook_entity = new Data\Webhook($webhook->toArray());
         return $this->isAllowed($webhook_entity, 'read');
     }
 
@@ -68,7 +68,7 @@ class WebhookPolicy
      */
     public function delete(User $user, Webhook $webhook)
     {
-        $webhook_entity = new Entity\Webhook($webhook->toArray());
+        $webhook_entity = new Data\Webhook($webhook->toArray());
         return $this->isAllowed($webhook_entity, 'delete');
     }
     /**
@@ -78,7 +78,7 @@ class WebhookPolicy
     public function update(User $user, Webhook $webhook)
     {
         // we convert to a Webhook entity to be able to continue using the old authorizers and classes.
-        $webhook_entity = new Entity\Webhook($webhook->toArray());
+        $webhook_entity = new Data\Webhook($webhook->toArray());
         return $this->isAllowed($webhook_entity, 'update');
     }
 
@@ -90,7 +90,7 @@ class WebhookPolicy
     public function store(User $user, Webhook $webhook)
     {
         // we convert to a webhook_entity entity to be able to continue using the old authorizers and classes.
-        $webhook_entity = new Entity\Webhook($webhook->toArray());
+        $webhook_entity = new Data\Webhook($webhook->toArray());
         return $this->isAllowed($webhook_entity, 'create');
     }
 

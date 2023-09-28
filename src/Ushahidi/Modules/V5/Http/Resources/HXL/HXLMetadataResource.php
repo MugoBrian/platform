@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\HXL;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\HXL\HXLMetadata as HXLMetadataEntity;
+use Ushahidi\Core\Data\HXL\HXLMetadata as HXLMetadataEntity;
 
 
 use App\Bus\Query\QueryBus;

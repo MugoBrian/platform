@@ -21,16 +21,16 @@ use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Tool\BoundingBox;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Entity\FormRepository;
+use Ushahidi\Core\Data\FormRepository;
 use Ushahidi\Core\Ohanzee\Entity\Post;
 use Ushahidi\Core\Ohanzee\Entity\Media;
-use Ushahidi\Core\Entity\ContactRepository;
-use Ushahidi\Core\Entity\PostLockRepository;
+use Ushahidi\Core\Data\ContactRepository;
+use Ushahidi\Core\Data\PostLockRepository;
 use Ushahidi\Core\Ohanzee\Entity\PostLock;
-use Ushahidi\Core\Entity\FormStageRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
+use Ushahidi\Core\Data\FormStageRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
 use Ushahidi\Core\Tool\Permissions\InteractsWithPostPermissions;
-use Ushahidi\Core\Entity\PostRepository as PostRepositoryContract;
+use Ushahidi\Core\Data\PostRepository as PostRepositoryContract;
 use Ushahidi\Core\Ohanzee\Repository\Post\ValueFactory as PostValueFactory;
 
 class PostRepository extends OhanzeeRepository implements

@@ -3,9 +3,8 @@
 namespace Ushahidi\Modules\V5\Actions\Auth\Commands;
 
 use App\Bus\Command\Command;
-use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\User as UserEntity;
-use Ushahidi\Core\Ohanzee\Entities\User as OhanzeeUser;
+use Ushahidi\Core\Data\UserEntity;
+use Ushahidi\Core\Ohanzee\Entity\User as OhanzeeUser;
 use Ushahidi\Modules\V5\Requests\RegisterRequest;
 use Ushahidi\Core\Tool\Hasher\Password as PasswordHash;
 

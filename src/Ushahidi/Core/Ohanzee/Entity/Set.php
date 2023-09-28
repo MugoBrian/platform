@@ -13,9 +13,9 @@ namespace Ushahidi\Core\Ohanzee\Entity;
 
 use Illuminate\Support\Facades\Auth;
 use Ushahidi\Core\Ohanzee\StaticEntity;
-use \Ushahidi\Core\Entity\Set as EntitySet;
+use \Ushahidi\Core\Data\SetEntity;
 
-class Set extends StaticEntity implements EntitySet
+class Set extends StaticEntity implements SetEntity
 {
     protected $id;
     protected $user_id;

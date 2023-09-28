@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Attribute Authorizer
+ * Ushahidi FormEntity Attribute Authorizer
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -14,10 +14,10 @@ namespace Ushahidi\Core\Tool\Authorizer;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Entity\FormStageRepository;
+use Ushahidi\Core\Data\FormStageRepository;
 
 // The `FormAttributeAuthorizer` class is responsible
-// for access checks on Form Attributes
+// for access checks on FormEntity Attributes
 class FormAttributeAuthorizer implements Authorizer
 {
     // The access checks are run under the context of a specific user

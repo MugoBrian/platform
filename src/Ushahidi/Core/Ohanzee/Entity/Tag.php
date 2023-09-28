@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\Tag as EntityTag;
+use Ushahidi\Core\Data\TagEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class Tag extends StaticEntity implements EntityTag
+class Tag extends StaticEntity implements TagEntity
 {
     protected $id;
     protected $parent_id;

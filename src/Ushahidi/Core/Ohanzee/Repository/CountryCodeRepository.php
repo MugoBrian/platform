@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Config Repository, using Kohana::$config
+ * Ushahidi ConfigEntity Repository, using Kohana::$config
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application

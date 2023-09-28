@@ -34,7 +34,7 @@ interface Authorizer
     /**
      * Get the user for the current authorization context.
      *
-     * @return \Ushahidi\Contracts\Entity
+     * @return \Ushahidi\Core\Data\UserEntity
      */
     public function getUser();
 

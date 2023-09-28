@@ -6,7 +6,7 @@ use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Models\CSV;
 use Ushahidi\Modules\V5\Requests\CSVRequest;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\CSV as CSVEntity;
+use Ushahidi\Core\Data\CSV as CSVEntity;
 use Ushahidi\Modules\V5\Models\Stage;
 use Ushahidi\Core\Tool\Uploader;
 use Ushahidi\Core\Tool\UploadData;
@@ -30,7 +30,7 @@ class CreateCSVCommand implements Command
      */
     protected $upload;
 
-    
+
 
     // public function __construct(CSVEntity $csv_entity)
     // {
@@ -73,7 +73,7 @@ class CreateCSVCommand implements Command
         $input['errors'] = null;
         $input['processed'] = null;
         $input['collection_id'] = null;
-        
+
         $input['created'] = time();
         $input['updated'] = null;
 

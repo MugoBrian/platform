@@ -12,7 +12,7 @@ use Ushahidi\Modules\V5\Actions\User\Commands\CreateUserCommand;
 use Ushahidi\Modules\V5\Actions\User\Commands\DeleteUserCommand;
 use Ushahidi\Modules\V5\Actions\User\Commands\UpdateUserCommand;
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\User as UserEntity;
+use Ushahidi\Core\Data\UserEntity;
 use Ushahidi\Modules\V5\DTO\UserSearchFields;
 use Ushahidi\Modules\V5\Requests\UserRequest;
 use Illuminate\Support\Facades\Log;

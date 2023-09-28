@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Search Form Attribute Use Case
+ * Ushahidi Platform Search FormEntity Attribute Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

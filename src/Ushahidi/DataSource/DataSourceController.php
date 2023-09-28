@@ -78,7 +78,7 @@ abstract class DataSourceController extends Controller
      *
      * @param  array  $payload Message payload containing:
      *     - string type    Message type
-     *     - string contact_type    Contact type
+     *     - string contact_type    ContactEntity type
      *     - string from    From contact
      *     - string message Received Message
      *     - string to      To contact

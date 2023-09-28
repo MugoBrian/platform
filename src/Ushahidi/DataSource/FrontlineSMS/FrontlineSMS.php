@@ -29,7 +29,7 @@ class FrontlineSMS implements CallbackDataSource, OutgoingDataSource
     protected $client;
 
     /**
-     * Contact type user for this provider
+     * ContactEntity type user for this provider
      */
     public $contact_type = Contact::PHONE;
 

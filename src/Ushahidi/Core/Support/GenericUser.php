@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Core\Support;
 
-use Ushahidi\Core\Entity\User;
+use Ushahidi\Core\Data\User;
 use Laravel\Passport\HasApiTokens;
 use Illuminate\Contracts\Auth\Authenticatable as AuthContract;
 
@@ -27,7 +27,7 @@ class GenericUser implements User, AuthContract
     {
         $this->attributes = $attributes;
     }
- 
+
     public function getId()
     {
         return $this->getAuthIdentifier();

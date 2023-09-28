@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Models;
 
 use Illuminate\Http\Request;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Tool\Permissions\InteractsWithFormPermissions;
 
 class Survey extends BaseModel

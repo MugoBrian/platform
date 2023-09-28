@@ -13,7 +13,7 @@ namespace Ushahidi\Core\Ohanzee\Repository;
 
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entity\Permission;
-use Ushahidi\Core\Entity\PermissionRepository as PermissionRepositoryContract;
+use Ushahidi\Core\Data\PermissionRepository as PermissionRepositoryContract;
 
 class PermissionRepository extends OhanzeeRepository implements
     PermissionRepositoryContract

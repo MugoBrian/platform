@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Read Form Role Use Case
+ * Ushahidi Platform Read FormEntity Role Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

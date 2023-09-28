@@ -70,7 +70,7 @@ class OutgoingEmail implements OutgoingDataSource
     }
 
     /**
-     * Contact type user for this provider
+     * ContactEntity type user for this provider
      */
     public $contact_type = Contact::EMAIL;
 

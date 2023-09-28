@@ -86,7 +86,7 @@ class CSVTest extends TestCase
 			"priority": 5
 		  },
 		  {
-			"label": "Contact ID",
+			"label": "ContactEntity ID",
 			"key": "contact_id",
 			"type": "integer",
 			"input": "number",
@@ -96,7 +96,7 @@ class CSVTest extends TestCase
 			"priority": 6
 		  },
 		  {
-			"label": "Contact",
+			"label": "ContactEntity",
 			"key": "contact",
 			"type": "text",
 			"input": "text",

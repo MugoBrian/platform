@@ -17,14 +17,14 @@ use Ushahidi\Core\Tool\SearchData;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Event;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
-use Ushahidi\Core\Entity\ExportBatch;
+use Ushahidi\Core\Data\ExportBatchEntity;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\PostRepository;
 use Ushahidi\Core\Concerns\FilterRecords;
 use Ushahidi\Core\Ohanzee\Entity\ExportJob;
 use Ushahidi\Modules\V3\Events\SendToHDXEvent;
-use Ushahidi\Core\Entity\ExportJobRepository as ExportJobRepositoryContract;
+use Ushahidi\Core\Data\ExportJobRepository as ExportJobRepositoryContract;
 
 class ExportJobRepository extends OhanzeeRepository implements ExportJobRepositoryContract
 {
@@ -208,7 +208,7 @@ class ExportJobRepository extends OhanzeeRepository implements ExportJobReposito
     {
         $query = $this->selectQuery([
                 'export_job.id' => $jobId,
-                'export_batches.status' => ExportBatch::STATUS_COMPLETED
+                'export_batches.status' => ExportBatchEntity::STATUS_COMPLETED
             ])
             ->resetSelect()
             ->select([DB::expr('COUNT(DISTINCT export_batches.id)'), 'completed_batches'], 'total_batches')

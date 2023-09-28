@@ -13,13 +13,13 @@ namespace Ushahidi\Core\Ohanzee\Repository\HXL;
 
 use Ohanzee\DB;
 use Ohanzee\Database;
-use Ushahidi\Core\Entity\HXL\HXLTag;
+use Ushahidi\Core\Data\HXL\HXLTag;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Ohanzee\Repository\OhanzeeRepository;
 use Ushahidi\Contracts\Repository\ReadRepository;
 use Ushahidi\Contracts\Repository\SearchRepository;
-use Ushahidi\Core\Entity\HXL\HXLTagRepository as HXLTagRepositoryContract;
+use Ushahidi\Core\Data\HXL\HXLTagRepository as HXLTagRepositoryContract;
 
 class HXLTagRepository extends OhanzeeRepository implements
     HXLTagRepositoryContract,

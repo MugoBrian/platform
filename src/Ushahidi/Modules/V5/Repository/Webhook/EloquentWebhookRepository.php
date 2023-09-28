@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\Webhook\Webhook;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\WebhookSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Webhook as WebhookEntity;
+use Ushahidi\Core\Data\Webhook as WebhookEntity;
 
 class EloquentWebhookRepository implements WebhookRepository
 {

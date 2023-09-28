@@ -20,19 +20,19 @@ class WebhookCommand extends Command
 
     /**
      *
-     * @var \Ushahidi\Core\Entity\PostRepository
+     * @var \Ushahidi\Core\Data\PostRepository
      */
     private $postRepository;
 
     /**
      *
-     * @var \Ushahidi\Core\Entity\WebhookRepository
+     * @var \Ushahidi\Core\Data\WebhookRepository
      */
     private $webhookRepository;
 
     /**
      *
-     * @var \Ushahidi\Core\Entity\WebhookJobRepository
+     * @var \Ushahidi\Core\Data\WebhookJobRepository
      */
     private $webhookJobRepository;
 

@@ -11,8 +11,8 @@
 
 namespace Ushahidi\Modules\V3\Validator\Message;
 
-use Ushahidi\Core\Entity\UserRepository;
-use Ushahidi\Core\Entity\MessageRepository;
+use Ushahidi\Core\Data\UserRepository;
+use Ushahidi\Core\Data\MessageRepository;
 use Ushahidi\DataSource\Contracts\MessageStatus;
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
 use Ushahidi\DataSource\Contracts\MessageDirection;

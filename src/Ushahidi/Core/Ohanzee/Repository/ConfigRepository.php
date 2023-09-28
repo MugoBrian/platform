@@ -1,6 +1,6 @@
 <?php
 /**
- * Ushahidi Config Repository
+ * Ushahidi ConfigEntity Repository
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -21,7 +21,7 @@ use Ushahidi\Contracts\Repository\DeleteRepository;
 use Ushahidi\Contracts\Repository\UpdateRepository;
 use Ushahidi\Core\Ohanzee\Resolver as OhanzeeResolver;
 use Ushahidi\Core\Ohanzee\Entity\Config as ConfigEntity;
-use Ushahidi\Core\Entity\ConfigRepository as ConfigRepositoryContract;
+use Ushahidi\Core\Data\ConfigRepository as ConfigRepositoryContract;
 
 class ConfigRepository implements
     ReadRepository,
@@ -102,7 +102,7 @@ class ConfigRepository implements
                 throw $e;
             }
 
-            // Otherwise, Config table doesn't exist: continue to default values
+            // Otherwise, ConfigEntity table doesn't exist: continue to default values
         }
 
         // Merge defaults

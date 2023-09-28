@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Ushahidi\Modules\V3\Http\Controllers\RESTController;
 
 /**
- * Ushahidi API Form Stats Controller
+ * Ushahidi API FormEntity Stats Controller
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @copyright  2018 Ushahidi

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Delete Form Stage Use Case
+ * Ushahidi Platform Delete FormEntity Stage Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

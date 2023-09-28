@@ -13,9 +13,9 @@ namespace Ushahidi\Core\Ohanzee\Repository\Post;
 
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Ohanzee\Repository\PostRepository;
-use Ushahidi\Core\Entity\SetRepository;
-use Ushahidi\Core\Entity\TagRepository;
-use Ushahidi\Core\Entity\MessageRepository;
+use Ushahidi\Core\Data\SetRepository;
+use Ushahidi\Core\Data\TagRepository;
+use Ushahidi\Core\Data\MessageRepository;
 
 class ExportRepository extends PostRepository
 {
@@ -84,7 +84,7 @@ class ExportRepository extends PostRepository
             $data['data_source'] = $message->data_source;
         }
 
-        // Set Form name
+        // Set FormEntity name
         if (!empty($data['form_id'])) {
             $form = $this->form_repo->get($data['form_id']);
             $data['form_name'] = $form->name;

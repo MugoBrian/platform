@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Http\Resources\User;
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
 use Ushahidi\Modules\V5\Http\Resources\RequestCachedResource;
 use Illuminate\Support\Collection;
-use Ushahidi\Core\Entity\User;
+use Ushahidi\Core\Ohanzee\Entity\User;
 
 use App\Bus\Query\QueryBus;
 
@@ -85,7 +85,7 @@ class UserResource extends Resource
                 $permissions_name[] = $permission->permission;
             }
         }
-        
+
         return $permissions_name;
     }
 }

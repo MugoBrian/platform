@@ -17,7 +17,7 @@ use Ohanzee\DB;
 use Illuminate\Support\Collection;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Hasher;
-use Ushahidi\Core\Entity\UserRepository as UserRepositoryContract;
+use Ushahidi\Core\Data\UserRepository as UserRepositoryContract;
 use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entity\User;
@@ -64,7 +64,7 @@ class UserRepository extends OhanzeeRepository implements UserRepositoryContract
 
     protected function getContacts($entity_id)
     {
-        // Unfortunately there is a circular reference created if the Contact repo is
+        // Unfortunately there is a circular reference created if the ContactEntity repo is
         // injected into the User repo to avoid this we access the table directly
         // NOTE: This creates a hard coded dependency on the table naming for contacts
         $query = DB::select('*')->from('contacts')

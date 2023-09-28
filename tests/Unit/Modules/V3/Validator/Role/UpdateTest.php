@@ -15,7 +15,7 @@ use Ushahidi\Core\Support\FeatureManager as Feature;
 use Ushahidi\Tests\TestCase;
 use Kohana\Validation\Validation;
 use Ushahidi\Modules\V3\Validator\Role\Update;
-use Ushahidi\Core\Entity\PermissionRepository;
+use Ushahidi\Core\Data\PermissionRepository;
 
 /**
  * @backupGlobals disabled

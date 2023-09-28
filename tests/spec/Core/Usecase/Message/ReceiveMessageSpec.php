@@ -10,9 +10,9 @@ use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Formatter;
 use Ushahidi\Contracts\Repository\CreateRepository;
-use Ushahidi\Core\Entity\ContactRepository;
+use Ushahidi\Core\Data\ContactRepository;
 use Ushahidi\Contracts\Validator;
-use Ushahidi\Core\Entity\Contact;
+use Ushahidi\Core\Data\ContactEntity;
 use Ushahidi\Core\Exception\ValidatorException;
 use Ushahidi\Core\Usecase\Message\ReceiveMessage;
 
@@ -88,7 +88,7 @@ class ReceiveMessageSpec extends ObjectBehavior
         $repo,
         $contactRepo,
         Entity $entity,
-        Contact $contact
+        ContactEntity $contact
     ) {
         $payload = $this->getPayload();
         $contact_id = 3;
@@ -115,7 +115,7 @@ class ReceiveMessageSpec extends ObjectBehavior
         $valid,
         $contactValid,
         Entity $entity,
-        Contact $contact
+        ContactEntity $contact
     ) {
         $payload = $this->getPayload();
         $contact_id = 3;
@@ -147,7 +147,7 @@ class ReceiveMessageSpec extends ObjectBehavior
         $valid,
         $contactValid,
         Entity $entity,
-        Contact $contact
+        ContactEntity $contact
     ) {
         $payload = $this->getPayload();
         $contact_id = 3;
@@ -187,7 +187,7 @@ class ReceiveMessageSpec extends ObjectBehavior
         $format,
         Entity $entity,
         Entity $created,
-        Contact $contact
+        ContactEntity $contact
     ) {
         $payload = $this->getPayload();
         $contact_id = 3;
@@ -232,7 +232,7 @@ class ReceiveMessageSpec extends ObjectBehavior
         $format,
         Entity $entity,
         Entity $created,
-        Contact $contact
+        ContactEntity $contact
     ) {
         $payload = $this->getPayload();
         $contact_id = 3;

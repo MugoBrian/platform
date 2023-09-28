@@ -5,9 +5,9 @@ namespace Ushahidi\Tests\Unit\Modules\V3\Jobs;
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use Illuminate\Support\Facades\Storage;
-use Ushahidi\Core\Entity\ExportJobRepository;
+use Ushahidi\Core\Data\ExportJobRepository;
 use Ushahidi\Core\Ohanzee\Entity\ExportJob;
-use Ushahidi\Core\Entity\ExportBatchRepository;
+use Ushahidi\Core\Data\ExportBatchRepository;
 use Ushahidi\Core\Ohanzee\Entity\ExportBatch;
 use Ushahidi\Modules\V3\Jobs\CombineExportedPostBatchesJob;
 

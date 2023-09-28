@@ -12,7 +12,7 @@ use Ushahidi\Modules\V5\Actions\Survey\Commands\DeleteSurveyCommand;
 use Ushahidi\Modules\V5\Http\Resources\Survey\SurveyCollection;
 use Ushahidi\Modules\V5\Http\Resources\Survey\SurveyResource;
 use Ushahidi\Modules\V5\DTO\SurveySearchFields;
-use Ushahidi\Core\Entity\Form as SurveyEntity;
+use Ushahidi\Core\Data\FormEntity as SurveyEntity;
 use Ushahidi\Core\Exception\NotFoundException;
 use Ushahidi\Modules\V5\Http\Resources\TranslationCollection;
 use Ushahidi\Modules\V5\Requests\SurveyRequest;

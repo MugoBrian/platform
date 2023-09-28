@@ -11,7 +11,6 @@ use Ushahidi\Core\Concerns\Event;
 use Ushahidi\Modules\V5\Repository\Config\ConfigRepository;
 use Ushahidi\Modules\V5\Actions\Config\Commands\UpdateConfigCommand;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\Config as ConfigEntity;
 use Ushahidi\Core\Exception\NotFoundException;
 
 class UpdateConfigCommandHandler extends AbstractCommandHandler

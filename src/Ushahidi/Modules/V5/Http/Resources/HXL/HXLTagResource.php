@@ -2,7 +2,7 @@
 namespace Ushahidi\Modules\V5\Http\Resources\HXL;
 
 use Illuminate\Http\Resources\Json\JsonResource as Resource;
-use Ushahidi\Core\Entity\HXL\HXLTag as HXLTagEntity;
+use Ushahidi\Core\Data\HXL\HXLTag as HXLTagEntity;
 
 
 use App\Bus\Query\QueryBus;

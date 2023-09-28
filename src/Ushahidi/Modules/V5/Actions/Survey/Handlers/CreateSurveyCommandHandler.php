@@ -7,7 +7,7 @@ use App\Bus\Command\Command;
 use Ushahidi\Modules\V5\Actions\Survey\Commands\CreateSurveyCommand;
 use Ushahidi\Modules\V5\Actions\Survey\Commands\CreateTaskCommand;
 use Ushahidi\Modules\V5\Repository\Survey\SurveyRepository;
-use Ushahidi\Core\Entity\FormStage as TaskEntity;
+use Ushahidi\Core\Data\FormStageEntity as TaskEntity;
 use App\Bus\Command\CommandBus;
 
 class CreateSurveyCommandHandler extends V5CommandHandler

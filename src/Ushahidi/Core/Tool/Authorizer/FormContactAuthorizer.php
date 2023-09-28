@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Stage Authorizer
+ * Ushahidi FormEntity Stage Authorizer
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -15,7 +15,7 @@ use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Entity\FormRepository;
+use Ushahidi\Core\Data\FormRepository;
 
 /** The `FormContactAuthorizer` class is responsible
  for access checks on `Contacts` that are created for a targetted survey

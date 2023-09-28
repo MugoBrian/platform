@@ -14,7 +14,7 @@ namespace Ushahidi\Core\Usecase\Post;
 use Ushahidi\Contracts\Usecase;
 use Ushahidi\Core\Tool\SearchData;
 use Illuminate\Support\Facades\Log;
-use Ushahidi\Core\Entity\ExportBatch;
+use Ushahidi\Core\Data\ExportBatchEntity;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\FilterRecords;
 use Ushahidi\Core\Ohanzee\Repository\ExportJobRepository;
@@ -22,7 +22,7 @@ use Ushahidi\Core\Ohanzee\Repository\Post\ExportRepository;
 use Ushahidi\Core\Ohanzee\Repository\Form\AttributeRepository;
 use Ushahidi\Core\Ohanzee\Repository\HXL\HXLFormAttributeHXLAttributeTagRepository;
 use Ushahidi\Core\Usecase\Concerns\VerifyParentLoaded;
-use Ushahidi\Core\Entity\ExportBatchRepository;
+use Ushahidi\Core\Data\ExportBatchRepository;
 use Ushahidi\Core\Usecase\Concerns\Formatter as FormatterTrait;
 use Ushahidi\Core\Usecase\Concerns\Authorizer as AuthorizerTrait;
 use Ushahidi\Core\Usecase\Concerns\Translator as TranslatorTrait;
@@ -49,7 +49,7 @@ class ExportPost implements Usecase
     private $hxlFromAttributeHxlAttributeTagRepo;
 
     /**
-     * @var \Ushahidi\Core\Entity\ExportBatchRepository
+     * @var \Ushahidi\Core\Data\ExportBatchRepository
      */
     protected $repo;
 
@@ -107,7 +107,7 @@ class ExportPost implements Usecase
         $batchEntity = $this->repo->getEntity()->setState([
             'export_job_id' => $job->id,
             'batch_number' => $this->getIdentifier('batch_number'),
-            'status' => ExportBatch::STATUS_PENDING,
+            'status' => ExportBatchEntity::STATUS_PENDING,
             'has_headers' => $this->getFilter('add_header', false)
         ]);
         $batchId = $this->repo->create($batchEntity);
@@ -168,7 +168,7 @@ class ExportPost implements Usecase
             // Mark batch as failed
             $batchEntity = $this->repo->get($batchId);
             $batchEntity->setState([
-                'status' => ExportBatch::STATUS_FAILED
+                'status' => ExportBatchEntity::STATUS_FAILED
             ]);
             $this->repo->update($batchEntity);
             // And rethrow the error
@@ -179,7 +179,7 @@ class ExportPost implements Usecase
         // Include filename, post count, header row etc
         $batchEntity = $this->repo->get($batchId);
         $batchEntity->setState([
-            'status' => ExportBatch::STATUS_COMPLETED,
+            'status' => ExportBatchEntity::STATUS_COMPLETED,
             'filename' => $file->file,
             'rows' => count($posts),
         ]);

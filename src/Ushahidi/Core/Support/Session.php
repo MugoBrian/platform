@@ -11,7 +11,7 @@
 namespace Ushahidi\Core\Support;
 
 use Illuminate\Support\Facades\Auth;
-use Ushahidi\Core\Entity\UserRepository;
+use Ushahidi\Core\Data\UserRepository;
 
 class Session
 {

@@ -11,7 +11,7 @@
 
 namespace Ushahidi\Modules\V3\Validator\Post;
 
-use Ushahidi\Core\Entity\PostRepository;
+use Ushahidi\Core\Data\PostRepository;
 
 class Relation extends ValueValidator
 {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Stage Authorizer
+ * Ushahidi FormEntity Stage Authorizer
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Application
@@ -14,7 +14,7 @@ namespace Ushahidi\Core\Tool\Authorizer;
 use Ushahidi\Contracts\Entity;
 use Ushahidi\Contracts\Authorizer;
 use Ushahidi\Core\Concerns\UserContext;
-use Ushahidi\Core\Entity\FormRepository;
+use Ushahidi\Core\Data\FormRepository;
 
 // The `FormStageAuthorizer` class is responsible for access checks on `Forms`
 class FormStageAuthorizer implements Authorizer

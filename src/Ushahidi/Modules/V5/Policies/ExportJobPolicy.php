@@ -2,7 +2,7 @@
 
 namespace Ushahidi\Modules\V5\Policies;
 
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Concerns\OwnerAccess;
 use Ushahidi\Core\Concerns\ControlAccess;
 use Ushahidi\Core\Concerns\AccessPrivileges;
@@ -58,7 +58,7 @@ class ExportJobPolicy
 
     public function update(User $user, ExportJob $export_job)
     {
-        // we convert to a ExportJob entity to be able to continue using the old authorizers and classes.
+        // we convert to a ExportJobEntity entity to be able to continue using the old authorizers and classes.
         $export_job_entity = new OhanzeeExportJob($export_job->toArray());
         return $this->isAllowed($export_job_entity, 'update');
     }

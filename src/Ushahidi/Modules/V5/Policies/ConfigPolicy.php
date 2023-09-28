@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Policies;
 
 use Ushahidi\Contracts\Entity;
-use Ushahidi\Core\Entity\Permission;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
 use Ushahidi\Core\Concerns\AccessPrivileges;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
@@ -67,7 +67,7 @@ class ConfigPolicy
 
     public function update(User $user, EloquentConfig $config)
     {
-        // we convert to a Config entity to be able to continue using the old authorizers and classes.
+        // we convert to a ConfigEntity entity to be able to continue using the old authorizers and classes.
         $config_entity = new OhanzeeConfig($config->toArray());
         return $this->isAllowed($config_entity, 'update');
     }
@@ -124,7 +124,7 @@ class ConfigPolicy
      */
     protected function isConfigPublic(Entity $entity)
     {
-        // Config that is unloaded is treated as public.
+        // ConfigEntity that is unloaded is treated as public.
         if (!$entity->getId()) {
             return true;
         }
@@ -143,7 +143,7 @@ class ConfigPolicy
      */
     protected function isConfigReadOnly(Entity $entity)
     {
-        // Config that is unloaded is treated as writable.
+        // ConfigEntity that is unloaded is treated as writable.
         if (!$entity->getId()) {
             return false;
         }

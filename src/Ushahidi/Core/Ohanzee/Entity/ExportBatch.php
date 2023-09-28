@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\ExportBatch as EntityExportBatch;
+use Ushahidi\Core\Data\ExportBatchEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class ExportBatch extends StaticEntity implements EntityExportBatch
+class ExportBatch extends StaticEntity implements ExportBatchEntity
 {
     protected $id;
     protected $export_job_id;

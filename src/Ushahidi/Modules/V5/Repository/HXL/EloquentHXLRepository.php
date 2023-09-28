@@ -12,7 +12,7 @@ use Ushahidi\Modules\V5\DTO\HXLMetadataSearchFields;
 use Ushahidi\Modules\V5\DTO\HXLOrganizationSearchFields;
 use Ushahidi\Modules\V5\DTO\HXLLicenseSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\HXL\HXLMetadata as HXLMetadataEntity;
+use Ushahidi\Core\Data\HXL\HXLMetadata as HXLMetadataEntity;
 use Ushahidi\Modules\V5\Models\HXL\HXLMetaData;
 
 class EloquentHXLRepository implements HXLRepository
@@ -99,7 +99,7 @@ class EloquentHXLRepository implements HXLRepository
             $builder->where("datasetTitle", "like", "%" . $search_fields->datasetTitle() . "%");
         }
 
-        
+
 
         return $builder->paginate($paging->getLimit()
             ? $paging->getLimit()

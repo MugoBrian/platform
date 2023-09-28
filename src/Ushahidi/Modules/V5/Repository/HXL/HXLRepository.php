@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\DTO\HXLMetadataSearchFields;
 use Ushahidi\Modules\V5\DTO\HXLOrganizationSearchFields;
 use Ushahidi\Modules\V5\DTO\HXLLicenseSearchFields;
 use Ushahidi\Modules\V5\Models\HXL\HXLMetaData;
-use Ushahidi\Core\Entity\HXL\HXLMetadata as HXLMetadataEntity;
+use Ushahidi\Core\Data\HXL\HXLMetadata as HXLMetadataEntity;
 
 interface HXLRepository
 {
@@ -74,7 +74,7 @@ interface HXLRepository
      */
     public function fetchLicenses(Paging $paging, HXLLicenseSearchFields $search_fields): LengthAwarePaginator;
 
-   
+
     /**
      * This method will create a HXL
      * @param HXLMetadataEntity $entity

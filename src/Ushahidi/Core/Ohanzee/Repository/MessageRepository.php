@@ -18,7 +18,7 @@ use Ushahidi\Core\Tool\SearchData;
 use Ushahidi\Core\Ohanzee\Entity\Message;
 use Ushahidi\DataSource\Contracts\MessageStatus;
 use Ushahidi\DataSource\Contracts\MessageDirection;
-use Ushahidi\Core\Entity\MessageRepository as MessageRepositoryContract;
+use Ushahidi\Core\Data\MessageRepository as MessageRepositoryContract;
 
 class MessageRepository extends OhanzeeRepository implements
     MessageRepositoryContract

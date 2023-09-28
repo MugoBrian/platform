@@ -12,7 +12,7 @@ namespace Ushahidi\Tests\Unit\Core\Tool;
 
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\ApiKeyRepository;
+use Ushahidi\Core\Data\ApiKeyRepository;
 use Ushahidi\Core\Tool\Verifier;
 
 /**

@@ -16,15 +16,15 @@ use Ushahidi\Core\Facade\Feature;
 use Ushahidi\Core\Concerns\AdminAccess;
 use Ushahidi\Core\Concerns\UserContext;
 use Ushahidi\Core\Concerns\ControlAccess;
-use Ushahidi\Core\Entity\Permission;
-use Ushahidi\Core\Entity\TagRepository;
-use Ushahidi\Core\Entity\FormRepository;
-use Ushahidi\Core\Entity\PostRepository;
-use Ushahidi\Core\Entity\PostLockRepository;
-use Ushahidi\Core\Entity\RoleRepository;
-use Ushahidi\Core\Entity\UserRepository;
-use Ushahidi\Core\Entity\FormStageRepository;
-use Ushahidi\Core\Entity\FormAttributeRepository;
+use Ushahidi\Core\Data\PermissionEntity as Permission;
+use Ushahidi\Core\Data\TagRepository;
+use Ushahidi\Core\Data\FormRepository;
+use Ushahidi\Core\Data\PostRepository;
+use Ushahidi\Core\Data\PostLockRepository;
+use Ushahidi\Core\Data\RoleRepository;
+use Ushahidi\Core\Data\UserRepository;
+use Ushahidi\Core\Data\FormStageRepository;
+use Ushahidi\Core\Data\FormAttributeRepository;
 use Ushahidi\Modules\V3\Validator\LegacyValidator;
 
 class Create extends LegacyValidator

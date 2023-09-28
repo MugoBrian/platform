@@ -13,7 +13,7 @@ namespace Ushahidi\Tests\Unit\DataSource\Console;
 use Mockery as M;
 use Ushahidi\Tests\TestCase;
 use phpmock\mockery\PHPMockery;
-use Ushahidi\Core\Entity\ConfigRepository;
+use Ushahidi\Core\Data\ConfigRepository;
 use Ushahidi\Core\Ohanzee\Entity\Config;
 use Ushahidi\DataSource\DataSourceManager;
 use Ushahidi\DataSource\DataSourceStorage;

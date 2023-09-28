@@ -3,7 +3,7 @@
 namespace Ushahidi\Core\Support;
 
 use Illuminate\Support\Facades\Cache;
-use Ushahidi\Core\Entity\ConfigRepository;
+use Ushahidi\Core\Data\ConfigRepository;
 
 class SiteManager
 {
@@ -45,7 +45,7 @@ class SiteManager
 
     public function getConfig()
     {
-        /** @var \Ushahidi\Core\Entity\Config */
+        /** @var \Ushahidi\Core\Data\ConfigEntity */
         $config = Cache::remember(
             'config.site',
             $this->cache_lifetime,

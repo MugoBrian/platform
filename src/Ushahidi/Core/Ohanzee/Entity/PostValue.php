@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\PostValue as EntityPostValue;
+use Ushahidi\Core\Data\PostValueEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class PostValue extends StaticEntity implements EntityPostValue
+class PostValue extends StaticEntity implements PostValueEntity
 {
     protected $id;
     protected $post_id;

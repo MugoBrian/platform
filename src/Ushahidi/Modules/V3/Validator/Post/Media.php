@@ -11,7 +11,7 @@
 
 namespace Ushahidi\Modules\V3\Validator\Post;
 
-use Ushahidi\Core\Entity\MediaRepository;
+use Ushahidi\Core\Data\MediaRepository;
 
 class Media extends ValueValidator
 {

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Form Attribute
+ * Ushahidi FormEntity Attribute
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform
@@ -11,10 +11,10 @@
 
 namespace Ushahidi\Core\Ohanzee\Entity;
 
-use Ushahidi\Core\Entity\FormAttribute as EntityFormAttribute;
+use Ushahidi\Core\Data\FormAttribute as FormAttributeEntity;
 use Ushahidi\Core\Ohanzee\StaticEntity;
 
-class FormAttribute extends StaticEntity implements EntityFormAttribute
+class FormAttribute extends StaticEntity implements FormAttributeEntity
 {
     protected $id;
     protected $key;

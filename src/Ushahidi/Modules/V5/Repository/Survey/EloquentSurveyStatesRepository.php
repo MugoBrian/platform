@@ -4,7 +4,7 @@ namespace Ushahidi\Modules\V5\Repository\Survey;
 
 use Ushahidi\Modules\V5\Models\Survey;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Ushahidi\Core\Entity;
+use Ushahidi\Core\Data;
 use Ushahidi\Modules\V5\DTO\SurveyStatesSearchFields;
 use Ushahidi\Modules\V5\Models\SurveyRole;
 use DB;
@@ -32,9 +32,9 @@ class EloquentSurveyStatesRepository implements SurveyStatesRepository
                     'targeted_survey_state.survey_status',
                     'in',
                     [
-                        Entity\TargetedSurveyState::RECEIVED_RESPONSE,
-                        Entity\TargetedSurveyState::PENDING_RESPONSE,
-                        Entity\TargetedSurveyState::SURVEY_FINISHED,
+                        Data\TargetedSurveyState::RECEIVED_RESPONSE,
+                        Data\TargetedSurveyState::PENDING_RESPONSE,
+                        Data\TargetedSurveyState::SURVEY_FINISHED,
                     ]
                 ],
 
@@ -71,9 +71,9 @@ class EloquentSurveyStatesRepository implements SurveyStatesRepository
             'messages.direction' => 'outgoing',
             'messages.status' => 'pending',
             'targeted_survey_state.survey_status' => [
-                Entity\TargetedSurveyState::RECEIVED_RESPONSE,
-                Entity\TargetedSurveyState::PENDING_RESPONSE,
-                Entity\TargetedSurveyState::SURVEY_FINISHED,
+                Data\TargetedSurveyState::RECEIVED_RESPONSE,
+                Data\TargetedSurveyState::PENDING_RESPONSE,
+                Data\TargetedSurveyState::SURVEY_FINISHED,
             ]
         ];
         $query = $this->selectQuery($where)
@@ -270,9 +270,9 @@ class EloquentSurveyStatesRepository implements SurveyStatesRepository
                     'targeted_survey_state.survey_status',
                     'in',
                     [
-                        Entity\TargetedSurveyState::RECEIVED_RESPONSE,
-                        Entity\TargetedSurveyState::PENDING_RESPONSE,
-                        Entity\TargetedSurveyState::SURVEY_FINISHED,
+                        Data\TargetedSurveyState::RECEIVED_RESPONSE,
+                        Data\TargetedSurveyState::PENDING_RESPONSE,
+                        Data\TargetedSurveyState::SURVEY_FINISHED,
                     ]
                 ],
 

@@ -11,7 +11,7 @@ use Ushahidi\Modules\V5\Actions\Survey\Commands\CreateTaskCommand;
 use Ushahidi\Modules\V5\Actions\Survey\Commands\DeleteTasksCommand;
 use Ushahidi\Modules\V5\Repository\Survey\SurveyRepository;
 use Ushahidi\Modules\V5\Repository\Survey\TaskRepository;
-use Ushahidi\Core\Entity\FormStage as TaskEntity;
+use Ushahidi\Core\Data\FormStageEntity as TaskEntity;
 use App\Bus\Command\CommandBus;
 
 class UpdateSurveyCommandHandler extends V5CommandHandler

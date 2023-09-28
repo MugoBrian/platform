@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Contact Types
+ * Ushahidi ContactEntity Types
  *
  *
  * @author     Ushahidi Team <team@ushahidi.com>

@@ -3,7 +3,7 @@
 namespace Ushahidi\Modules\V5\Actions\User\Commands;
 
 use App\Bus\Command\Command;
-use Ushahidi\Core\Entity\User as UserEntity;
+use Ushahidi\Core\Data\UserEntity;
 
 class CreateUserCommand implements Command
 {
@@ -16,7 +16,7 @@ class CreateUserCommand implements Command
      * @var int
      */
     private $id;
-   
+
     public function __construct(UserEntity $user_entity)
     {
         $this->entity = $user_entity;

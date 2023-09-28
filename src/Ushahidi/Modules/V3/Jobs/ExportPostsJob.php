@@ -6,7 +6,7 @@ use Ushahidi\Core\Tool\Job;
 use Illuminate\Support\Facades\Log;
 use Ushahidi\Core\Ohanzee\Entity\ExportJob;
 use Ushahidi\Core\Usecase\Export\Job\PostCount;
-use Ushahidi\Core\Entity\ExportJobRepository;
+use Ushahidi\Core\Data\ExportJobRepository;
 
 class ExportPostsJob extends Job
 {

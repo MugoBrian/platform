@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Ushahidi Platform Delete Form Attribute Use Case
+ * Ushahidi Platform Delete FormEntity Attribute Use Case
  *
  * @author     Ushahidi Team <team@ushahidi.com>
  * @package    Ushahidi\Platform

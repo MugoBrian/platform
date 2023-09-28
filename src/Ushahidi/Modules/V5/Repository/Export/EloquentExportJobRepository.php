@@ -9,7 +9,7 @@ use Ushahidi\Modules\V5\Models\ExportJob;
 use Ushahidi\Modules\V5\DTO\Paging;
 use Ushahidi\Modules\V5\DTO\ExportJobSearchFields;
 use Illuminate\Support\Facades\DB;
-use Ushahidi\Core\Entity\ExportJob as ExportJobEntity;
+use Ushahidi\Core\Data\ExportJobEntity as ExportJobEntity;
 
 class EloquentExportJobRepository implements ExportJobRepository
 {
@@ -33,7 +33,7 @@ class EloquentExportJobRepository implements ExportJobRepository
         return $builder;
     }
     /**
-     * This method will fetch all the ExportJob for the logged user from the database utilising
+     * This method will fetch all the ExportJobEntity for the logged user from the database utilising
      * Laravel Eloquent ORM and return them as an array
      * @param int $limit
      * @param int $skip
@@ -53,7 +53,7 @@ class EloquentExportJobRepository implements ExportJobRepository
     }
 
     /**
-     * This method will fetch a single ExportJob from the database utilising
+     * This method will fetch a single ExportJobEntity from the database utilising
      * Laravel Eloquent ORM. Will throw an exception if provided identifier does
      * not exist in the database.
      * @param int $id
@@ -64,14 +64,14 @@ class EloquentExportJobRepository implements ExportJobRepository
     {
         $export_job = ExportJob::find($id);
         if (!$export_job instanceof ExportJob) {
-            throw new NotFoundException('ExportJob not found');
+            throw new NotFoundException('ExportJobEntity not found');
         }
         return $export_job;
     }
 
 
     /**
-     * This method will create a ExportJob
+     * This method will create a ExportJobEntity
      * @param ExportJobEntity $entity
      * @return int
      * @throws \Exception
@@ -90,7 +90,7 @@ class EloquentExportJobRepository implements ExportJobRepository
     }
 
     /**
-     * This method will update the ExportJob
+     * This method will update the ExportJobEntity
      * @param int @id
      * @param ExportJobEntity $entity
      * @throws NotFoundException
@@ -99,7 +99,7 @@ class EloquentExportJobRepository implements ExportJobRepository
     {
         $export_job = ExportJob::find($id);
         if (!$export_job instanceof ExportJob) {
-            throw new NotFoundException('ExportJob not found');
+            throw new NotFoundException('ExportJobEntity not found');
         }
 
         DB::beginTransaction();
@@ -113,7 +113,7 @@ class EloquentExportJobRepository implements ExportJobRepository
     }
 
     /**
-     * This method will create a ExportJob
+     * This method will create a ExportJobEntity
      * @param int $id
      * @return int
      * @throws NotFoundException

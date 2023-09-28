@@ -24,7 +24,7 @@ class DeletePostLock extends DeleteUsecase
 
     /**
      *
-     * @var \Ushahidi\Core\Entity\PostLockRepository
+     * @var \Ushahidi\Core\Data\PostLockRepository
      */
     protected $repo;
 

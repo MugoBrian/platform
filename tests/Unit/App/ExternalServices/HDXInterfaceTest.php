@@ -8,7 +8,7 @@ use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use Ushahidi\Tests\TestCase;
-use Ushahidi\Core\Entity\HXL\HXLLicense;
+use Ushahidi\Core\Data\HXL\HXLLicense;
 use Ushahidi\Core\Tool\ExternalServices\HDXInterface;
 
 class HDXInterfaceTest extends TestCase
